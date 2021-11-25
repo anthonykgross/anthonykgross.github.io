@@ -1,0 +1,8 @@
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+.idea
+vendor
+yarn-error.log
+node_modules
