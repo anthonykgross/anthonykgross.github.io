@@ -21,11 +21,13 @@
 title: Anthony K GROSS
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+lang: fr-FR
+twitter: AnthonyKGROSS
 
 # Build settings
 plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+#  - jekyll-feed
+#  - jekyll-seo-tag
   - jekyll-postcss
 
 # other configs
