@@ -6,3 +6,5 @@ _site
 vendor
 yarn-error.log
 node_modules
+assets/dist
+!assets/dist/.gitkeep

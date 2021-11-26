@@ -1,0 +1,11 @@
+- name: CV
+  url: /cv
+
+- name: Blog
+  url: /blog
+
+- name: Evenements
+  url: /evenements
+
+- name: Projets
+  url: /projets

@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<div class="menu fixed w-full h-16">
+    <div class="container mx-auto flex justify-between place-content-center p-3">
+        <div class="flex">
+            <div class="w-16">
+                <a href="{{ site.baseurl }}/">
+                    <img src="/assets/images/akg.svg" title="AKG - Anthony K GROSS" alt="AKG - Anthony K GROSS" />
+                </a>
+            </div>
+            <div class="ml-8 text-xl grid grid-flow-col gap-8 content-center text-akgFontBlack">
+                {% for m in site.data.menu %}
+                    <a href="{{m.url}}">{{m.name}}</a>
+                {% endfor %}
+            </div>
+        </div>
+        <form class="text-right flex content-center">
+            <div class="bg-akgFontGrey rounded-tl-sm rounded-bl-sm border-r-0 py-2 px-3 text-akgBgWhite">
+                <i class="fa fa-search"></i>
+            </div>
+            <input class="border border-l-0 border-akgFontGrey rounded-tr-sm rounded-br-sm" type="text" />
+            <input class="border border-akgFontGrey rounded-sm py-2 px-4 ml-2 cursor-pointer" type="submit" value="Feu"/>
+        </form>
+    </div>
+</div>
+<div class="banner text-center p-20 pt-32">
+    <img class="w-80 m-4 mt-0 inline-block" src="/assets/images/theme.png" />
+    <div class="text-rotator title uppercase text-akgFontGrey font-fjalla text-2xl"></div>
+</div>
+<div class="content">
+    <div class="container mx-auto p-3">
+        {{content}}
+    </div>
+</div>

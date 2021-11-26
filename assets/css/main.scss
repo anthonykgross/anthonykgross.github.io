@@ -4,3 +4,16 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+$akg-base-content: "/assets/images/base-content.jpg";
+$akg-bg-repeat: "/assets/images/bg-repeat.png";
+
+body, .menu {
+  background-image: url($akg-base-content);
+  background-repeat: repeat;
+}
+
+.banner {
+  background-image: url($akg-bg-repeat);
+  background-repeat: repeat;
+}

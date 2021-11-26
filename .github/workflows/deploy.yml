@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install Dependencies
-        run: yarn
+        run: npm install -g gulp && yarn && gulp
 
       - name: Build the site in the jekyll/builder container
         run: |
