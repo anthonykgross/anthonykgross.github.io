@@ -1,10 +1,16 @@
 JEKYLL_IMAGE=jekyll/jekyll
 NODE_IMAGE=node:lts
 
+.DEFAULT_GOAL := help
+
+help:
+	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
+
+
 ##
 ## Project setup
 ##---------------------------------------------------------------------------
-install:          ## Install Gem dependencies
+install:        ## Install Gem dependencies
 install:
 	docker run --rm --volume="$(PWD):/srv/jekyll" -it $(JEKYLL_IMAGE) bundle install
 
@@ -21,6 +27,6 @@ debug:
 	docker run --rm --volume="$(PWD):/srv/jekyll" -it $(JEKYLL_IMAGE) bash
 
 
-node:          ## Node commands
+node:           ## Node commands
 node:
 	docker run --rm --volume="$(PWD):/src" -it $(NODE_IMAGE) bash -c "cd /src && bash"

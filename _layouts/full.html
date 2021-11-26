@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="menu fixed w-full h-16">
+<div class="menu fixed w-full h-16 border-b shadow-sm">
     <div class="container mx-auto flex justify-between place-content-center p-3">
         <div class="flex">
             <div class="w-16">
@@ -25,12 +25,28 @@ layout: default
         </form>
     </div>
 </div>
+{% include anchor/anchor.html anchorId='top' %}
 <div class="banner text-center p-20 pt-32">
     <img class="w-80 m-4 mt-0 inline-block" src="/assets/images/theme.png" />
-    <div class="text-rotator title uppercase text-akgFontGrey font-fjalla text-2xl"></div>
+    <div class="text-rotator title uppercase text-akgFontGrey font-fjalla text-2xl">
+        <h1>Créer un plugin javascript pour JWPlayer 6</h1>
+    </div>
 </div>
 <div class="content">
-    <div class="container mx-auto p-3">
+    <div class="container mx-auto p-3 min-h-screen">
         {{content}}
     </div>
+</div>
+<footer>
+    <div class="container mx-auto p-3 text-center">
+        {% capture img %}
+            <img class="w-24 m-4 inline-block opacity-50" src="/assets/images/akg2.svg" />
+        {% endcapture %}
+        {% include anchor/goto.html anchorId='top' content=img %}
+    </div>
+</footer>
+<div class="bg-akgFontBlack text-gray-500 p-2 text-center">
+        Made with <i class="fa fa-heart text-red-600"></i>
+        with <a href="https://jekyllrb.com" target="_blank">Jekyll</a>
+        | Source code disponible sur <a href="{{site.project_url}}">Github</a>
 </div>

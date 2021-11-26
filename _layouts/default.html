@@ -19,8 +19,8 @@
 
         <!-- Twitter -->
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:site" content="@{{ site.twitter }}">
-        <meta name="twitter:creator" content="@{{ site.twitter }}">
+        <meta name="twitter:site" content="@{{ site.socials['twitter'].username }}">
+        <meta name="twitter:creator" content="@{{ site.socials['twitter'].username }}">
         <meta name="twitter:title" content="{{ page.title }}">
         <meta name="twitter:description" content="{{ page.description }}">
         <meta name="twitter:image" content="{{ page.image }}">
@@ -34,5 +34,6 @@
     <body class="bg-akgBgWhite">
         {{ content }}
         <script src="/assets/dist/libs.js"></script>
+        <script src="/assets/js/app.js"></script>
     </body>
 </html>

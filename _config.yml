@@ -22,7 +22,18 @@ title: Anthony K GROSS
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 lang: fr-FR
-twitter: AnthonyKGROSS
+
+project_url: https://github.com/anthonykgross/anthonykgross.github.io
+
+socials:
+  twitter:
+    username: AnthonyKGROSS
+    url: https://twitter.com/anthonykgross
+    fontawesome: fa fa-twitter
+  youtube:
+    username: AnthonyKGROSS
+    url: https://www.youtube.com/channel/UC7hF0LUlIoShX2QZejF7z7g
+    fontawesome: fa fa-youtube-play
 
 # Build settings
 plugins:
