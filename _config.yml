@@ -19,8 +19,8 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Anthony K GROSS
-baseurl: "/"
-url: "http://localhost/"
+baseurl: ""
+url: "http://localhost"
 lang: fr-FR
 
 project_url: https://github.com/anthonykgross/anthonykgross.github.io
