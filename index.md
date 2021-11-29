@@ -1,4 +1,0 @@
----
-layout: full
----
-It works !

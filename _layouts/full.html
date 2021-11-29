@@ -10,9 +10,9 @@ layout: default
                     <img src="/assets/images/akg.svg" title="AKG - Anthony K GROSS" alt="AKG - Anthony K GROSS" />
                 </a>
             </div>
-            <div class="ml-8 text-xl grid grid-flow-col gap-8 content-center text-akgFontBlack">
+            <div class="ml-8 text-xl flex items-center content-center text-akgFontBlack">
                 {% for m in site.data.menu %}
-                    <a href="{{m.url}}">{{m.name}}</a>
+                    <a class="mx-8" href="{{m.url}}">{{m.name}}</a>
                 {% endfor %}
             </div>
         </div>
@@ -33,9 +33,18 @@ layout: default
     </div>
 </div>
 <div class="content">
-    <div class="container mx-auto p-3 min-h-screen">
+    <div class="container mx-auto p-6 min-h-screen">
         {{content}}
     </div>
+</div>
+<div class="socials bg-white flex text-5xl text-akgBlue justify-center py-20">
+    <img src="{{site.baseurl}}/assets/images/rejoignezmoi.png" />
+    {% for s in site.socials %}
+        {% assign social = s[1] %}
+        <a class="mx-16 mt-1" href="{{social.url}}" target="_blank">
+            <i class="{{social.fontawesome}}"></i>
+        </a>
+    {% endfor %}
 </div>
 <footer>
     <div class="container mx-auto p-3 text-center">

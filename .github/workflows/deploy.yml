@@ -14,6 +14,9 @@ jobs:
       - name: Install Dependencies
         run: npm install -g gulp && yarn && gulp
 
+      - name: Config for Production
+        run: mv -Rf _config_prod.yml _config.yml
+
       - name: Build the site in the jekyll/builder container
         run: |
           docker run \

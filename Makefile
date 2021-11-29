@@ -10,8 +10,9 @@ help:
 ##
 ## Project setup
 ##---------------------------------------------------------------------------
-install:        ## Install Gem dependencies
+install:        ## Install dependencies
 install:
+	docker run --rm --volume="$(PWD):/src" -it $(NODE_IMAGE) bash -c "cd /src && npm install -g gulp && yarn && gulp"
 	docker run --rm --volume="$(PWD):/srv/jekyll" -it $(JEKYLL_IMAGE) bundle install
 
 build:          ## Build application
