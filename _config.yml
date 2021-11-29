@@ -19,8 +19,8 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Anthony K GROSS
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/"
+url: "http://localhost/"
 lang: fr-FR
 
 project_url: https://github.com/anthonykgross/anthonykgross.github.io
