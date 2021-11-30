@@ -1,8 +1,8 @@
 <div class="border-l-4 border-akgBlue pl-6 my-6">
-    <h2 class="
+    <h2 class="mb-3
         {% if include.clipable %}
             clipable
         {% endif %}
-    ">{{include.title}}</h2>
+    " id="{{include.title | slugify }}">{{include.title}}</h2>
     <div class="text-lg text-akgFontBlack text-justify">{{include.intro}}</div>
 </div>

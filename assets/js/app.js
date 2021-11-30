@@ -10,7 +10,7 @@ $(document).ready(function () {
     $(".banner .text-rotator").show().ticker({rate: 150, delay: 10000}).trigger("play");
 
     // jQuery smooth scrolling
-    $('.navbar-nav .nav-link, footer a, a.active-anchor').bind('click', function (event) {
+    $('a.active-anchor').bind('click', function (event) {
         var anchor = $(this);
         var anchorId = anchor.attr('href').split("#")[1];
         animateAnchor(anchorId, event);
@@ -31,22 +31,24 @@ $(document).ready(function () {
     });
 
     // CLIPABLE
-    $('[id].clipable').each(function(i, elm) {
+    $('.clipable').each(function(i, elm) {
         var elm = $(elm);
 
-        var i = $('<i/>')
-            .addClass('fa fa-link cliper')
+        var a = $('<a/>')
+            .addClass('cliper')
             .attr('data-clipboard-text', uri.origin()+uri.pathname()+'#'+elm.attr('id'))
             .attr('title', 'Copier le lien')
         ;
-        elm.append(i);
+        elm.html(
+            a.append(elm.html())
+        );
     });
 
     var clipboard = new ClipboardJS('.cliper');
     clipboard.on('success', function() {
         new Noty({
             text: 'Merci d\'avoir copié le lien !',
-            theme: 'bootstrap-v4',
+            theme: 'light',
             type: 'success',
             timeout: 3000
         }).show();
@@ -59,7 +61,7 @@ $(document).ready(function () {
 });
 
 function animateAnchor(anchorId, event) {
-    var elm = $("[id="+anchorId+"]");
+    var elm = $("[id='"+anchorId+"']");
 
     if (elm.length >= 1) {
         changeUrl(elm.text(), uri.origin()+uri.pathname()+'#'+anchorId);

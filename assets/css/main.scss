@@ -18,6 +18,18 @@ body, .menu {
   background-repeat: repeat;
 }
 
+.cliper {
+  @apply cursor-pointer;
+
+  &:hover {
+    @apply text-akgBlue;
+  }
+}
+
+.noty_theme__light.noty_type__success {
+  @apply bg-akgBlue text-akgBgWhite border-akgBlue-dark
+}
+
 h2 {
   @apply text-4xl
 }

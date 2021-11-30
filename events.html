@@ -1,0 +1,14 @@
+---
+layout: full
+title: Évènements
+intro: >-
+    Ma participation à divers évènements m'apporte beaucoup et c'est en toute humilité que je vous donne mon retour d'expérience.
+permalink: /evenements
+---
+{% include title.html
+    title=page.title
+    intro=page.intro
+%}
+
+{% assign posts = site.posts | where_exp:"item", "item.category == 'event'" %}
+{% include list_posts.html posts=posts %}

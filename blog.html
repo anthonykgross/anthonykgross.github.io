@@ -1,0 +1,14 @@
+---
+layout: full
+title: Blog
+intro: >-
+    À quoi bon garder l'information pour moi ? Je partage mon petit savoir.
+permalink: /blog
+---
+{% include title.html
+    title=page.title
+    intro=page.intro
+%}
+
+{% assign posts = site.posts | where_exp:"item", "item.category == 'blog'" %}
+{% include list_posts.html posts=posts %}

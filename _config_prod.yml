@@ -65,3 +65,4 @@ exclude:
   - tailwind.config.js
   - Makefile
   - yarn.lock
+  - gulpfile.js

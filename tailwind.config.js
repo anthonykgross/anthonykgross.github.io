@@ -7,10 +7,19 @@ module.exports = {
         'xxs': '.5rem',
       },
       colors: {
-        akgBgWhite: '#F6F6F6',
-        akgFontBlack: '#232525',
-        akgFontGrey: '#A9B7C6',
-        akgBlue: '#598DBB'
+        akgBgWhite: {
+          DEFAULT: '#F6F6F6'
+        },
+        akgFontBlack: {
+          DEFAULT: '#232525'
+        },
+        akgFontGrey: {
+          DEFAULT: '#A9B7C6'
+        },
+        akgBlue: {
+          DEFAULT: '#598DBB',
+          dark: '#355771'
+        }
       },
       fontFamily: {
         'fjalla': ['Fjalla One'],
