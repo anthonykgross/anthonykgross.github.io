@@ -1,0 +1,20 @@
+<div>
+    <a href="{{ include.post.url }}">
+        <figure class="relative">
+            <img class="w-full" src="{{ include.post.image }}" alt="{{ include.post.title }}"/>
+            <div class="absolute left-0 bottom-0 p-6 bg-akgBlue text-akgBgWhite text-2xl">{{ include.post.title }}</div>
+        </figure>
+    </a>
+    <p class="py-6 text-justify">
+        {{ include.post.intro }}
+    </p>
+    <div class="flex justify-between border-t border-b py-3 border-akgFontGrey text-akgFontGrey text-xs">
+        <div>
+            <i class="fa fa-calendar pr-2"></i>
+            {{ include.post.date | date: "%d/%m/%Y" }}
+        </div>
+        <div>
+            <a href="{{ include.post.url }}">Lire</a>
+        </div>
+    </div>
+</div>

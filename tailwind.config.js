@@ -22,7 +22,8 @@ module.exports = {
         }
       },
       fontFamily: {
-        'fjalla': ['Fjalla One'],
+        'jenna-sue': ['JennaSue'],
+        'hello-world': ['HelloWorld'],
       }
     }
   },

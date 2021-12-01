@@ -8,6 +8,15 @@
 $akg-base-content: "/assets/images/base-content.jpg";
 $akg-bg-repeat: "/assets/images/bg-repeat.png";
 
+@font-face {
+  font-family: 'HelloWorld';
+  src: url('/assets/fonts/hello-world/font.ttf');
+}
+@font-face {
+  font-family: 'JennaSue';
+  src: url('/assets/fonts/JennaSue.ttf');
+}
+
 body, .menu {
   background-image: url($akg-base-content);
   background-repeat: repeat;
@@ -27,13 +36,25 @@ body, .menu {
 }
 
 .noty_theme__light.noty_type__success {
-  @apply bg-akgBlue text-akgBgWhite border-akgBlue-dark
+  @apply bg-akgBlue text-akgBgWhite border-akgBlue-dark;
 }
 
 h2 {
-  @apply text-4xl
+  @apply text-4xl;
 }
 
 h3 {
-  @apply text-3xl mb-6
+  @apply text-3xl mb-6;
+}
+
+h4 {
+  @apply text-2xl mb-1;
+}
+
+a {
+  @apply underline;
+
+  .menu &, &.cliper {
+    @apply no-underline;
+  }
 }

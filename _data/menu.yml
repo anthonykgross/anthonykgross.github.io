@@ -1,11 +1,8 @@
 - name: CV
-  url: /cv
+  template: cv.html
 
 - name: Blog
-  url: /blog
+  template: blog.html
 
-- name: Evenements
-  url: /evenements
-
-- name: Projets
-  url: /projets
+- name: Portfolio
+  template: portfolio.html

@@ -25,13 +25,20 @@
         <meta name="twitter:description" content="{{ page.description | default: site.description }}">
         <meta name="twitter:image" content="{{ site.url }}{{ page.image | default: '/assets/images/fb_image.png' }}">
 
-        <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" type="text/css">
-
         <!-- Favicons -->
         <link rel="shortcut icon" href="{{ site.baseurl }}/assets/favicon.ico">
         <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/apple-touch-icon.png">
     </head>
     <body class="bg-akgBgWhite">
+        {% if site.env == 'dev' %}
+        <div class="fixed bg-red-600 p-6 z-50 text-white">
+            <div class="hidden sm:block">SM</div>
+            <div class="hidden md:block">MD</div>
+            <div class="hidden lg:block">LG</div>
+            <div class="hidden xl:block">XL</div>
+            <div class="hidden 2xl:block">2XL</div>
+        </div>
+        {% endif %}
         {{ content }}
         <script src="/assets/dist/libs.js"></script>
         <script src="/assets/js/app.js"></script>

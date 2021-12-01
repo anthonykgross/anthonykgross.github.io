@@ -1,6 +1,17 @@
-<div class="flex my-6 text-justify items-center">
-    <div class="pr-6 w-24">
-        <img src="{{include.image}}" alt="{{include.author}}" />
+<div class="my-6">
+    <div class="flex text-justify">
+        <div class="pr-6">
+            <img class="w-32" src="{{ site.baseurl }}/assets/images/photo.jpg" alt="Anthony K GROSS" />
+        </div>
+        <div>
+            <h4>Qui suis-je ?</h4>
+            Ingénieur logiciel en poste au Laboratoire d'Astrophysique de Marseille
+            et freelance, chargé de la conception et de la réalisation de
+            services spécifiques, notamment de traitements lourds, accessibles
+            via webservices.
+            <div class="text-right pt-1">
+                <a href="{% link cv.html %}">Lire</a>
+            </div>
+        </div>
     </div>
-    <div>{{include.intro}}</div>
 </div>

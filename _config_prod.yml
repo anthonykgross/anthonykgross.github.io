@@ -22,6 +22,7 @@ title: Anthony K GROSS
 baseurl: ""
 url: "https://anthonykgross.fr"
 lang: fr-FR
+env: prod
 
 project_url: https://github.com/anthonykgross/anthonykgross.github.io
 

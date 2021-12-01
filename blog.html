@@ -1,6 +1,8 @@
 ---
 layout: full
 title: Blog
+text-rotator: Fautes d'orthographe, fautes d'accord, tout y est !
+description:
 intro: >-
     À quoi bon garder l'information pour moi ? Je partage mon petit savoir.
 permalink: /blog
@@ -10,5 +12,9 @@ permalink: /blog
     intro=page.intro
 %}
 
-{% assign posts = site.posts | where_exp:"item", "item.category == 'blog'" %}
-{% include list_posts.html posts=posts %}
+{% assign posts = site.posts | sort: 'date' | reverse %}
+{% for post in posts %}
+    <div class="mb-6">
+        {% include cards/post.html post=post %}
+    </div>
+{% endfor %}
