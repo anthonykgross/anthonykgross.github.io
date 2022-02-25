@@ -1,0 +1,15 @@
+<a class="flex flex-col no-underline text-justify" href="{{ include.url }}">
+    <figure>
+        <img class="w-full" src="{{ include.image }}" alt="{{ include.title }}"/>
+    </figure>
+    <h4 class="mt-3 font-medium">{{ include.title }}</h4>
+    <p class="flex-grow py-3 pb-4">
+        {{ include.intro }}
+    </p>
+    <div class="flex justify-between border-t border-b py-3 border-akgFontGrey text-akgFontGrey text-xs">
+        <div>
+            <i class="fa fa-calendar pr-2"></i>
+            {{ include.date | date: "%d/%m/%Y" }}
+        </div>
+    </div>
+</a>

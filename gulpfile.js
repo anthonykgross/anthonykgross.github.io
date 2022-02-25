@@ -24,6 +24,7 @@ exports.default = function() {
         './node_modules/prismjs/components/prism-java.js',
         './node_modules/prismjs/components/prism-git.js',
         './node_modules/prismjs/components/prism-ini.js',
+        './node_modules/prismjs/components/prism-markup-templating.js',
         './node_modules/prismjs/plugins/file-highlight/prism-file-highlight.js',
 
         './node_modules/jquery/dist/jquery.min.js',

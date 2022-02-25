@@ -1,4 +1,4 @@
-- url_demo: /p/multi-streaming-broadcaster-twitch-youtube-dailymotion-hitbox
+- url: /p/multi-streaming-broadcaster-twitch-youtube-dailymotion-hitbox
   date: 2015-09-09
   title: Docker Broadcaster
   intro: |
@@ -11,13 +11,13 @@
     seule fois.
   image: /assets/images/articles/docker-broadcaster.png
 
-- url_demo: /p/kctus-controle-a-distance-des-videos
+- url: /p/kctus-controle-a-distance-des-videos
   date: 2014-11-30
   title: Kctus
   intro:
   image: /assets/images/articles/kctus.jpg
 
-- url_demo: /p/sharindata-donnees-outils-pour-developpeurs
+- url: /p/sharindata-donnees-outils-pour-developpeurs
   date: 2013-11-03
   title: Sharindata
   intro: |
@@ -28,7 +28,7 @@
     toutes ces tâches récurrentes.
   image: /assets/images/articles/sharindata.jpg
 
-- url_demo: /assets/data/sunisup/index.html
+- url: /assets/data/sunisup/index.html
   date: 2012-12-21
   title: Sun is up
   intro: |
@@ -40,23 +40,23 @@
     qu’ils devrons cliquer.
   image: /assets/images/articles/sunisup.jpg
 
-- url_demo: https://kosmetik-direkt24.com
+- url: https://kosmetik-direkt24.com
   date: 2012-11-11
   title: Kosmetik-Direkt24
   intro:
   image: /assets/images/articles/kdm.jpg
 
-- url_demo: https://streamplayer.anthonykgross.fr
-  date: 2012-01-27
-  title: Streamplayer
-  intro: |
-    Marre de passer son temps entre différents sites pour trouver la radio que
-    vous aimez ? Avec Streamplayer est là. En effet, grâce à cette application
-    vous avez désormais le choix entre différentes WebTV, radios, vidéos ou
-    musiques. De plus, vous pouvez ajouter vos liens Youtube préférés grâce au
-    formulaire de proposition. Une vidéo validée par l’administrateur (moi-même
-    pour l’instant), celle-ci sera disponible par les autres utilisateurs.
-    Autant dire que cette prochaine application sera avant tout communautaire.
-    Cette application est disponible sur le web mais aussi pour les pc disposant
-    du Système d’exploitation Windows. Pour plus d’information, contactez-moi !
-  image: /assets/images/articles/streamplayer.jpg
+#- url: https://streamplayer.anthonykgross.fr
+#  date: 2012-01-27
+#  title: Streamplayer
+#  intro: |
+#    Marre de passer son temps entre différents sites pour trouver la radio que
+#    vous aimez ? Avec Streamplayer est là. En effet, grâce à cette application
+#    vous avez désormais le choix entre différentes WebTV, radios, vidéos ou
+#    musiques. De plus, vous pouvez ajouter vos liens Youtube préférés grâce au
+#    formulaire de proposition. Une vidéo validée par l’administrateur (moi-même
+#    pour l’instant), celle-ci sera disponible par les autres utilisateurs.
+#    Autant dire que cette prochaine application sera avant tout communautaire.
+#    Cette application est disponible sur le web mais aussi pour les pc disposant
+#    du Système d’exploitation Windows. Pour plus d’information, contactez-moi !
+#  image: /assets/images/articles/streamplayer.jpg

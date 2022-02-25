@@ -51,6 +51,7 @@ socials:
     username: AnthonyKGROSS
     url: /rss
     fontawesome: fa fa-rss
+
 # Build settings
 plugins:
 #  - jekyll-feed
@@ -67,3 +68,4 @@ exclude:
   - Makefile
   - yarn.lock
   - gulpfile.js
+  - .idea
