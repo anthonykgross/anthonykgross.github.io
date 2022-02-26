@@ -5,21 +5,15 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-$akg-base-content: "/assets/images/base-content.jpg";
 $akg-bg-repeat: "/assets/images/bg-repeat.png";
 
-@font-face {
-  font-family: 'HelloWorld';
-  src: url('/assets/fonts/hello-world/font.ttf');
-}
 @font-face {
   font-family: 'JennaSue';
   src: url('/assets/fonts/JennaSue.ttf');
 }
 
-body, .menu {
-  background-image: url($akg-base-content);
-  background-repeat: repeat;
+html {
+  @apply bg-akgWhite text-akgBlack text-base font-open-sans leading-8;
 }
 
 .banner, footer {
@@ -36,7 +30,7 @@ body, .menu {
 }
 
 .noty_theme__light.noty_type__success {
-  @apply bg-akgBlue text-akgBgWhite border-akgBlue-dark;
+  @apply bg-akgBlue text-akgWhite border-akgBlue-dark;
 }
 
 h2 {

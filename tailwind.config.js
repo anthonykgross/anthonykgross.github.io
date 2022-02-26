@@ -7,28 +7,38 @@ module.exports = {
         'xxs': '.5rem',
       },
       colors: {
-        akgBgWhite: {
-          DEFAULT: '#F6F6F6'
+        akgWhite: {
+          DEFAULT: '#FFF'
         },
-        akgFontBlack: {
-          DEFAULT: '#232525'
+        akgBlack: {
+          DEFAULT: '#212529',
+          dark: '#060607',
         },
         akgFontGrey: {
           DEFAULT: '#A9B7C6'
         },
         akgBlue: {
-          DEFAULT: '#598DBB',
+          DEFAULT: '#3A9ADB',
           dark: '#355771'
+        },
+        akgRed: {
+          DEFAULT: '#FE6061'
+        },
+        social: {
+          twitter: '#00aced',
+          facebook: '#4267B2',
         }
       },
       fontFamily: {
+        'open-sans': ['Open Sans'],
         'jenna-sue': ['JennaSue'],
-        'hello-world': ['HelloWorld'],
       }
     }
   },
   variants: {
-    extend: {},
+    extend: {
+      margin: ['last']
+    },
   },
   plugins: [],
 }

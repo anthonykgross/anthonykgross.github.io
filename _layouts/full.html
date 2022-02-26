@@ -2,33 +2,23 @@
 layout: default
 ---
 
-<div class="menu fixed w-full h-16 border-b shadow-sm z-40">
+<div class="menu fixed w-full h-16 border-b shadow-sm z-40 bg-akgWhite">
     <div class="container mx-auto flex justify-between place-content-center p-3">
-        <div class="flex">
-            <div class="w-16">
-                <a href="{{ site.baseurl }}/">
-                    <img src="/assets/images/akg.svg" title="AKG - Anthony K GROSS" alt="AKG - Anthony K GROSS" />
-                </a>
-            </div>
-            <div class="ml-8 text-xl flex items-center content-center text-akgFontBlack">
-                {% for m in site.data.menu %}
-                    <a class="mx-8" href="{% link {{ m.template }} %}">{{m.name}}</a>
-                {% endfor %}
-            </div>
+        <div class="w-16">
+            <a href="{{ site.baseurl }}/">
+                <img src="/assets/images/akg.svg" title="AKG - Anthony K GROSS" alt="AKG - Anthony K GROSS" />
+            </a>
         </div>
-        <form class="text-right flex content-center">
-            <div class="bg-akgFontGrey rounded-tl-sm rounded-bl-sm border-r-0 py-2 px-3 text-akgBgWhite">
-                <i class="fa fa-search"></i>
-            </div>
-            <input class="border border-l-0 border-akgFontGrey rounded-tr-sm rounded-br-sm" type="text" />
-            <input class="border border-akgFontGrey rounded-sm py-2 px-4 ml-2 cursor-pointer" type="submit" value="Feu !"/>
-        </form>
+        <div class="ml-8 text-xl flex items-center content-center text-akgBlack">
+            {% for m in site.data.menu %}
+                <a class="mx-6 font-semibold last:mr-0" href="{% link {{ m.template }} %}">{{m.name}}</a>
+            {% endfor %}
+        </div>
     </div>
 </div>
 {% include anchor/anchor.html anchorId='top' %}
-<div class="banner text-center p-20 pt-32">
-    <img class="w-80 m-4 mt-0 inline-block" src="/assets/images/theme.png" />
-    <div class="text-rotator title uppercase text-akgFontGrey font-hello-world text-2xl">
+<div class="banner text-center p-40 pt-52">
+    <div class="uppercase text-akgWhite text-4xl font-bold">
         <h1>{%- if page.text-rotator -%}
                 {{ page.text-rotator }}
             {%- else -%}
@@ -43,7 +33,7 @@ layout: default
     </div>
 </div>
 <div class="socials bg-white flex text-5xl text-akgBlue justify-center py-10">
-    <div class="font-jenna-sue text-center text-akgFontBlack transform -rotate-6">
+    <div class="font-jenna-sue text-center text-akgBlack transform -rotate-6">
         <div>Rejoignez moi !</div>
     </div>
     {% for s in site.socials %}
@@ -61,7 +51,7 @@ layout: default
         {% include anchor/goto.html anchorId='top' content=img %}
     </div>
 </footer>
-<div class="bg-akgFontBlack text-gray-500 p-2 text-center">
+<div class="bg-akgBlack text-gray-500 p-2 text-center">
         Made with <i class="fa fa-heart text-red-600"></i>
         with <a href="https://jekyllrb.com" target="_blank">Jekyll</a>
         | Code source disponible sur <a href="{{site.project_url}}">Github</a>

@@ -6,9 +6,6 @@ $(document).ready(function () {
         $(this).remove();
     });
 
-    // Overlay animation
-    $(".banner .text-rotator").show().ticker({rate: 150, delay: 10000}).trigger("play");
-
     // jQuery smooth scrolling
     $('a.active-anchor').bind('click', function (event) {
         var anchor = $(this);
