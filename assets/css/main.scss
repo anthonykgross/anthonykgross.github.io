@@ -52,3 +52,24 @@ a {
     @apply no-underline;
   }
 }
+
+.post a {
+  @apply text-akgRed no-underline hover:underline;
+}
+
+.card .thumb::before {
+  position: absolute;
+  content: " ";
+  left: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: all 350ms;
+  @apply bg-akgBlue;
+}
+.card .thumb:hover::before {
+  @apply opacity-60;
+}

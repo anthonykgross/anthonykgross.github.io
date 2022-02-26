@@ -11,7 +11,7 @@ layout: default
         </div>
         <div class="ml-8 text-xl flex items-center content-center text-akgBlack">
             {% for m in site.data.menu %}
-                <a class="mx-6 font-semibold last:mr-0" href="{% link {{ m.template }} %}">{{m.name}}</a>
+                <a class="mx-6 font-semibold last:mr-0 hover:text-akgBlue" href="{% link {{ m.template }} %}">{{m.name}}</a>
             {% endfor %}
         </div>
     </div>
@@ -32,13 +32,13 @@ layout: default
         {{content}}
     </div>
 </div>
-<div class="socials bg-white flex text-5xl text-akgBlue justify-center py-10">
+<div class="socials bg-white flex text-3xl lg:text-5xl text-akgBlue justify-center py-10 lg:py-20">
     <div class="font-jenna-sue text-center text-akgBlack transform -rotate-6">
         <div>Rejoignez moi !</div>
     </div>
     {% for s in site.socials %}
         {% assign social = s[1] %}
-        <a class="mx-16 mt-1" href="{{social.url}}" target="_blank">
+        <a class="mx-4 lg:mx-14 mt-1 hover:text-akgBlue-dark" href="{{social.url}}" target="_blank">
             <i class="{{social.fontawesome}}"></i>
         </a>
     {% endfor %}
