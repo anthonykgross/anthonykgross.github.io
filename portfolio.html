@@ -12,20 +12,16 @@ permalink: /portfolio
     intro=page.intro
 %}
 
-{% if site.env == 'dev' %}
-    <div class="grid grid-cols-1 gap-10">
-        {% assign projects = site.data.portfolio %}
-        {% for project in projects %}
-            {%
-                include card.html
-                url=project.url
-                image=project.image
-                title=project.title
-                intro=project.intro
-                date=project.date
-            %}
-        {% endfor %}
-    </div>
-{% else %}
-    <h4 class="text-center">En cours de refonte</h4>
-{% endif %}
+<div class="mt-12">
+    {% assign projects = site.data.portfolio %}
+    {% for project in projects %}
+        {%
+            include card.html
+            url=project.url
+            image=project.image
+            title=project.title
+            intro=project.intro
+            date=project.date
+        %}
+    {% endfor %}
+</div>

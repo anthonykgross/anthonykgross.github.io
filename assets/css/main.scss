@@ -33,16 +33,16 @@ html {
   @apply bg-akgBlue text-akgWhite border-akgBlue-dark;
 }
 
-h2 {
+h1, h2 {
   @apply text-4xl;
 }
 
 h3 {
-  @apply text-3xl mb-6;
+  @apply text-3xl;
 }
 
 h4 {
-  @apply text-2xl mb-1;
+  @apply text-2xl;
 }
 
 a {
@@ -55,6 +55,10 @@ a {
 
 .post a {
   @apply text-akgRed no-underline hover:underline;
+}
+.post p {
+  text-indent: 2rem;
+  @apply text-justify;
 }
 
 .card .thumb::before {

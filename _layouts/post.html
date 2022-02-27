@@ -13,9 +13,39 @@ layout: full
     {{ content }}
 </div>
 
-{% include author.html %}
-<div class="border-t border-b my-6 py-3 border-akgFontGrey text-akgFontGrey text-xs">
-    <i class="fa fa-calendar pr-2"></i>
-    {{page.date | date: "%d/%m/%Y"}}
+<div class="flex justify-between border-t border-b border-akgFontGrey my-6 py-3">
+    <div>
+        <a class="pr-2 no-underline" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank">
+            <i class="fa fa-facebook-square text-social-facebook"></i>
+        </a>
+        <a class="pr-2 no-underline" href="https://twitter.com/share?text={{ page.title }}&url={{ site.url }}{{ page.url }}" target="_blank">
+            <i class="fa fa-twitter-square text-social-twitter"></i>
+        </a>
+    </div>
+    <div>
+        <i class="fa fa-calendar pr-2"></i>
+        {{page.date | date: "%d/%m/%Y"}}
+    </div>
 </div>
 
+{% include author.html %}
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://anthonykgross.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<nosc

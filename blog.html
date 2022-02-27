@@ -12,23 +12,19 @@ permalink: /blog
     intro=page.intro
 %}
 
-{% if site.env == 'dev' %}
-    {% assign posts = site.posts | sort: 'date' | reverse %}
-    <div class="grid grid-cols-1 gap-10">
-        {% for post in posts %}
-            {%
-                include card.html
-                url=post.url
-                image=post.image
-                title=post.title
-                intro=post.intro
-                date=post.date
-            %}
-        {% endfor %}
-    </div>
-{% else %}
-    <h4 class="text-center">En cours de refonte</h4>
-{% endif %}
+{% assign posts = site.posts | sort: 'date' | reverse %}
+<div class="mt-12">
+    {% for post in posts %}
+        {%
+            include card.html
+            url=post.url
+            image=post.image
+            title=post.title
+            intro=post.intro
+            date=post.date
+        %}
+    {% endfor %}
+</div>
 
 
 

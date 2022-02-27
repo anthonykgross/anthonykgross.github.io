@@ -9,26 +9,19 @@ description:
 %}
 
 {% include author.html %}
-
-{% if site.env == 'dev' %}
-    <div class="mt-12">
-        <div class="grid grid-cols-1 gap-10 text-justify">
-            {% assign posts = site.posts | sort: 'date' | reverse | slice: 0, 3 %}
-            {% for post in posts %}
-                {%
-                    include card.html
-                    url=post.url
-                    image=post.image
-                    title=post.title
-                    intro=post.intro
-                    date=post.date
-                %}
-            {% endfor %}
-        </div>
-        <div class="text-center p-6 mt-6">
-            <a class="p-6 border border-akgBlack" href="{% link blog.html %}">Tous les articles</a>
-        </div>
+<div class="mt-12">
+    {% assign posts = site.posts | sort: 'date' | reverse | slice: 0, 3 %}
+    {% for post in posts %}
+        {%
+            include card.html
+            url=post.url
+            image=post.image
+            title=post.title
+            intro=post.intro
+            date=post.date
+        %}
+    {% endfor %}
+    <div class="text-center p-6 mt-6">
+        <a class="p-6 border border-akgBlack no-underline hover:bg-akgBlue hover:border-akgWhite hover:text-akgWhite" href="{% link blog.html %}">Tous les articles</a>
     </div>
-{% else %}
-    <h4 class="text-center">En cours de refonte</h4>
-{% endif %}
+</div>

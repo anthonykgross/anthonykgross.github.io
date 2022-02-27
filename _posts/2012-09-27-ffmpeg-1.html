@@ -5,22 +5,22 @@ title: FFmpeg - Partie 1 - Installation
 intro:
 image: /assets/images/articles/ffmpeg.jpg
 ---
-<div class="col-md-12">
-    <p>
-        Les commandes suivantes sont utilisables sous <strong>Debian</strong>.
-        Pour <strong>Ubuntu</strong>, <strong>Kubuntu</strong>, <strong>Xubuntu</strong> et <strong>Lubuntu</strong>,
-        remplacez <strong>aptitude</strong> par <strong>apt-get</strong> .
-        A savoir que toutes les commandes sont à utiliser en <strong>root</strong>.
-    </p>
-    <p>
-        Afin que nous puissions parler de la même chose, je vous invite à installer
-        FFmpeg avec X264 afin que nous puissions bénéficier des outils nécessaires pour
-        encoder (= convertir une video) en H.264. <strong>Pourquoi H.264 ?</strong> Il faut savoir que
-        H.264 est une norme de compression puissante et utilisable sur plusieurs supports comme DVD/DivX, Mobile, TV et
-        Web.
-    </p>
-    <h3>Installation de FFmpeg avec x264</h3>
-    <pre class=" language-bash"><code class=" language-bash">
+<p>
+    Les commandes suivantes sont utilisables sous <strong>Debian</strong>.
+    Pour <strong>Ubuntu</strong>, <strong>Kubuntu</strong>, <strong>Xubuntu</strong> et <strong>Lubuntu</strong>,
+    remplacez <strong>aptitude</strong> par <strong>apt-get</strong> .
+    A savoir que toutes les commandes sont à utiliser en <strong>root</strong>.
+</p>
+<p>
+    Afin que nous puissions parler de la même chose, je vous invite à installer
+    FFmpeg avec X264 afin que nous puissions bénéficier des outils nécessaires pour
+    encoder (= convertir une video) en H.264. <strong>Pourquoi H.264 ?</strong> Il faut savoir que
+    H.264 est une norme de compression puissante et utilisable sur plusieurs supports comme DVD/DivX, Mobile, TV et
+    Web.
+</p>
+
+<h3 class="mt-8">Installation de FFmpeg avec x264</h3>
+<pre class="language-bash"><code>
 #Ajout des libraries multimedia dans la sources.list de Debian
 echo "deb http://www.deb-multimedia.org squeeze main non-free" &gt;&gt; /etc/apt/sources.list
 aptitude update -y -f --allow-untrusted &amp;&amp; aptitude upgrade -y -f --allow-untrusted
@@ -78,10 +78,10 @@ make
 #Vérification de l'installation de FFmpeg
 checkinstall --pkgname=ffmpeg --pkgversion="5:$(date +%Y%m%d%H%M)-git" --backup=no   --deldoc=yes --fstrans=no --default
 </code></pre>
-    <h3>Conclusion</h3>
-    <p>
-        Et voilà, FFmpeg est installé sur votre machine et vous pouvez dès à présent manipuler
-        vos fichiers audios et videos. Si vous souhaiter apprendre les commandes de bases, je vous invite à passer à
-        l'article suivant : <a href="/p/ffmpeg-commandes-base">FFmpeg - Partie 2 - Commandes de bases</a>
-    </p>
-</div>
+
+<h3 class="mt-8">Conclusion</h3>
+<p>
+    Et voilà, FFmpeg est installé sur votre machine et vous pouvez dès à présent manipuler
+    vos fichiers audios et videos. Si vous souhaiter apprendre les commandes de bases, je vous invite à passer à
+    l'article suivant : <a href="/p/ffmpeg-commandes-base">FFmpeg - Partie 2 - Commandes de bases</a>
+</p>

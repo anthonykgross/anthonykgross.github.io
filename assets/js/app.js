@@ -44,7 +44,7 @@ $(document).ready(function () {
     var clipboard = new ClipboardJS('.cliper');
     clipboard.on('success', function() {
         new Noty({
-            text: 'Merci d\'avoir copié le lien !',
+            text: 'Lien copié !',
             theme: 'light',
             type: 'success',
             timeout: 3000
