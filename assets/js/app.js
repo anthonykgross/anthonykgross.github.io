@@ -1,6 +1,11 @@
 var uri = new URI();
 
 $(document).ready(function () {
+    document.querySelectorAll('pre code').forEach((el) => {
+        el.innerHTML = el.innerHTML.trim();
+        hljs.highlightElement(el);
+    });
+
     // LOADER
     $('.page-loading').fadeOut(1000, function () {
         $(this).remove();

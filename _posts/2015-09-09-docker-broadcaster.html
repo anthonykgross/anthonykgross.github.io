@@ -12,36 +12,27 @@ intro: >-
 image: /assets/images/articles/docker-broadcaster.png
 ---
 
-<div class="col-md-12">
-    <div class="row">
-        <div class="col-md-6">
-            <h3>Prérequis</h3>
-            <ul>
-                <li>Un serveur distant avec une bonne connexion Internet</li>
-                <li>Un minimum de connaissances en système Unix</li>
-                <li>Docker</li>
-                <li>Un logiciel de capture video : SplitBroadcaster, OBS, etc ... </li>
-            </ul>
-        </div>
-        <div class="col-md-6">
-            <h3>Mon environnement pour le tutoriel</h3>
-            <ul>
-                <li>Un serveur distant : Ok ! Debian 8 - kimsufi (OVH) entrée de gamme</li>
-                <li>Docker 1.8.1 &amp; Docker-Compose 1.3.1</li>
-                <li>OBS (Opensource Broadcasting Software)</li>
-            </ul>
-        </div>
-    </div>
-</div>
+<h3 class="mt-8">Prérequis</h3>
+<ul>
+    <li>Un serveur distant avec une bonne connexion Internet</li>
+    <li>Un minimum de connaissances en système Unix</li>
+    <li>Docker</li>
+    <li>Un logiciel de capture video : SplitBroadcaster, OBS, etc ... </li>
+</ul>
 
-<div class="col-md-12">
-    <h3>Installation</h3>
-    <div class="row">
-        <div class="col-md-6">
-            <h4>Étape 1 - Docker</h4>
-            <p>
-                Je vais faire simple car ce n'est pas le sujet de l'article.
-            </p><pre class=" language-bash"><code class=" language-bash">
+<h3 class="mt-8">Mon environnement pour le tutoriel</h3>
+<ul>
+    <li>Un serveur distant : Ok ! Debian 8 - kimsufi (OVH) entrée de gamme</li>
+    <li>Docker 1.8.1 &amp; Docker-Compose 1.3.1</li>
+    <li>OBS (Opensource Broadcasting Software)</li>
+</ul>
+
+<h3 class="mt-8">Installation</h3>
+<h4>Étape 1 - Docker</h4>
+<p>
+    Je vais faire simple car ce n'est pas le sujet de l'article.
+</p>
+<pre class="language-bash"><code>
 # Debian 8
 # Installation de git, curl &amp; pip (pour docker compose)
 apt-get install git curl python-pip
@@ -50,13 +41,12 @@ curl -sSL https://get.docker.com/ | sh
 # Installation de docker-compose
 pip install -U docker-compose
 </code></pre>
-            <p></p>
-        </div>
-        <div class="col-md-6">
-            <h4>Étape 2 - anthonykgross/docker-broadcaster</h4>
-            <p>
-                Pour streamer sur toutes les plateformes, je vous invite à télécharger l'image Docker.
-            </p><pre><code class="language-bash">
+
+<h4>Étape 2 - anthonykgross/docker-broadcaster</h4>
+<p>
+    Pour streamer sur toutes les plateformes, je vous invite à télécharger l'image Docker.
+</p>
+<pre><code class="language-bash">
 # Debian 8
 git clone https://github.com/anthonykgross/docker-broadcaster.git
 cd docker-broadcaster/
@@ -65,37 +55,31 @@ chmod +x create-image.sh
 # Et on génére l'image
 ./create-image.sh
 </code></pre>
-            <p></p>
-        </div>
-    </div>
-    <h4>Explications</h4>
-    <p>
-        Pour ce qui est de l'étape 1, nous avons seulement installer des outils utiles pour l'installation de Docker et la seconde étape, c'est la récupération de l'image <b>anthonykgross/docker-broadcaster</b> que nous aurons besoin.
-        Bien entendu, il n'est pas «nécéssaire» de récupérer l'image via <a href="https://github.com/anthonykgross/docker-broadcaster" target="_blank">Github</a> car celle-ci est disponible sur le <a href="https://hub.docker.com/r/anthonykgross/docker-broadcaster/" target="_blank">Docker Hub</a> mais je préfère, pour les néophytes, que vous en ayez trop que pas assez.
-    </p>
-    <p>
-        En effet, dans le répertoire <b>docker-broadcaster</b>, vous avez un fichier <b>docker-compose.yml</b> qui est très important. Si vous l'ouvrez avec un éditeur de texte, vous verrez que celui-ci possède déjà toutes les configurations possibles de notre image.
-    </p>
-</div>
 
-<div class="col-md-12">
-    <h3>Configuration</h3>
-    <p>
-        Pour cette étape, je vous invite à vous inscrire à toutes les plateformes en question. Bien entendu, vous n'êtes <b>pas obligé</b> de streamer sur TOUTES.
-        Choisissez celles qui vous plaisent.
-    </p>
-    Dans mon cas, les plateformes m'ont donné :
-    <ul>
-        <li><b>Youtube</b> =&gt; RTMP URL : "rtmp://a.rtmp.youtube.com/live2" ; Clé : "poopaplla-7537.ea0k-ef3-czsz"</li>
-        <li><b>Hitbox</b> =&gt; RTMP URL : "rtmp://live.hitbox.tv/push" ; Clé : "qsfqf?key=Jn6Dsqdqsd8cpx"</li>
-        <li><b>Twitch</b> =&gt; RTMP URL : "rtmp://live-cdg.twitch.tv/app" ; Clé : "live_101724967_qLZMlwnxxpKqsqsfJ5lNcBcP0RYtpw"</li>
-        <li><b>Dailymotion</b> =&gt; RTMP URL : "rtmp://publish.dailymotion.com/publish-dm" ; Clé : "24646?auth=qeGP_9fb42e109944fa5b504e191"</li>
-    </ul>
-    <p></p>
-    <div class="row">
-        <div class="col-md-6">
-            <h5>L'originale</h5>
-            <pre><code class="language-bash">
+<h4>Explications</h4>
+<p>
+    Pour ce qui est de l'étape 1, nous avons seulement installer des outils utiles pour l'installation de Docker et la seconde étape, c'est la récupération de l'image <b>anthonykgross/docker-broadcaster</b> que nous aurons besoin.
+    Bien entendu, il n'est pas «nécéssaire» de récupérer l'image via <a href="https://github.com/anthonykgross/docker-broadcaster" target="_blank">Github</a> car celle-ci est disponible sur le <a href="https://hub.docker.com/r/anthonykgross/docker-broadcaster/" target="_blank">Docker Hub</a> mais je préfère, pour les néophytes, que vous en ayez trop que pas assez.
+</p>
+<p>
+    En effet, dans le répertoire <b>docker-broadcaster</b>, vous avez un fichier <b>docker-compose.yml</b> qui est très important. Si vous l'ouvrez avec un éditeur de texte, vous verrez que celui-ci possède déjà toutes les configurations possibles de notre image.
+</p>
+
+<h3 class="mt-8">Configuration</h3>
+<p>
+    Pour cette étape, je vous invite à vous inscrire à toutes les plateformes en question. Bien entendu, vous n'êtes <b>pas obligé</b> de streamer sur TOUTES.
+    Choisissez celles qui vous plaisent.
+</p>
+Dans mon cas, les plateformes m'ont donné :
+<ul>
+    <li><b>Youtube</b> =&gt; RTMP URL : "rtmp://a.rtmp.youtube.com/live2" ; Clé : "poopaplla-7537.ea0k-ef3-czsz"</li>
+    <li><b>Hitbox</b> =&gt; RTMP URL : "rtmp://live.hitbox.tv/push" ; Clé : "qsfqf?key=Jn6Dsqdqsd8cpx"</li>
+    <li><b>Twitch</b> =&gt; RTMP URL : "rtmp://live-cdg.twitch.tv/app" ; Clé : "live_101724967_qLZMlwnxxpKqsqsfJ5lNcBcP0RYtpw"</li>
+    <li><b>Dailymotion</b> =&gt; RTMP URL : "rtmp://publish.dailymotion.com/publish-dm" ; Clé : "24646?auth=qeGP_9fb42e109944fa5b504e191"</li>
+</ul>
+
+<h4>L'originale</h4>
+<pre><code class="language-bash">
 # docker-compose.yml
 broadcaster:
   image: anthonykgross/docker-broadcaster
@@ -120,10 +104,9 @@ broadcaster:
   volumes:
     - ./log:/log
 </code></pre>
-        </div>
-        <div class="col-md-6">
-            <h5>Ce que nous voulons ! </h5>
-            <pre><code class="language-bash">
+
+<h4>Ce que nous voulons ! </h4>
+<pre><code class="language-bash">
 # docker-compose.yml
 broadcaster:
   image: anthonykgross/docker-broadcaster
@@ -148,58 +131,53 @@ broadcaster:
   volumes:
     - ./log:/log
 </code></pre>
-        </div>
-    </div>
-    <p>
-        «Mais à quoi peuvent servir les autres paramêtres ? (<b>YOUR_IP</b>, <b>PRIVATE_KEY</b> &amp; <b>EXPIRATION_TOKEN</b>) » - Déjà, pour <b>YOUR_IP</b> : Mettez la votre, pas la mienne ! Vous n'êtes pas obligé de la renseigner mais pour la suite ça pourrait être utile.<br>
-        <b>PRIVATE_KEY</b> est un paramêtre qui vous servira à sécuriser votre serveur. Sinon ? Si vous ne sécuriser pas votre serveur et que quelqu'un parvient à prendre votre URl de streaming =&gt; il streamera sur tous vos comptes à votre place donc pensez bien à la changer régulièrement.<br>
-        <b>EXPIRATION_TOKEN</b> permet de donner une validité à votre token que nous verrons plus tard. Si vous mettez 3600 (secondes) soit 1h, vous ne pourrez plus diffuser votre video après 1h de live car votre token sera périmé.
-    </p>
-</div>
+<p>
+    «Mais à quoi peuvent servir les autres paramêtres ? (<b>YOUR_IP</b>, <b>PRIVATE_KEY</b> &amp; <b>EXPIRATION_TOKEN</b>) » - Déjà, pour <b>YOUR_IP</b> : Mettez la votre, pas la mienne ! Vous n'êtes pas obligé de la renseigner mais pour la suite ça pourrait être utile.<br>
+    <b>PRIVATE_KEY</b> est un paramêtre qui vous servira à sécuriser votre serveur. Sinon ? Si vous ne sécuriser pas votre serveur et que quelqu'un parvient à prendre votre URl de streaming =&gt; il streamera sur tous vos comptes à votre place donc pensez bien à la changer régulièrement.<br>
+    <b>EXPIRATION_TOKEN</b> permet de donner une validité à votre token que nous verrons plus tard. Si vous mettez 3600 (secondes) soit 1h, vous ne pourrez plus diffuser votre video après 1h de live car votre token sera périmé.
+</p>
 
-<div class="col-md-12">
-    <h3>Exécution</h3>
-    <p>
-        J'arrête de vous faire languir : place au spetacle ! Pour lancer le l'image Docker :
-    </p>
-    <p>
-        <b>Méthode 1</b> (Conseillée)
-    </p>
-    <pre class="language-bash"><code>
+<h3 class="mt-8">Exécution</h3>
+<p>
+    J'arrête de vous faire languir : place au spetacle ! Pour lancer le l'image Docker :
+</p>
+<p>
+    <b>Méthode 1</b> (Conseillée)
+</p>
+<pre class="language-bash"><code>
 docker-compose up -d
 </code></pre>
-    <p>
-        Cette commande va lire le fichier <b>docker-compose.yml</b> et créer le container en conséquence avec tous les paramêtres. Bien entendu, vous pouvez éviter de passer par <b>Compose</b> mais vous devrez à chaque fois renseigner vos paramêtres.<br>
-    </p>
-    <p>
-        <b>Méthode 2</b>
-    </p>
-    <pre class="language-bash"><code>
+<p>
+    Cette commande va lire le fichier <b>docker-compose.yml</b> et créer le container en conséquence avec tous les paramêtres. Bien entendu, vous pouvez éviter de passer par <b>Compose</b> mais vous devrez à chaque fois renseigner vos paramêtres.<br>
+</p>
+<p>
+    <b>Méthode 2</b>
+</p>
+<pre class="language-bash"><code>
 docker run -e "YOUTUBE_URL=rtmp://a.rtmp.youtube.com/live2" -e "YOUTUBE_STREAMKEY=poopaplla-7537.ea0k-ef3-czsz" ... anthonykgross/docker-broadcaster
 </code></pre>
-    <p>
-        Cette commande <b>ne lira pas</b> le fichier <b>docker-compose.yml</b> donc il n'ait pas nécessaire de le remplir. Vous devez lui envoyer toute votre configuration en paramêtre.
-    </p>
-    <p>
-        Donc si tout se passe bien, rien ne devrez se passer ! Bizarre? Non, c'est parfait !
-    </p>
-</div>
+<p>
+    Cette commande <b>ne lira pas</b> le fichier <b>docker-compose.yml</b> donc il n'ait pas nécessaire de le remplir. Vous devez lui envoyer toute votre configuration en paramêtre.
+</p>
+<p>
+    Donc si tout se passe bien, rien ne devrez se passer ! Bizarre? Non, c'est parfait !
+</p>
 
-<div class="col-md-12">
-    <h3>Diffusion</h3>
-    <p>
-        Vérifions tout d'abord que votre image Docker marche correctement.
-    </p>
-    <pre class="language-bash"><code>
+<h3 class="mt-8">Diffusion</h3>
+<p>
+    Vérifions tout d'abord que votre image Docker marche correctement.
+</p>
+<pre class="language-bash"><code>
 docker ps
 
 CONTAINER ID        IMAGE                              COMMAND             CREATED             STATUS              PORTS                                            NAMES
 4df494575536        anthonykgross/docker-broadcaster   "/entrypoint.sh"    21 hours ago        Up 21 hours         0.0.0.0:1935-&gt;1935/tcp, 0.0.0.0:8080-&gt;8080/tcp   dockerbroadcaster_broadcaster_1
 </code></pre>
-    <p>
-        Donc jusqu'ici tout va bien : mon container est en marche et son <b>CONTAINER ID</b> est <b>4df494575536</b>! Nous allons chercher mes identifiants pour streamer sur ma machine grâce justement à cet ID.
-    </p>
-    <pre class="language-bash"><code>
+
+<p>
+    Donc jusqu'ici tout va bien : mon container est en marche et son <b>CONTAINER ID</b> est <b>4df494575536</b>! Nous allons chercher mes identifiants pour streamer sur ma machine grâce justement à cet ID.
+</p>
+<pre class="language-bash"><code>
 docker logs 4df494575536
 
 
@@ -217,38 +195,28 @@ broadcaster_1 | = Expiration token    = 09-08-2015 02:29:57 PM (in 3600 sec.)
 broadcaster_1 | =
 broadcaster_1 | ===============================================================================================
 </code></pre>
-    <p>
-        Le container nous affiche tous nos paramêtres afin de vérfier que ceux-ci ont bien été pris en compte.<br>
-        De plus, si vous avez renseigné <b>YOUR_IP</b>, vous avez à votre disponibilité deux URLs: <b>live</b> et <b>transcode</b>. Pour ce qui est de <b>transcode</b>, c'est une version beta donc je ne vous conseille pas de l'utiliser pour l'instant. Pour ce qui est de <b>live</b>, c'est celle-ci qui nous intéresse ainsi que <b>Stream Key</b>
-    </p>
-    <h4>STRREEEEAAAMMMIIINNNGGGG !!! </h4>
-    <p>
-        Sur votre pc de maison, vous ouvrez <b>OBS</b> (ou <b>XplitBroadcaster</b>) et vous renseignez dans <b>RTMP-URL</b> "rtmp://YOUR_IP:1935/live/" (à remplacer par la votre hein?!).<br>
-        Ensuite, dans la clé du flux, vous mettez votre ... <b>Stream Key</b>.<br>
-        Et si tout se passe bien ... <b>CA MARCHE</b> ! Vous pouvez vous rendre sur tous vos profiles publiques de toutes les plateformes que vous avez choisi et vous devriez voir votre belle video.
-    </p>
-</div>
 
-<div class="col-md-12">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-0" scrolling="no" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 540px; height: 249px; display: block; flex-grow: 1;" title="Twitter Tweet" src="https://platform.twitter.com/embed/Tweet.html?creatorScreenName=AnthonyKGROSS&amp;dnt=false&amp;embedId=twitter-widget-0&amp;features=eyJ0ZndfZXhwZXJpbWVudHNfY29va2llX2V4cGlyYXRpb24iOnsiYnVja2V0IjoxMjA5NjAwLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdHdlZXRfZW1iZWRfOTU1NSI6eyJidWNrZXQiOiJodGUiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3NwYWNlX2NhcmQiOnsiYnVja2V0Ijoib2ZmIiwidmVyc2lvbiI6bnVsbH19&amp;frame=false&amp;hideCard=false&amp;hideThread=false&amp;id=791739163481550848&amp;lang=en&amp;origin=http%3A%2F%2Flocalhost%3A8080%2Fp%2Fmulti-streaming-broadcaster-twitch-youtube-dailymotion-hitbox&amp;sessionId=490c3695633b6176f8938c86e92a98defa9d7907&amp;siteScreenName=AnthonyKGROSS&amp;theme=light&amp;widgetsVersion=2582c61%3A1645036219416&amp;width=550px" data-tweet-id="791739163481550848" frameborder="0"></iframe></div>
-            <script async="" src="//www.google-analytics.com/analytics.js"></script><script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js"></script><script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-        <div class="col-md-6">
-            <a href="https://github.com/anthonykgross/docker-broadcaster/stargazers" target="_blank">
-                <img alt="Thumbnail" src="/assets/images/articles/github-docker-broadcaster.png">
-            </a>
-        </div>
-    </div>
-</div>
+<p>
+    Le container nous affiche tous nos paramêtres afin de vérfier que ceux-ci ont bien été pris en compte.<br>
+    De plus, si vous avez renseigné <b>YOUR_IP</b>, vous avez à votre disponibilité deux URLs: <b>live</b> et <b>transcode</b>. Pour ce qui est de <b>transcode</b>, c'est une version beta donc je ne vous conseille pas de l'utiliser pour l'instant. Pour ce qui est de <b>live</b>, c'est celle-ci qui nous intéresse ainsi que <b>Stream Key</b>
+</p>
+<h4>STRREEEEAAAMMMIIINNNGGGG !!! </h4>
+<p>
+    Sur votre pc de maison, vous ouvrez <b>OBS</b> (ou <b>XplitBroadcaster</b>) et vous renseignez dans <b>RTMP-URL</b> "rtmp://YOUR_IP:1935/live/" (à remplacer par la votre hein?!).<br>
+    Ensuite, dans la clé du flux, vous mettez votre ... <b>Stream Key</b>.<br>
+    Et si tout se passe bien ... <b>CA MARCHE</b> ! Vous pouvez vous rendre sur tous vos profiles publiques de toutes les plateformes que vous avez choisi et vous devriez voir votre belle video.
+</p>
 
-<div class="col-md-12">
-    <h3>Conclusion</h3>
-    <p>
-        Dans un premier temps, sachez que je m'excuse pour les fautes d'orthographe : j'ai du écrire rapidement cet article car j'en ai un peu trop fait la promo sur les réseaux sociaux !
-        Sachez néanmoins que ça m'a beaucoup appris de Docker en réalisant cette image. <br>Pour finir je voudrais remercier mon frangin qui, avec ses idées à la con parfois, m'a donné un bel objectif : J'te kiff' bro!
-        Ah et ... merci à Clément Vidal pour m'avoir fait comprendre quelques subtilités de Docker et m'avoir aidé à écrire la doc en anglais (en cours de relecture).<br>
-        Sur ce, j'ai garé mon panda en double file. Tchou !
-    </p>
-</div>
+<div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-0" scrolling="no" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 540px; height: 249px; display: block; flex-grow: 1;" title="Twitter Tweet" src="https://platform.twitter.com/embed/Tweet.html?creatorScreenName=AnthonyKGROSS&amp;dnt=false&amp;embedId=twitter-widget-0&amp;features=eyJ0ZndfZXhwZXJpbWVudHNfY29va2llX2V4cGlyYXRpb24iOnsiYnVja2V0IjoxMjA5NjAwLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdHdlZXRfZW1iZWRfOTU1NSI6eyJidWNrZXQiOiJodGUiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3NwYWNlX2NhcmQiOnsiYnVja2V0Ijoib2ZmIiwidmVyc2lvbiI6bnVsbH19&amp;frame=false&amp;hideCard=false&amp;hideThread=false&amp;id=791739163481550848&amp;lang=en&amp;origin=http%3A%2F%2Flocalhost%3A8080%2Fp%2Fmulti-streaming-broadcaster-twitch-youtube-dailymotion-hitbox&amp;sessionId=490c3695633b6176f8938c86e92a98defa9d7907&amp;siteScreenName=AnthonyKGROSS&amp;theme=light&amp;widgetsVersion=2582c61%3A1645036219416&amp;width=550px" data-tweet-id="791739163481550848" frameborder="0"></iframe></div>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a href="https://github.com/anthonykgross/docker-broadcaster/stargazers" target="_blank">
+    <img alt="Thumbnail" src="/assets/images/articles/github-docker-broadcaster.png">
+</a>
+
+<h3 class="mt-8">Conclusion</h3>
+<p>
+    Dans un premier temps, sachez que je m'excuse pour les fautes d'orthographe : j'ai du écrire rapidement cet article car j'en ai un peu trop fait la promo sur les réseaux sociaux !
+    Sachez néanmoins que ça m'a beaucoup appris de Docker en réalisant cette image. <br>Pour finir je voudrais remercier mon frangin qui, avec ses idées à la con parfois, m'a donné un bel objectif : J'te kiff' bro!
+    Ah et ... merci à Clément Vidal pour m'avoir fait comprendre quelques subtilités de Docker et m'avoir aidé à écrire la doc en anglais (en cours de relecture).<br>
+    Sur ce, j'ai garé mon panda en double file. Tchou !
+</p>

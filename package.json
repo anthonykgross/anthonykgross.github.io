@@ -5,6 +5,7 @@
   "repository": "git@github.com:anthonykgross/anthonykgross.github.io.git",
   "license": "MIT",
   "dependencies": {
+    "@highlightjs/cdn-assets": "^11.4.0",
     "autoprefixer": "^10.4.0",
     "clipboard": "^2.0.8",
     "font-awesome": "^4.7.0",
@@ -14,13 +15,10 @@
     "gulp-uglify": "^3.0.2",
     "gulp-uglifycss": "^1.1.0",
     "jquery": "^3.6.0",
-    "jticker": "https://github.com/stephband/jticker",
-    "jwplayer": "https://github.com/sathyapulse/jwplayer#6.10",
     "magnific-popup": "^1.1.0",
     "noty": "^3.2.0-beta-deprecated",
     "postcss": "^8.4.1",
     "postcss-import": "^14.0.2",
-    "prismjs": "^1.25.0",
     "tailwindcss": "^2.2.19",
     "urijs": "^1.19.7"
   }

@@ -49,13 +49,13 @@ socials:
     fontawesome: fa fa-cubes
   rss:
     username: AnthonyKGROSS
-    url: /rss
+    url: /feed.xml
     fontawesome: fa fa-rss
 
 # Build settings
 plugins:
-#  - jekyll-feed
-#  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-seo-tag
   - jekyll-postcss
 
 # other configs
