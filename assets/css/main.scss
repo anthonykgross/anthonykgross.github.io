@@ -53,15 +53,25 @@ a {
   }
 }
 
-.post a {
-  @apply text-akgRed no-underline hover:underline;
+.content a, .post a {
+  @apply text-akgBlue underline hover:text-akgBlue-dark;
 }
+
+.card a, .author a {
+  @apply text-akgBlack no-underline hover:text-akgBlue;
+}
+
 .post p {
   text-indent: 2rem;
   @apply text-justify;
 }
 
-.card .thumb::before {
+pre code {
+  @apply my-2;
+}
+
+.card .thumb::before,
+.author .thumb::before {
   position: absolute;
   content: " ";
   left: 0;
@@ -74,6 +84,7 @@ a {
   transition: all 350ms;
   @apply bg-akgBlue;
 }
-.card .thumb:hover::before {
+.card .thumb:hover::before,
+.author .thumb:hover::before {
   @apply opacity-60;
 }
