@@ -7,15 +7,15 @@ permalink: /cv
 {% include title.html
     title='Architecte Logiciel'
 %}
-<div class="flex items-center justify-between text-justify">
+<div class="flex flex-col-reverse xl:flex-row xl:items-center justify-between text-justify">
     <div>
-        <h3>Études</h3>
+        <h3 class="mt-8">Études</h3>
         <div>2011 – Licence Informatique SIL-NTI (Nouvelles Technologies)</div>
         <div>2010 – BTS informatique de gestion option développeur d’applications</div>
         <div>2008 – BAC STG (télécommunication-gestion) avec mention AB</div>
     </div>
     <div>
-        <h3>Coordonnées</h3>
+        <h3 class="mt-8">Coordonnées</h3>
         <div>
             <i class="fa fa-twitter px-3 text-1xl"></i>
             <a href="{{ site.socials['twitter'].url }}">{{ site.socials['twitter'].url }}</a>
@@ -32,11 +32,11 @@ permalink: /cv
     <img class="w-36" src="/assets/images/photo_143.jpg"/>
 </div>
 
-<div class="mt-6 text-justify">
-    <h3>Connaissances informatiques</h3>
-    <div class="grid grid-cols-3 gap-3">
+<div class="text-justify">
+    <h3 class="mt-8">Connaissances informatiques</h3>
+    <div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-3">
         <div>
-            <h4>Langages</h4>
+            <h4 class="mt-4">Langages</h4>
             <div>
                 Java (POO, C/S, Threads, notions OpenGL, MVC)
             </div>
@@ -51,7 +51,7 @@ permalink: /cv
             </div>
         </div>
         <div>
-            <h4>Web</h4>
+            <h4 class="mt-4">Web</h4>
             <div>
                 PHP (POO, Zend Framework, Symfony 1.4 & 2+)
             </div>
@@ -69,7 +69,7 @@ permalink: /cv
             </div>
         </div>
         <div>
-            <h4>Technologies</h4>
+            <h4 class="mt-4">Technologies</h4>
             <div>
                 ZeroMQ, ActiveMQ, Celery (& RabbitMQ)
             </div>
@@ -84,7 +84,7 @@ permalink: /cv
             </div>
         </div>
         <div>
-            <h4>API</h4>
+            <h4 class="mt-4">API</h4>
             <div>
                 Youtube, DailyMotion
             </div>
@@ -96,7 +96,7 @@ permalink: /cv
             </div>
         </div>
         <div>
-            <h4>Mobile</h4>
+            <h4 class="mt-4">Mobile</h4>
             <div>
                 Android (toutes versions)
             </div>
@@ -108,7 +108,7 @@ permalink: /cv
             </div>
         </div>
         <div>
-            <h4>Bases de données</h4>
+            <h4 class="mt-4">Bases de données</h4>
             <div>
                 MySQL
             </div>
@@ -120,7 +120,7 @@ permalink: /cv
             </div>
         </div>
         <div>
-            <h4>Analyse Informatique</h4>
+            <h4 class="mt-4">Analyse Informatique</h4>
             <div>
                 Merise/2
             </div>
@@ -129,7 +129,7 @@ permalink: /cv
             </div>
         </div>
         <div>
-            <h4>Logiciels</h4>
+            <h4 class="mt-4">Logiciels</h4>
             <div>
                 Audio/Photo/Vidéo (Photoshop, Magix Vidéo Deluxe, Ulead Photo Impact)
             </div>
@@ -141,7 +141,7 @@ permalink: /cv
             </div>
         </div>
         <div>
-            <h4>Réseau</h4>
+            <h4 class="mt-4">Réseau</h4>
             <div>
                 Installation et configuration
             </div>
@@ -153,9 +153,9 @@ permalink: /cv
     </div>
 </div>
 
-<div class="mt-6 text-justify">
-    <h3>Expériences professionnelles</h3>
-    <div class="grid grid-cols-4 gap-1 mb-6">
+<div class="text-justify">
+    <h3 class="mt-8">Expériences professionnelles</h3>
+    <div class="grid grid-cols-4 gap-1 py-6 border-akgFontGrey border-b border-dashed">
         <div>Avril 2018</div>
         <div>CDI 1 an</div>
         <div>Kalyzée (Marseille)</div>
@@ -174,7 +174,7 @@ permalink: /cv
             docker, ovh
         </div>
     </div>
-    <div class="grid grid-cols-4 gap-1 mb-6">
+    <div class="grid grid-cols-4 gap-1 py-6 border-akgFontGrey border-b border-dashed">
         <div>Juin 2016</div>
         <div>CDI 2 ans+</div>
         <div>Pepperstone (Melbourne, Australie)</div>
@@ -196,7 +196,7 @@ permalink: /cv
             docker, mysql, aws, digital ocean
         </div>
     </div>
-    <div class="grid grid-cols-4 gap-1 mb-6">
+    <div class="grid grid-cols-4 gap-1 py-6 border-akgFontGrey border-b border-dashed">
         <div>Février 2014</div>
         <div>CDD 2 ans+</div>
         <div>CNRS (Laboratoire d’Astrophysique de Marseille)</div>
@@ -217,7 +217,7 @@ permalink: /cv
             docker, zMq, postgres, angularjs
         </div>
     </div>
-    <div class="grid grid-cols-4 gap-1 mb-6">
+    <div class="grid grid-cols-4 gap-1 py-6 border-akgFontGrey border-b border-dashed">
         <div>Avril 2012</div>
         <div>CDD 2 ans+</div>
         <div>Kalyzée (Marseille)</div>
@@ -237,7 +237,7 @@ permalink: /cv
             proxmox, activeMq, flash, mysql
         </div>
     </div>
-    <div class="grid grid-cols-4 gap-1 mb-6">
+    <div class="grid grid-cols-4 gap-1 py-6 border-akgFontGrey border-b border-dashed">
         <div>Septembre 2011</div>
         <div>CDD 6 mois</div>
         <div>LordOfWeb (Marseille)</div>
@@ -254,7 +254,7 @@ permalink: /cv
             php, javascript, html/css, prestashop
         </div>
     </div>
-    <div class="grid grid-cols-4 gap-1 mb-6">
+    <div class="grid grid-cols-4 gap-1 py-6 border-akgFontGrey border-b border-dashed">
         <div>Juin 2011</div>
         <div>Stage 12 semaines</div>
         <div>Idvive SARL (Marseille)</div>
@@ -271,7 +271,7 @@ permalink: /cv
             php, javascript, html/css, prestashop, zendFramework1, OVH API, postgres
         </div>
     </div>
-    <div class="grid grid-cols-4 gap-1 mb-6">
+    <div class="grid grid-cols-4 gap-1 py-6 border-akgFontGrey border-b border-dashed">
         <div>Janvier 2010</div>
         <div>Stage 9 semaines</div>
         <div>GEIQ BTP 13 (Marseille)</div>
@@ -287,7 +287,7 @@ permalink: /cv
             php, javascript, html/css
         </div>
     </div>
-    <div class="grid grid-cols-4 gap-1 mb-6">
+    <div class="grid grid-cols-4 gap-1 py-6 border-akgFontGrey border-b border-dashed">
         <div>Septembre 2009</div>
         <div>CDD 2 mois</div>
         <div>Kosmetik-Direkt24 (Allemagne)</div>
@@ -304,7 +304,7 @@ permalink: /cv
             php, javascript, html/css, prestashop
         </div>
     </div>
-    <div class="grid grid-cols-4 gap-1">
+    <div class="grid grid-cols-4 gap-1 py-6">
         <div>Mai 2009</div>
         <div>Stage 6 semaines</div>
         <div>R&D Internet (La Ciotat)</div>
@@ -322,15 +322,15 @@ permalink: /cv
     </div>
 </div>
 
-<div class="mt-6 text-justify">
-    <div class="grid grid-cols-2 gap-6">
+<div class="text-justify">
+    <div class="grid lg:grid-cols-2 gap-3">
         <div>
-            <h3>Langues vivantes</h3>
+            <h3 class="mt-4">Langues vivantes</h3>
             <div>Anglais courant (lu – parlé – écrit).</div>
             <div>Allemand courant (lu – parlé – écrit).</div>
         </div>
         <div>
-            <h3>Informations personnelles</h3>
+            <h3 class="mt-4">Informations personnelles</h3>
             <div>{{ "now" | date: "%Y" | minus: 1988 }} ans, pacsé, 2 crapules.</div>
             <div>Loisirs : Informatique, mangas, guitare, lecture, activités physiques.</div>
         </div>
