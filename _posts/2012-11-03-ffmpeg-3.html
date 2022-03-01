@@ -1,51 +1,116 @@
 ---
 layout: post
-permalink: /p/ffmpeg-partie-3-commandes-avancees
-title: FFmpeg - Partie 3 - Commandes avancées.
+permalink: /p/memento-ffmpeg
+title: Memento FFmpeg
 intro:
 image: /assets/images/articles/ffmpeg.jpg
 ---
+<h3>Information sur une vidéo</h3>
+<pre class=" language-bash"><code>
+    ffprobe -i maVideo.avi
+</code></pre>
+
+<h3 class="mt-8">Convertir une&nbsp;vidéo&nbsp;en&nbsp;série&nbsp;d'images</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.mpg image%d.jpg
+</code></pre>
+
+<h3 class="mt-8">Extraire un son d'une vidéo, et la sauvegarder en MP3</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i source_video.avi -vn -ar 44100 -ac 2 -ab 192 -f mp3 sound.mp3
+</code></pre>
+
+<h3 class="mt-8">Convertir .avi en .mpg</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video_origine.avi video_finale.mpg
+</code></pre>
+
+<h3 class="mt-8">Convertir .avi en gif animé non compressé</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video_origine.avi gif_anime.gif
+</code></pre>
+
+<h3 class="mt-8">Convertir .avi en.flv</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video_origine.avi -ab 56 -ar 44100 -b 200 -r 15 -s 320x240 -f flv video_finale.flv
+</code></pre>
+
+<h3 class="mt-8">Couper un MP3 de la 8ème seconde et d'une durée de 23 secondes</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i source_audio.mp3 -ss 08 -t 23 finale_audio.mp3
+</code></pre>
+
 <h3>Effacer la piste audio 0:2 d'une vidéo</h3>
-<pre class=" language-bash"><code class=" language-bash">ffmpeg -i video_origine.avi -i -map 0:0 -map 0:1 -map 0:3 -codec copy video_finale.avi</code></pre>
+<pre class=" language-bash"><code>
+    ffmpeg -i video_origine.avi -i -map 0:0 -map 0:1 -map 0:3 -codec copy video_finale.avi
+</code></pre>
 
 <h3 class="mt-8">Remplacer un son dans une vidéo</h3>
-<pre class="language-bash"><code>ffmpeg -i video_origine.avi -i son.mp3 -codec copy video_finale.avi</code></pre>
+<pre class="language-bash"><code>
+    ffmpeg -i video_origine.avi -i son.mp3 -codec copy video_finale.avi
+</code></pre>
 
 <h3 class="mt-8">Ajouter un son à une vidéo</h3>
-<pre class="language-bash"><code>ffmpeg -i video_origine.avi -i son.mp3 -map 0 -map 1 -codec copy video_finale.avi</code></pre>
+<pre class="language-bash"><code>
+    ffmpeg -i video_origine.avi -i son.mp3 -map 0 -map 1 -codec copy video_finale.avi
+</code></pre>
 
 <h3 class="mt-8">Ajouter plusieurs sons à une vidéo</h3>
-<pre class="language-bash"><code>ffmpeg -i video_origine.avi -i son1.mp3 -i son5.mp3 -i son9.mp3 -map 0 -map 1 -map 2 -map 3 -codec copy video_finale.avi</code></pre>
+<pre class="language-bash"><code>
+    ffmpeg -i video_origine.avi -i son1.mp3 -i son5.mp3 -i son9.mp3 -map 0 -map 1 -map 2 -map 3 -codec copy video_finale.avi
+</code></pre>
 
 <h3 class="mt-8">Spécifier la langue allemande de la piste audio 3</h3>
-<pre class="language-bash"><code>ffmpeg -i video_origine.mov -metadata:s:a:2 language=ger -map 0 -codec copy video_finale.mov</code></pre>
+<pre class="language-bash"><code>
+    ffmpeg -i video_origine.mov -metadata:s:a:2 language=ger -map 0 -codec copy video_finale.mov
+</code></pre>
 
 <h3 class="mt-8">Ajouter un son à une vidéo entre la piste audio 1 (0:1) et 2 (0:2)</h3>
-<pre class="language-bash"><code>ffmpeg -i video_origine.avi -i son.mp3 -map 0:1 -map 1 -map 0:2 -codec copy video_finale.avi</code></pre>
+<pre class="language-bash"><code>
+    ffmpeg -i video_origine.avi -i son.mp3 -map 0:1 -map 1 -map 0:2 -codec copy video_finale.avi
+</code></pre>
 
 <h3 class="mt-8">Convertir .avi multipiste (plusieurs flux audio) en mpeg et conserver tous les flux (audio+ vidéo)</h3>
-<pre class="language-bash"><code>ffmpeg -i source_video.avi -map 0 finale_video.mpeg</code></pre>
+<pre class="language-bash"><code>
+    ffmpeg -i source_video.avi -map 0 finale_video.mpeg
+</code></pre>
 
 <h3 class="mt-8">Convertir .avi multipiste (plusieurs flux audio) en mpeg et conserver la piste 1 et 3</h3>
-<pre class="language-bash"><code>ffmpeg -i source_video.avi -map 0:0 -map 0:2 finale_video.mpeg</code></pre>
+<pre class="language-bash"><code>
+    ffmpeg -i source_video.avi -map 0:0 -map 0:2 finale_video.mpeg
+</code></pre>
 
 <h3 class="mt-8">Graver un sous-titre ASS sur une video MP4</h3>
-<pre class="language-bash"><code>ffmpeg -i source_video.mp4 -vf ass=sous_titre.ass finale_video.mp4</code></pre>
+<pre class="language-bash"><code>
+    ffmpeg -i source_video.mp4 -vf ass=sous_titre.ass finale_video.mp4
+</code></pre>
 
 <h3 class="mt-8">Fusionner un MP3 (son2) à la fin d'un autre (son1)</h3>
-<pre class="language-bash"><code>ffmpeg -i "concat:son1.mp3|son2.mp3" output.mp3</code></pre>
+<pre class="language-bash"><code>
+    ffmpeg -i "concat:son1.mp3|son2.mp3" output.mp3
+</code></pre>
 
 <h3 class="mt-8">Extraire une thumbnail toutes les 5 minutes de video</h3>
-<pre class="language-bash"><code>ffmpeg -i video_origine.mp4 -vf fps=fps=1/300 %d.png</code></pre>
+<pre class="language-bash"><code>
+    ffmpeg -i video_origine.mp4 -vf fps=fps=1/300 %d.png
+</code></pre>
 
 <h3 class="mt-8">Doubler la durée d'une video (video + audio)</h3>
-<pre class="language-bash"><code>ffmpeg -i video_origine.mp4 -filter:a 'atempo=0.5' -filter:v 'setpts=2.0*PTS' finale_video.mp4</code></pre>
+<pre class="language-bash"><code>
+    ffmpeg -i video_origine.mp4 -filter:a 'atempo=0.5' -filter:v 'setpts=2.0*PTS' finale_video.mp4
+</code></pre>
 
 <h3 class="mt-8">Superposer deux pistes audio</h3>
-<pre class="language-bash"><code>ffmpeg -i track1.mp3 -i track2.mp3 -filter_complex "amerge,pan=stereo:c0&lt;c0+c2:c1&lt;c1+c3" -c:a libmp3lame -q:a 4 final.mp3</code></pre>
+<pre class="language-bash"><code>
+    ffmpeg -i track1.mp3 -i track2.mp3 -filter_complex "amerge,pan=stereo:c0&lt;c0+c2:c1&lt;c1+c3" -c:a libmp3lame -q:a 4 final.mp3
+</code></pre>
 
 <h3 class="mt-8">Réduit le volume d'un son de 90%</h3>
-<pre class="language-bash"><code>ffmpeg -i track1.mp3 -af "volume=0.1" final.mp3</code></pre>
+<pre class="language-bash"><code>
+    ffmpeg -i track1.mp3 -af "volume=0.1" final.mp3
+</code></pre>
 
 <h3 class="mt-8">Créer le .M3u8 d'une video</h3>
-<pre class="language-bash"><code>ffmpeg -i video_origine.mp4 -map 0 -bsf h264_mp4toannexb -c copy -f segment -segment_list video_origine.m3u8 video_origine%03d.ts</code></pre>
+<pre class="language-bash"><code>
+    ffmpeg -i video_origine.mp4 -map 0 -bsf h264_mp4toannexb -c copy -f segment -segment_list video_origine.m3u8 video_origine%03d.ts
+</code></pre>
