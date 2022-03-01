@@ -10,7 +10,7 @@
         </h4>
         <div>
             <i class="fa fa-calendar pr-2"></i>
-            {{ include.date | date: "%d/%m/%Y" }}
+            {{ include.date | date: "%Y-%m-%d"}}
         </div>
         <p class="flex-grow py-3 pb-4">
             {{ include.intro }}
@@ -25,7 +25,7 @@
                 </a>
             </div>
             <div class="underline">
-                <a href="{{ include.url }}#disqus_thread">0 commentaires</a>
+                <a href="{{ include.url }}#disqus_thread">0 comments</a>
             </div>
         </div>
     </div>

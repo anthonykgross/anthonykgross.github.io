@@ -21,7 +21,7 @@
 title: Anthony K GROSS
 baseurl: ""
 url: "https://anthonykgross.fr"
-lang: fr-FR
+lang: en-US
 env: prod
 
 project_url: https://github.com/anthonykgross/anthonykgross.github.io
@@ -57,6 +57,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-postcss
+  - jekyll-redirect-from
 
 # other configs
 exclude:
