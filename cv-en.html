@@ -1,21 +1,19 @@
 ---
 layout: full
-title: Expériences professionnelles
+title: Professional experiences
 description: >-
 
-redirect_from:
-    - /fr/cv
-permalink: /cv
-text-rotator: Expériences professionnelles
+permalink: /en/cv
+text-rotator: Professional experiences
 ---
 
-{% assign cv = site.data.cv['fr'] %}
+{% assign cv = site.data.cv['en'] %}
 
 <div class="flex flex-row justify-end">
-    <img class="w-10" src="/assets/images/flag_fr.png" />
-    <a href="/en/cv">
-        <img class="opacity-50 w-10 hover:opacity-100" src="/assets/images/flag_en.png" />
+    <a href="/cv">
+        <img class="opacity-50 w-10 hover:opacity-100" src="/assets/images/flag_fr.png" />
     </a>
+    <img class="w-10" src="/assets/images/flag_en.png" />
 </div>
 
 <div class="lg:grid grid-cols-2 text-justify">
@@ -47,16 +45,16 @@ text-rotator: Expériences professionnelles
 </div>
 
 <div>
-    <h3 class="mt-8">Objectif de carrière</h3>
+    <h3 class="mt-8">Career Objectives</h3>
     <p>{{ cv.objectives }}</p>
 </div>
 
 <div class="lg:grid grid-cols-2 gap-3 text-justify">
     <div>
-        <h3 class="mt-8">Études</h3>
+        <h3 class="mt-8">Education</h3>
         <ul class="list-disc ml-12">
             {% for education in cv.education %}
-            <li>{{ education }}</li>
+                <li>{{ education }}</li>
             {% endfor %}
         </ul>
     </div>
@@ -64,14 +62,14 @@ text-rotator: Expériences professionnelles
         <h3 class="mt-8">Certifications</h3>
         <ul class="list-disc ml-12">
             {% for certification in cv.certifications %}
-            <li>{{ certification }}</li>
+                <li>{{ certification }}</li>
             {% endfor %}
         </ul>
     </div>
 </div>
 
 <div class="text-justify">
-    <h3 class="mt-8">Connaissances informatiques</h3>
+    <h3 class="mt-8">IT Technical Skills</h3>
     <div class="lg:grid grid-cols-2 xl:grid-cols-3 gap-3">
         {% for s in cv.skills %}
             <div>
@@ -85,7 +83,7 @@ text-rotator: Expériences professionnelles
 </div>
 
 <div class="text-justify">
-    <h3 class="mt-8">Expériences professionnelles</h3>
+    <h3 class="mt-8">Professional experiences</h3>
     {% for experience in cv.experiences %}
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-1 py-6 border-akgFontGrey border-b border-dashed">
             <div>{{ experience.date }}</div>
@@ -106,15 +104,15 @@ text-rotator: Expériences professionnelles
 <div class="text-justify">
     <div class="lg:grid grid-cols-2 gap-3">
         <div>
-            <h3 class="mt-4">Langues vivantes</h3>
+            <h3 class="mt-4">Languages known</h3>
             {% for language in cv.profile.languages %}
                 <div>{{ language }}</div>
             {% endfor %}
         </div>
         <div>
-            <h3 class="mt-4">Informations personnelles</h3>
-            <div>{{ "now" | date: "%Y" | minus: 1988 }} ans, {{ cv.profile.status }}</div>
-            <div>Loisirs : {{ cv.profile.interests }}</div>
+            <h3 class="mt-4">Profile</h3>
+            <div>{{ "now" | date: "%Y" | minus: 1988 }} y.o, {{ cv.profile.status }}</div>
+            <div>Interests : {{ cv.profile.interests }}</div>
         </div>
     </div>
 </div>

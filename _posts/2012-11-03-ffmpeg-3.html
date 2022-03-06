@@ -1,12 +1,12 @@
 ---
 layout: post
-permalink: /p/memento-ffmpeg
+permalink: /posts/memento-ffmpeg
 title: Record, convert and stream audio and video with FFmpeg
 text-rotator: Memento FFmpeg
 intro: >-
-    I'm getting old and I need to write everything. Welcome on my memento for FFmpeg ! <br/>
+    I'm getting old and I need to write everything. Welcome to my memento for FFmpeg ! <br/>
     Converting video formats to another one, generating thumbnails, merging sounds; everything is there !
-image: /assets/images/posts/ffmpeg.jpg
+image: /assets/images/posts/memento-ffmpeg/thumbnail.png
 ---
 <p>
     FFmpeg is a free and open-source software project consisting of a suite of libraries and programs for handling video, audio, and other multimedia files and streams.
@@ -16,6 +16,11 @@ image: /assets/images/posts/ffmpeg.jpg
 <h3 class="mt-8">Get file Information from a media file</h3>
 <pre class=" language-bash"><code>
     ffprobe video.avi
+</code></pre>
+
+<h3 class="mt-8">Get file Information to JSON file</h3>
+<pre class=" language-bash"><code>
+    ffprobe -v quiet -print_format json -show_format -show_streams output.mp4 > output.json
 </code></pre>
 
 <h3 class="mt-8">Convert a video to X images</h3>
@@ -28,17 +33,17 @@ image: /assets/images/posts/ffmpeg.jpg
     ffmpeg -i video.avi -vn -ar 44100 -ac 2 -ab 192 -f mp3 output.mp3
 </code></pre>
 
-<h3 class="mt-8">Convert .avi to .mpg</h3>
+<h3 class="mt-8">Convert AVI to MPEG</h3>
 <pre class="language-bash"><code>
     ffmpeg -i video.avi output.mpg
 </code></pre>
 
-<h3 class="mt-8">Convert .avi to animated gif</h3>
+<h3 class="mt-8">Convert AVI to animated GIF</h3>
 <pre class="language-bash"><code>
     ffmpeg -i video.avi output.gif
 </code></pre>
 
-<h3 class="mt-8">Convert .avi to .flv</h3>
+<h3 class="mt-8">Convert AVI to FLV</h3>
 <pre class="language-bash"><code>
     ffmpeg -i video.avi -ab 56 -ar 44100 -b 200 -r 15 -s 320x240 -f flv output.flv
 </code></pre>
@@ -78,7 +83,7 @@ image: /assets/images/posts/ffmpeg.jpg
     ffmpeg -i video.avi -i audio.mp3 -map 0:1 -map 1 -map 0:2 -codec copy output.avi
 </code></pre>
 
-<h3 class="mt-8">Convert a multitrack video to mpeg</h3>
+<h3 class="mt-8">Convert a multitrack video to MPEG</h3>
 <pre class="language-bash"><code>
     ffmpeg -i video.avi -map 0 output.mpeg
 </code></pre>
@@ -113,12 +118,12 @@ image: /assets/images/posts/ffmpeg.jpg
     ffmpeg -i track1.mp3 -i track2.mp3 -filter_complex "amerge,pan=stereo:c0&lt;c0+c2:c1&lt;c1+c3" -c:a libmp3lame -q:a 4 output.mp3
 </code></pre>
 
-<h3 class="mt-8">Lower the audio volume to 90%</h3>
+<h3 class="mt-8">Lower the audio volume to 10%</h3>
 <pre class="language-bash"><code>
     ffmpeg -i track1.mp3 -af "volume=0.1" output.mp3
 </code></pre>
 
-<h3 class="mt-8">Convert a video to .M3u8</h3>
+<h3 class="mt-8">Convert a video to M3U8</h3>
 <pre class="language-bash"><code>
     ffmpeg -i video.mp4 -map 0 -bsf h264_mp4toannexb -c copy -f segment -segment_list output.m3u8 output-%03d.ts
 </code></pre>

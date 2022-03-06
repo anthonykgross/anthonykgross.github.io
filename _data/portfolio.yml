@@ -1,4 +1,4 @@
-- url: /p/multi-streaming-broadcaster-twitch-youtube-dailymotion-hitbox
+- url: /posts/multi-streaming-broadcaster-twitch-youtube-dailymotion-hitbox
   date: 2015-09-09
   title: Docker Broadcaster
   intro: |
@@ -9,4 +9,4 @@
     pour remédier au problème : «Ne choisit pas, fait les toutes ! ». Je vais
     vous montrer comment streamer sur toutes les plateformes en capturant qu'une
     seule fois.
-  image: /assets/images/posts/docker-broadcaster.png
+  image: /assets/images/posts/docker-broadcaster/thumbnail.png

@@ -1,0 +1,336 @@
+---
+layout: post
+permalink: /posts/jquery-to-javascript
+title: Convert jQuery to Javascript
+intro: >-
+    I would like to avoid using jQuery everywhere for any reasons. This is my
+    essential cheat sheet to convert jQuery to Javascript.
+image: /assets/images/posts/jquery-to-javascript/thumbnail.png
+---
+<p>
+</p>
+
+<h3 class="mt-8">Tree Traversal</h3>
+<h4 class="mt-4">
+    Select Elements
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class a');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelectorAll('.my-class a');
+    </code></pre>
+</div>
+
+
+<h4 class="mt-4">
+    Select first element
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class a').first();
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class a');
+    </code></pre>
+</div>
+
+
+<h4 class="mt-4">
+    Find child elements
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class a').find('div');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+let nodes = document.querySelectorAll('.my-class a');
+for (let i = 0; i < nodes.length; i++) {
+    if (nodes[i].querySelector('div')) {
+      // nodes[i].querySelector('div').innerHTML = 'Found !'
+   }
+}
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Select parent
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class a').parent();
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class a').parentNode;
+    </code></pre>
+</div>
+
+<h3 class="mt-8">Class Attribute</h3>
+<h4 class="mt-4">
+    Add class
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').addClass('new-class');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').classList.add('new-class');
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Remove class
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').removeClass('new-class');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').classList.remove('new-class');
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Toggle class
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').toggleClass('new-class');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').classList.toggle('new-class');
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Has class
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').hasClass('new-class');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').classList.contains('new-class');
+    </code></pre>
+</div>
+
+<h3 class="mt-8">General Attributes</h3>
+<h4 class="mt-4">
+    Get Attribute
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').attr('href');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').getAttribute('href');
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Set Attribute
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').attr('href', 'index.html');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').getAttribute('href', 'index.html');
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Remove Attribute
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').removeAttr('href');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').removeAttribute('href');
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Get HTML content
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').html();
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').innerHTML;
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Set HTML content
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').html('my html content');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').innerHTML = 'my html content';
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Get CSS style
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').css('property-name');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').style.{propertyName};
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Set CSS style
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').css('property-name', 'value');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').style.{propertyName} = value;
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Get height
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').height();
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').offsetHeight;
+// or
+document.querySelector('.my-class').clientHeight;
+    </code></pre>
+</div>
+
+<h3 class="mt-8"> DOM Insertion</h3>
+<h4 class="mt-4">
+    Append a new child
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+let child = $('&lt;div /&gt;');
+$('.my-class').append(child);
+    </code></pre>
+    <pre class=" language-javascript"><code>
+let child = document.createElement("div");
+document.querySelector('.my-class').appendChild(child);
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Prepend a new child
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+let child = $('&lt;div /&gt;');
+$('.my-class').prepend(child);
+    </code></pre>
+    <pre class=" language-javascript"><code>
+let child = document.createElement("div");
+let node = document.querySelector('.my-class');
+node.insertBefore(child, node.firstChild);
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Remove children
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').empty();
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').replaceChildren();
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Insert after an element
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+let child = $('&lt;div /&gt;');
+$('.my-class').after(child);
+    </code></pre>
+    <pre class=" language-javascript"><code>
+let child = document.createElement("div");
+let node = document.querySelector('.my-class');
+node.parentNode.insertBefore(child, node.nextSibling);
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Insert before an element
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+let child = $('&lt;div /&gt;');
+$('.my-class').after(child);
+    </code></pre>
+    <pre class=" language-javascript"><code>
+let child = document.createElement("div");
+let node = document.querySelector('.my-class');
+node.parentNode.insertBefore(child, node);
+    </code></pre>
+</div>
+
+<h3 class="mt-8">Event Handler Attachment</h3>
+<h4 class="mt-4">
+    Add Event Listener
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').on('click', function () {
+    ...
+});
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').addEventListener('click', function() {
+   ...
+});
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Remove Event Listener
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').off('click');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').removeEventListener('click');
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    DOM Is Ready
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$(function() {
+    // event handler
+});
+    </code></pre>
+    <pre class=" language-javascript"><code>
+if (document.readyState === 'complete' || (document.readyState !== 'loading')) {
+    ...
+} else {
+    document.addEventListener('DOMContentLoaded', function() {
+        ...
+    });
+}
+    </code></pre>
+</div>

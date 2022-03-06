@@ -1,0 +1,322 @@
+fr:
+  title: Architecte Logiciel
+  objectives: >-
+
+  profile:
+    status: pacsé, 2 crapules.
+    languages:
+      - Anglais courant (lu – parlé – écrit).
+      - Allemand courant (lu – parlé – écrit).
+    interests: Informatique, mangas, guitare, lecture, activités physiques.
+
+  education:
+    - 2011 – Licence Informatique SIL-NTI (Nouvelles Technologies)
+    - 2010 – BTS informatique de gestion option développeur d’applications
+    - 2008 – BAC STG (télécommunication-gestion) avec mention AB
+
+  certifications:
+    - '2021 – Kubernetes Mastery: Hands-On Lessons From A Docker Captain - Udemy.'
+    - '2020 – MongoDB : Leading NoSQL Database from scratch - Udemy.'
+    - 2018 – AWS Certified Solutions Architect - Associate 2018 - Udemy.
+    - '2017 – Artificial Intelligence A-Z : Learn how to build an AI - Udemy.'
+    - 2016 – Arduino - Fun MOOC.
+    - 2016 – Web semantic et Web data - Fun MOOC.
+    - 2015 – Docker - Treeptik.
+
+  skills:
+    - category: Langages
+      skills:
+        - Java (POO, C/S, Threads, notions OpenGL, MVC)
+        - C# (POO, connexion aux bases de données)
+        - Python (& Django)
+        - Bash
+
+    - category: Web
+      skills:
+        - PHP (POO, Zend Framework, Symfony 1.4 & 2+)
+        - Javascript (Ajax, jQuery + plugins, NodeJs, AngularJS, Gulp)
+        - HTML, CSS, XML (norme W3C).
+        - 'E-commerce: ZenCart, Joomla, PrestaShop (+modules)'
+        - Flash (notions)
+
+    - category: Technologies
+      skills:
+        - ZeroMQ, ActiveMQ, Celery (& RabbitMQ)
+        - 'Conception de webservices (Client et Serveur) : REST, SOAP.'
+        - 'Systèmes d’authentification/autorisation : OAuth2, WSSE, OpenID'
+        - 'Intégration continue : Travis CI, Jenkins'
+
+    - category: API
+      skills:
+        - Youtube, DailyMotion
+        - Facebook, Twitter, Google
+        - OVH
+
+    - category: Mobile
+      skills:
+        - Android (toutes versions)
+        - 'Market : Google Play'
+        - Design responsive
+
+    - category: Bases de données
+      skills:
+        - MySQL
+        - PostgreSQL
+        - Oracle
+
+    - category: Analyse Informatique
+      skills:
+        - Merise/2
+        - UML
+
+    - category: Logiciels
+      skills:
+        - Audio/Photo/Vidéo (Photoshop, Magix Vidéo Deluxe, Ulead Photo Impact)
+        - Bureautique (Word, Excel, Access, Powerpoint) - MicrosoftOffice & LibreOffice
+        - Conception (MySQL Workbench, ArgoUML, Dia Diagramm)
+
+    - category: Réseau
+      skills:
+        - Installation et configuration
+        - Serveur Svn, Git, Web, Ftp, Encodage, Streaming (Wowza), Virtualisation (Proxmox, Docker)
+
+  experiences:
+    - date: Avril 2018
+      contract: CDI 1 an
+      company: Kalyzée (Marseille)
+      position: Architecte logiciel
+      duties: >-
+        J'ai principalement mis en place une plateforme permettant à nos 
+        équipes de gérer les boitiers streaming à distance. Grace à 
+        Django, mon objectif était de rendre possible la maintenance 
+        de tout le parc depuis n'importe ou sans intervention technique 
+        manuelle. Les principales fonctionnalitées étaient la mise à 
+        jour et l'accès aux logs ainsi que le controle de la caméra et du stockage.
+      skills: java, maven, php, javascript, android, python, html/css, django, docker, ovh
+
+    - date: Juin 2016
+      contract: CDI 2 ans+
+      company: Pepperstone (Melbourne, Australie)
+      position: Architecte logiciel
+      duties: >-
+        Mon role était de maintenir différentes applications dans le domaine de la finance. Une de mes taches était de développer et maintenir un programme permettant de détecter le blanchiment d'argents via le comportement des clients. J'ai aussi conçu en collaboration avec l'équipe marketing un site web sur l'actualité Forex doté des dernieres technos web marketing du moment et l'activation de campagnes d'ads. Pour finir, mon fil rouge était la mise en place d'un logiciel de réconcialition des transactions financières depuis tous les moyens de paiements utilisés, les banques et les achats/ventes des clients.
+      skills: php, symfony, javascript, html/css, elasticsearch, ansible, docker, mysql, aws, digital ocean
+
+    - date: Février 2014
+      contract: CDD 2 ans+
+      company: CNRS (Laboratoire d’Astrophysique de Marseille)
+      position: Ingénieur d'étude
+      duties: >-
+        Après avoir passé quelques temps sur le debuggage d'une application en java, j'ai developpé un site web en python(django) permettant de savoir si deux étoiles appartiennent au même système, en collaboration avec différents laboratoires. J'ai aussi participé à l'établissement de petits outils facilitant la maintenance de plus gros. J'ai énormement voyagé afin de promouvoir les travaux de notre service au travers de conférences internationales et de formations.
+      skills: java, maven, php, javascript, python, html/css, django, docker, zMq, postgres, angularjs
+
+    - date: Avril 2012
+      contract: CDD 2 ans+
+      company: Kalyzée (Marseille)
+      position: Architecte logiciel
+      duties: >-
+        Lors de mes années Kalyzée, j'ai du concevoir et mettre en place différents produits. De l'installation de serveur en tout genre (Virtualisation, Streaming, Web, etc ...) jusqu'à la communication inter-logiciels, nous nous sommes spécialisés dans la manipulation des vidéos : encodage, streaming, sous-titrage automatique, etc ... La majorité de ces outils ont été architecturés par le CTO et moi-même et développés par l'ensemble de l'équipe.
+      skills:  java, php, nodejs, javascript, python, html/css, symfony2+, proxmox, activeMq, flash, mysql
+
+    - date: Septembre 2011
+      contract: CDD 6 mois
+      company: LordOfWeb (Marseille)
+      position: Développeur web
+      duties: >-
+        Design, intégration, développement, SEO, marketing, etc ... je développais les projets des clients. Analyse de leurs besoins, conception & développement du projet, j'ai du satisfaire à une bonne dizaine de clients en quelques mois en terme de site vitrine, e-commerce, correctif et évolutif.
+      skills: php, javascript, html/css, prestashop
+
+    - date: Juin 2011
+      contract: Stage 12 semaines
+      company: Idvive SARL (Marseille)
+      position: Étudiant
+      duties: >-
+        Afin de répondre plus rapidement aux besoins de sites d'e-commerce des clients de l'entreprise, j'ai du mettre un place un système qui permet d'installer automatiquement un prestashop ainsi que la commande du nom de domaine chez OVH. Celui-ci était déclenché lors de l'achat de ce service à partir du portail de l'entreprise.
+      skills: php, javascript, html/css, prestashop, zendFramework1, OVH API, postgres
+
+    - date: Janvier 2010
+      contract: Stage 9 semaines
+      company: GEIQ BTP 13 (Marseille)
+      position: Étudiant
+      duties: >-
+        Développement d'une plateforme favorisant le recrutement de personnes dans les métiers du batiments. Avec un second stagiaire, nous avons conçu et developpé l'ensemble de celle-ci sans outils particuliers. Objectif atteint car celle-ci a été utilisée durant plusieurs années.
+      skills: php, javascript, html/css
+
+    - date: Septembre 2009
+      contract: CDD 2 mois
+      company: Kosmetik-Direkt24 (Allemagne)
+      position: Développeur web
+      duties: >-
+        Mise en place d'un site de e-commerce dans le domaine de la cosmetique. J'étais chargé de l'installation, la personnalisation et de la configuration de la boutique afin qu'elle réponde aux besoins du gérant. Sous prestashop, j'ai dévéloppé un module d'envoi de newsletters depuis le site qui n'existait pas à l'époque.
+      skills:  php, javascript, html/css, prestashop
+
+    - date: Mai 2009
+      contract: Stage 6 semaines
+      company: R&D Internet (La Ciotat)
+      position: Étudiant
+      duties: >-
+        Mon objectif était de récupérer des données de classement sur tous les sites officiels de ligues amateurs de football. Avec l'aide d'un second stagiaire, nous avons developpé un robot en mesure de chercher automatiquement ces informations.
+      skills: php, javascript, html/css
+
+en:
+  title: Software Engineer
+  objectives: >-
+    Software engineer with 10+ years experience in many domains covering web development, 
+    software development and sciences. I’m confident that my proven 
+    skills and expertise will be a valuable asset for any organization and
+    am ready to accept any challenging job matching my profile.
+  profile:
+    status: Civil partner, 2 kiddos.
+    languages:
+      - English.
+      - French.
+    interests: Music, Development, Video games, TV Shows, Mangas, Gym.
+
+  education:
+    - Bachelor Degree in Computer Science, University of Sciences, Marseille, completed in 2011.
+    - Higher National Certificate in Programming, High School of Marseille, 2010.
+    - High School Certificate, High School of Agen, 2008.
+
+  certifications:
+    - 'Kubernetes Mastery: Hands-On Lessons From A Docker Captain - Udemy - 2021.'
+    - 'MongoDB : Leading NoSQL Database from scratch - Udemy - 2020.'
+    - AWS Certified Solutions Architect - Associate 2018 - Udemy - 2018.
+    - 'Artificial Intelligence A-Z : Learn how to build an AI - Udemy - 2017.'
+    - Arduino - Fun MOOC - 2016.
+    - Web semantic and Web data - Fun MOOC - 2016.
+    - Docker - Treeptik - Marseille, 2015.
+
+  skills:
+    - category: Langages
+      skills:
+        - Java (POO, C/S, Threads, notions OpenGL, MVC)
+        - C# (POO, connexion aux bases de données)
+        - Python (& Django)
+        - Bash
+
+    - category: Web
+      skills:
+        - PHP (POO, Zend Framework, Symfony 1.4 & 2+)
+        - Javascript (Ajax, jQuery + plugins, NodeJs, AngularJS, Gulp)
+        - HTML, CSS, XML (norme W3C).
+        - 'E-commerce: ZenCart, Joomla, PrestaShop (+modules)'
+        - Flash (notions)
+
+    - category: Technologies
+      skills:
+        - ZeroMQ, ActiveMQ, Celery (& RabbitMQ)
+        - 'Conception de webservices (Client et Serveur) : REST, SOAP.'
+        - 'Systèmes d’authentification/autorisation : OAuth2, WSSE, OpenID'
+        - 'Intégration continue : Travis CI, Jenkins'
+
+    - category: API
+      skills:
+        - Youtube, DailyMotion
+        - Facebook, Twitter, Google
+        - OVH
+
+    - category: Mobile
+      skills:
+        - Android (toutes versions)
+        - 'Market : Google Play'
+        - Design responsive
+
+    - category: Bases de données
+      skills:
+        - MySQL
+        - PostgreSQL
+        - Oracle
+
+    - category: Analyse Informatique
+      skills:
+        - Merise/2
+        - UML
+
+    - category: Logiciels
+      skills:
+        - Audio/Photo/Vidéo (Photoshop, Magix Vidéo Deluxe, Ulead Photo Impact)
+        - Bureautique (Word, Excel, Access, Powerpoint) - MicrosoftOffice & LibreOffice
+        - Conception (MySQL Workbench, ArgoUML, Dia Diagramm)
+
+    - category: Réseau
+      skills:
+        - Installation et configuration
+        - Serveur Svn, Git, Web, Ftp, Encodage, Streaming (Wowza), Virtualisation (Proxmox, Docker)
+
+  experiences:
+    - date: Avril 2018
+      contract: CDI 1 an
+      company: Kalyzée (Marseille)
+      position: Architecte logiciel
+      duties: >-
+        J'ai principalement mis en place une plateforme permettant à nos 
+        équipes de gérer les boitiers streaming à distance. Grace à 
+        Django, mon objectif était de rendre possible la maintenance 
+        de tout le parc depuis n'importe ou sans intervention technique 
+        manuelle. Les principales fonctionnalitées étaient la mise à 
+        jour et l'accès aux logs ainsi que le controle de la caméra et du stockage.
+      skills: java, maven, php, javascript, android, python, html/css, django, docker, ovh
+
+    - date: Juin 2016
+      contract: CDI 2 ans+
+      company: Pepperstone (Melbourne, Australie)
+      position: Architecte logiciel
+      duties: >-
+        Mon role était de maintenir différentes applications dans le domaine de la finance. Une de mes taches était de développer et maintenir un programme permettant de détecter le blanchiment d'argents via le comportement des clients. J'ai aussi conçu en collaboration avec l'équipe marketing un site web sur l'actualité Forex doté des dernieres technos web marketing du moment et l'activation de campagnes d'ads. Pour finir, mon fil rouge était la mise en place d'un logiciel de réconcialition des transactions financières depuis tous les moyens de paiements utilisés, les banques et les achats/ventes des clients.
+      skills: php, symfony, javascript, html/css, elasticsearch, ansible, docker, mysql, aws, digital ocean
+
+    - date: Février 2014
+      contract: CDD 2 ans+
+      company: CNRS (Laboratoire d’Astrophysique de Marseille)
+      position: Ingénieur d'étude
+      duties: >-
+        Après avoir passé quelques temps sur le debuggage d'une application en java, j'ai developpé un site web en python(django) permettant de savoir si deux étoiles appartiennent au même système, en collaboration avec différents laboratoires. J'ai aussi participé à l'établissement de petits outils facilitant la maintenance de plus gros. J'ai énormement voyagé afin de promouvoir les travaux de notre service au travers de conférences internationales et de formations.
+      skills: java, maven, php, javascript, python, html/css, django, docker, zMq, postgres, angularjs
+
+    - date: Avril 2012
+      contract: CDD 2 ans+
+      company: Kalyzée (Marseille)
+      position: Architecte logiciel
+      duties: >-
+        Lors de mes années Kalyzée, j'ai du concevoir et mettre en place différents produits. De l'installation de serveur en tout genre (Virtualisation, Streaming, Web, etc ...) jusqu'à la communication inter-logiciels, nous nous sommes spécialisés dans la manipulation des vidéos : encodage, streaming, sous-titrage automatique, etc ... La majorité de ces outils ont été architecturés par le CTO et moi-même et développés par l'ensemble de l'équipe.
+      skills:  java, php, nodejs, javascript, python, html/css, symfony2+, proxmox, activeMq, flash, mysql
+
+    - date: Septembre 2011
+      contract: CDD 6 mois
+      company: LordOfWeb (Marseille)
+      position: Développeur web
+      duties: >-
+        Design, intégration, développement, SEO, marketing, etc ... je développais les projets des clients. Analyse de leurs besoins, conception & développement du projet, j'ai du satisfaire à une bonne dizaine de clients en quelques mois en terme de site vitrine, e-commerce, correctif et évolutif.
+      skills: php, javascript, html/css, prestashop
+
+    - date: Juin 2011
+      contract: Stage 12 semaines
+      company: Idvive SARL (Marseille)
+      position: Étudiant
+      duties: >-
+        Afin de répondre plus rapidement aux besoins de sites d'e-commerce des clients de l'entreprise, j'ai du mettre un place un système qui permet d'installer automatiquement un prestashop ainsi que la commande du nom de domaine chez OVH. Celui-ci était déclenché lors de l'achat de ce service à partir du portail de l'entreprise.
+      skills: php, javascript, html/css, prestashop, zendFramework1, OVH API, postgres
+
+    - date: Janvier 2010
+      contract: Stage 9 semaines
+      company: GEIQ BTP 13 (Marseille)
+      position: Étudiant
+      duties: >-
+        Développement d'une plateforme favorisant le recrutement de personnes dans les métiers du batiments. Avec un second stagiaire, nous avons conçu et developpé l'ensemble de celle-ci sans outils particuliers. Objectif atteint car celle-ci a été utilisée durant plusieurs années.
+      skills: php, javascript, html/css
+
+    - date: Septembre 2009
+      contract: CDD 2 mois
+      company: Kosmetik-Direkt24 (Allemagne)
+      position: Développeur web
+      duties: >-
+        Mise en place d'un site de e-commerce dans le domaine de la cosmetique. J'étais chargé de l'installation, la personnalisation et de la configuration de la boutique afin qu'elle réponde aux besoins du gérant. Sous prestashop, j'ai dévéloppé un module d'envoi de newsletters depuis le site qui n'existait pas à l'époque.
+      skills:  php, javascript, html/css, prestashop
+
+    - date: Mai 2009
+      contract: Stage 6 semaines
+      company: R&D Internet (La Ciotat)
+      position: Étudiant
+      duties: >-
+        Mon objectif était de récupérer des données de classement sur tous les sites officiels de ligues amateurs de football. Avec l'aide d'un second stagiaire, nous avons developpé un robot en mesure de chercher automatiquement ces informations.
+      skills: php, javascript, html/css
