@@ -3,19 +3,19 @@ layout: full
 title: Professional experiences
 description: >-
 
-permalink: /en/cv
 text-rotator: Professional experiences
+permalink: /en/cv
 ---
 
 {% assign cv = site.data.cv['en'] %}
-
+{% if site.env == 'dev' %}
 <div class="flex flex-row justify-end">
     <a href="/cv">
         <img class="opacity-50 w-10 hover:opacity-100" src="/assets/images/flag_fr.png" />
     </a>
     <img class="w-10" src="/assets/images/flag_en.png" />
 </div>
-
+{% endif %}
 <div class="lg:grid grid-cols-2 text-justify">
     <div class="flex flex-row items-start">
         <img class="w-36 mr-4" src="/assets/images/photo_143.jpg"/>
@@ -27,7 +27,7 @@ text-rotator: Professional experiences
     </div>
     <div>
         <h3 class="mt-8 lg:mt-0">Contact</h3>
-        <ul class="ml-6">
+        <ul>
             <li>
                 <i class="fa fa-twitter px-3 text-1xl"></i>
                 <a href="{{ site.socials['twitter'].url }}">{{ site.socials['twitter'].url }}</a>
@@ -52,7 +52,7 @@ text-rotator: Professional experiences
 <div class="lg:grid grid-cols-2 gap-3 text-justify">
     <div>
         <h3 class="mt-8">Education</h3>
-        <ul class="list-disc ml-12">
+        <ul class="list-disc ml-6">
             {% for education in cv.education %}
                 <li>{{ education }}</li>
             {% endfor %}
@@ -60,7 +60,7 @@ text-rotator: Professional experiences
     </div>
     <div>
         <h3 class="mt-8">Certifications</h3>
-        <ul class="list-disc ml-12">
+        <ul class="list-disc ml-6">
             {% for certification in cv.certifications %}
                 <li>{{ certification }}</li>
             {% endfor %}
@@ -74,9 +74,11 @@ text-rotator: Professional experiences
         {% for s in cv.skills %}
             <div>
                 <h4 class="mt-4">{{ s.category }}</h4>
-                {% for skill in s.skills %}
-                    <div>{{ skill }}</div>
-                {% endfor %}
+                <ul class="ml-6">
+                    {% for skill in s.skills %}
+                    <li>{{ skill }}</li>
+                    {% endfor %}
+                </ul>
             </div>
         {% endfor %}
     </div>

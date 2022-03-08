@@ -1,7 +1,5 @@
 <div class="card flex flex-col lg:flex-row text-justify mt-12">
-    <a class="thumb lg:w-1/4 w-full flex-none relative" href="{{ include.url }}">
-        <img class="h-full" src="{{ include.image }}" alt="{{ include.title }}"/>
-    </a>
+    <a style="background-image: url('{{ include.image }}');" class="thumb lg:w-1/4 h-56 w-full flex-none relative bg-cover bg-center" href="{{ include.url }}"></a>
     <div class="flex flex-col flex-grow lg:pl-6">
         <h4 class="font-bold text-2xl lg:mt-0 mt-6">
             <a class="no-underline hover:text-akgBlue" href="{{ include.url }}">

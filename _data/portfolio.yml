@@ -1,12 +1,12 @@
-- url: /posts/multi-streaming-broadcaster-twitch-youtube-dailymotion-hitbox
-  date: 2015-09-09
-  title: Docker Broadcaster
-  intro: |
-    À la demande de mon frère qui souhaite lui aussi se mettre à streamer ses
-    jeux favoris sur Internet, j'ai mis en place un système qui permet de
-    diffuser sur toutes les platformes de votre choix votre live. «Nan mais Antho,
-    c'est quelle plateforme qu'est la mieux ?» Perso, moi j'en sais rien donc
-    pour remédier au problème : «Ne choisit pas, fait les toutes ! ». Je vais
-    vous montrer comment streamer sur toutes les plateformes en capturant qu'une
-    seule fois.
-  image: /assets/images/posts/docker-broadcaster/thumbnail.png
+#- url: /posts/multi-streaming-broadcaster-twitch-youtube-dailymotion-hitbox
+#  date: 2015-09-09
+#  title: Docker Broadcaster
+#  intro: |
+#    À la demande de mon frère qui souhaite lui aussi se mettre à streamer ses
+#    jeux favoris sur Internet, j'ai mis en place un système qui permet de
+#    diffuser sur toutes les platformes de votre choix votre live. «Nan mais Antho,
+#    c'est quelle plateforme qu'est la mieux ?» Perso, moi j'en sais rien donc
+#    pour remédier au problème : «Ne choisit pas, fait les toutes ! ». Je vais
+#    vous montrer comment streamer sur toutes les plateformes en capturant qu'une
+#    seule fois.
+#  image: /assets/images/posts/docker-broadcaster/thumbnail.png
