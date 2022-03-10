@@ -134,77 +134,77 @@ fr:
         promouvoir les travaux de notre service au travers de conférences 
         internationales et de formations.
       skills: java, maven, php, javascript, python, html/css, django, docker, zMq, postgres, angularjs
-
-    - date: Avril 2012
-      contract: CDD 2+ ans
-      company: Kalyzée (Marseille)
-      position: Architecte logiciel
-      duties: >-
-        Lors de mes années Kalyzée, j'ai dû concevoir et mettre en place différents 
-        produits. De l'installation de serveur en tout genre (Virtualisation, Streaming, Web, etc ...) 
-        jusqu'à la communication inter-logiciels, nous nous sommes spécialisés dans la 
-        manipulation des vidéos : encodage, streaming, sous-titrage automatique, etc ... 
-        La majorité de ces outils ont été construits par le CTO et moi-même et développés 
-        par l'ensemble de l'équipe.
-      skills:  java, php, nodejs, javascript, python, html/css, symfony2+, proxmox, activeMq, flash, mysql
-
-    - date: Septembre 2011
-      contract: CDD 6 mois
-      company: LordOfWeb (Marseille)
-      position: Développeur web
-      duties: >-
-        Design, intégration, développement, SEO, marketing, etc ... 
-        je développais les projets des clients. Analyse de leurs besoins, 
-        conception & développement du projet, j'ai dû satisfaire à une bonne 
-        dizaine de clients en quelques mois en termes de site vitrine, e-commerce, 
-        correctif et évolutif.
-      skills: php, javascript, html/css, prestashop
-
-    - date: Juin 2011
-      contract: 12 semaines
-      company: Idvive SARL (Marseille)
-      position: Stagiaire
-      duties: >-
-        Afin de répondre plus rapidement aux besoins de sites d'e-commerce des clients de 
-        l'entreprise, j'ai dû mettre en place un système qui permet d'installer 
-        automatiquement un prestashop ainsi que la commande du nom de domaine chez OVH. 
-        Celui-ci était déclenché lors de l'achat de ce service à partir du portail de 
-        l'entreprise.
-      skills: php, javascript, html/css, prestashop, zendFramework1, OVH API, postgres
-
-    - date: Janvier 2010
-      contract: 9 semaines
-      company: GEIQ BTP 13 (Marseille)
-      position: Stagiaire
-      duties: >-
-        Développement d'une plateforme favorisant le recrutement de personnes dans les 
-        métiers du bâtiment. Avec un second stagiaire, nous avons conçu et développé 
-        l'ensemble de celle-ci sans outils particuliers. Objectif atteint car celle-ci 
-        a été utilisée durant plusieurs années.
-      skills: php, javascript, html/css
-
-    - date: Septembre 2009
-      contract: CDD 2 mois
-      company: Kosmetik-Direkt24 (Allemagne)
-      position: Développeur web
-      duties: >-
-        Mise en place d'un site de e-commerce dans le domaine de la cosmétique. 
-        J'étais chargé de l'installation, la personnalisation et de la configuration 
-        de la boutique afin qu'elle réponde aux besoins du gérant. Sous prestashop, 
-        j'ai développé un module d'envoi de newsletters depuis le site qui 
-        n'existait pas à l'époque.
-      skills:  php, javascript, html/css, prestashop
-
-    - date: Mai 2009
-      contract: 6 semaines
-      company: R&D Internet (La Ciotat)
-      position: Stagiaire
-      duties: >-
-        Mon objectif était de récupérer des données de classement sur tous les 
-        sites officiels de ligues amateurs de football. Avec l'aide d'un second 
-        stagiaire, nous avons développé un robot en mesure de chercher 
-        automatiquement ces informations.
-      skills: php, javascript, html/css
+#
+#    - date: Avril 2012
+#      contract: CDD 2+ ans
+#      company: Kalyzée (Marseille)
+#      position: Architecte logiciel
+#      duties: >-
+#        Lors de mes années Kalyzée, j'ai dû concevoir et mettre en place différents
+#        produits. De l'installation de serveur en tout genre (Virtualisation, Streaming, Web, etc ...)
+#        jusqu'à la communication inter-logiciels, nous nous sommes spécialisés dans la
+#        manipulation des vidéos : encodage, streaming, sous-titrage automatique, etc ...
+#        La majorité de ces outils ont été construits par le CTO et moi-même et développés
+#        par l'ensemble de l'équipe.
+#      skills:  java, php, nodejs, javascript, python, html/css, symfony2+, proxmox, activeMq, flash, mysql
+#
+#    - date: Septembre 2011
+#      contract: CDD 6 mois
+#      company: LordOfWeb (Marseille)
+#      position: Développeur web
+#      duties: >-
+#        Design, intégration, développement, SEO, marketing, etc ...
+#        je développais les projets des clients. Analyse de leurs besoins,
+#        conception & développement du projet, j'ai dû satisfaire à une bonne
+#        dizaine de clients en quelques mois en termes de site vitrine, e-commerce,
+#        correctif et évolutif.
+#      skills: php, javascript, html/css, prestashop
+#
+#    - date: Juin 2011
+#      contract: 12 semaines
+#      company: Idvive SARL (Marseille)
+#      position: Stagiaire
+#      duties: >-
+#        Afin de répondre plus rapidement aux besoins de sites d'e-commerce des clients de
+#        l'entreprise, j'ai dû mettre en place un système qui permet d'installer
+#        automatiquement un prestashop ainsi que la commande du nom de domaine chez OVH.
+#        Celui-ci était déclenché lors de l'achat de ce service à partir du portail de
+#        l'entreprise.
+#      skills: php, javascript, html/css, prestashop, zendFramework1, OVH API, postgres
+#
+#    - date: Janvier 2010
+#      contract: 9 semaines
+#      company: GEIQ BTP 13 (Marseille)
+#      position: Stagiaire
+#      duties: >-
+#        Développement d'une plateforme favorisant le recrutement de personnes dans les
+#        métiers du bâtiment. Avec un second stagiaire, nous avons conçu et développé
+#        l'ensemble de celle-ci sans outils particuliers. Objectif atteint car celle-ci
+#        a été utilisée durant plusieurs années.
+#      skills: php, javascript, html/css
+#
+#    - date: Septembre 2009
+#      contract: CDD 2 mois
+#      company: Kosmetik-Direkt24 (Allemagne)
+#      position: Développeur web
+#      duties: >-
+#        Mise en place d'un site de e-commerce dans le domaine de la cosmétique.
+#        J'étais chargé de l'installation, la personnalisation et de la configuration
+#        de la boutique afin qu'elle réponde aux besoins du gérant. Sous prestashop,
+#        j'ai développé un module d'envoi de newsletters depuis le site qui
+#        n'existait pas à l'époque.
+#      skills:  php, javascript, html/css, prestashop
+#
+#    - date: Mai 2009
+#      contract: 6 semaines
+#      company: R&D Internet (La Ciotat)
+#      position: Stagiaire
+#      duties: >-
+#        Mon objectif était de récupérer des données de classement sur tous les
+#        sites officiels de ligues amateurs de football. Avec l'aide d'un second
+#        stagiaire, nous avons développé un robot en mesure de chercher
+#        automatiquement ces informations.
+#      skills: php, javascript, html/css
 
 en:
   title: Software Engineer
@@ -286,18 +286,22 @@ en:
       company: WAG Travel (Marseille)
       position: CTO
       duties: >-
+        I did too many things! From accounting to web development, 
+        I spent my days to create a solution to analyze visitors 
+        behaviors from website based on their activities without 
+        any personal data. A great challenge !
 
     - date: Apr 2018
       contract: 1 year
       company: Kalyzée (Marseille)
       position: Software architect
       duties: >-
-        J'ai principalement mis en place une plateforme permettant à nos 
-        équipes de gérer les boitiers streaming à distance. Grace à 
-        Django, mon objectif était de rendre possible la maintenance 
-        de tout le parc depuis n'importe ou sans intervention technique 
-        manuelle. Les principales fonctionnalitées étaient la mise à 
-        jour et l'accès aux logs ainsi que le controle de la caméra et du stockage.
+        I mainly developed a website to manage boxes on remote. 
+        Thank to Django, my goal was to let make possible 
+        maintenance on devices all around the world 
+        without any manual connections by technicians. 
+        Some of features were : Upgrading, rebooting, 
+        recording, streaming and managing storage.
       skills: java, maven, php, javascript, android, python, html/css, django, docker, ovh
 
     - date: Jun 2016
@@ -305,7 +309,13 @@ en:
       company: Pepperstone (Melbourne, Australia)
       position: Software architect
       duties: >-
-        Mon role était de maintenir différentes applications dans le domaine de la finance. Une de mes taches était de développer et maintenir un programme permettant de détecter le blanchiment d'argents via le comportement des clients. J'ai aussi conçu en collaboration avec l'équipe marketing un site web sur l'actualité Forex doté des dernieres technos web marketing du moment et l'activation de campagnes d'ads. Pour finir, mon fil rouge était la mise en place d'un logiciel de réconcialition des transactions financières depuis tous les moyens de paiements utilisés, les banques et les achats/ventes des clients.
+        My job was to maintain different applications related on Finance. 
+        One of my task was to develop and maintain programs detecting 
+        Money Laundry behaviors based on clients activities. Another 
+        one was a new public website in collaboration with the 
+        marketing team and the last one was to develop from 
+        scratch an accounting software reconciling automatically 
+        transactions between our payment providers and tradings servers.
       skills: php, symfony, javascript, html/css, elasticsearch, ansible, docker, mysql, aws, digital ocean
 
     - date: Feb 2014
@@ -313,53 +323,13 @@ en:
       company: CNRS (National laboratory of astrophysics)
       position: Software architect
       duties: >-
-        Après avoir passé quelques temps sur le debuggage d'une application en java, j'ai developpé un site web en python(django) permettant de savoir si deux étoiles appartiennent au même système, en collaboration avec différents laboratoires. J'ai aussi participé à l'établissement de petits outils facilitant la maintenance de plus gros. J'ai énormement voyagé afin de promouvoir les travaux de notre service au travers de conférences internationales et de formations.
+        I learnt Python/Django, Java, IDL and improved my communication. 
+        Knowing scientists needs and collaborating with international 
+        laboratories were my basic day. The two main parts of my job 
+        were to maintain an astronomic software helping scientists to 
+        determine the best parameters to watch a star on telescope 
+        (Brightness, location, etc.) and the second one was to 
+        develop from scratch, a website helping astronomers to 
+        know if one star belongs to a given groups of star 
+        based on the paralax effect.
       skills: java, maven, php, javascript, python, html/css, django, docker, zMq, postgres, angularjs
-
-    - date: Apr 2012
-      contract: 2+ years
-      company: Kalyzée (Marseille)
-      position: Software architect
-      duties: >-
-        Lors de mes années Kalyzée, j'ai du concevoir et mettre en place différents produits. De l'installation de serveur en tout genre (Virtualisation, Streaming, Web, etc ...) jusqu'à la communication inter-logiciels, nous nous sommes spécialisés dans la manipulation des vidéos : encodage, streaming, sous-titrage automatique, etc ... La majorité de ces outils ont été architecturés par le CTO et moi-même et développés par l'ensemble de l'équipe.
-      skills:  java, php, nodejs, javascript, python, html/css, symfony2+, proxmox, activeMq, flash, mysql
-
-    - date: Sep 2011
-      contract: 6 months
-      company: LordOfWeb (Marseille)
-      position: Web developer
-      duties: >-
-        Design, intégration, développement, SEO, marketing, etc ... je développais les projets des clients. Analyse de leurs besoins, conception & développement du projet, j'ai du satisfaire à une bonne dizaine de clients en quelques mois en terme de site vitrine, e-commerce, correctif et évolutif.
-      skills: php, javascript, html/css, prestashop
-
-    - date: Jun 2011
-      contract: 12 weeks
-      company: Idvive SARL (Marseille)
-      position: Trainee
-      duties: >-
-        Afin de répondre plus rapidement aux besoins de sites d'e-commerce des clients de l'entreprise, j'ai du mettre un place un système qui permet d'installer automatiquement un prestashop ainsi que la commande du nom de domaine chez OVH. Celui-ci était déclenché lors de l'achat de ce service à partir du portail de l'entreprise.
-      skills: php, javascript, html/css, prestashop, zendFramework1, OVH API, postgres
-
-    - date: Jan 2010
-      contract: 9 weeks
-      company: GEIQ BTP 13 (Marseille)
-      position: Trainee
-      duties: >-
-        Développement d'une plateforme favorisant le recrutement de personnes dans les métiers du batiments. Avec un second stagiaire, nous avons conçu et developpé l'ensemble de celle-ci sans outils particuliers. Objectif atteint car celle-ci a été utilisée durant plusieurs années.
-      skills: php, javascript, html/css
-
-    - date: Sep 2009
-      contract: 2 months
-      company: Kosmetik-Direkt24 (Germany)
-      position: Web developer
-      duties: >-
-        Mise en place d'un site de e-commerce dans le domaine de la cosmetique. J'étais chargé de l'installation, la personnalisation et de la configuration de la boutique afin qu'elle réponde aux besoins du gérant. Sous prestashop, j'ai dévéloppé un module d'envoi de newsletters depuis le site qui n'existait pas à l'époque.
-      skills:  php, javascript, html/css, prestashop
-
-    - date: May 2009
-      contract: 6 weeks
-      company: R&D Internet (La Ciotat)
-      position: Trainee
-      duties: >-
-        Mon objectif était de récupérer des données de classement sur tous les sites officiels de ligues amateurs de football. Avec l'aide d'un second stagiaire, nous avons developpé un robot en mesure de chercher automatiquement ces informations.
-      skills: php, javascript, html/css
