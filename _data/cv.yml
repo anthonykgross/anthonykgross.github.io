@@ -286,10 +286,14 @@ en:
       company: WAG Travel (Marseille)
       position: CTO
       duties: >-
-        I did too many things! From accounting to web development, 
-        I spent my days to create a solution to analyze visitors 
-        behaviors from website based on their activities without 
-        any personal data. A great challenge !
+        I did too many things! From accounting to web development,
+        I spent my days to create a solution to analyze visitors
+        behaviors from websites based on their activities without
+        any personal data following GDPR regulations. A great challenge! <br/>
+        My first aim was to develop a tracker as light and powerful as
+        possible to ease its implementation. It has to be customizable to catch events on demand. My second goal was to create a dashboard to deliver our analysis
+        and let our customers personalize their trackers.
+        Finally, every project has to be in real time.
 
     - date: Apr 2018
       contract: 1 year
