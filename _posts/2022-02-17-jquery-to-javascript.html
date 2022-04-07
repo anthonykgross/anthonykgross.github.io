@@ -303,9 +303,11 @@ $('.my-class').on('click', function () {
 });
     </code></pre>
     <pre class=" language-javascript"><code>
-document.querySelector('.my-class').addEventListener('click', function() {
-   ...
-});
+document.querySelectorAll('.my-class').forEach(function(item) {
+  item.addEventListener('click', event => {
+    ...
+  })
+})
     </code></pre>
 </div>
 
