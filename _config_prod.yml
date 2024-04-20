@@ -69,3 +69,6 @@ exclude:
   - Makefile
   - yarn.lock
   - gulpfile.js
+
+include:
+  - .well-known
