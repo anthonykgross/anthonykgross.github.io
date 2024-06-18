@@ -76,6 +76,18 @@ skills:
       - Test-Driven & Domain-Driven Development
 
 experiences:
+  - date: Avril 2022
+    contract: CDI 2+ ans
+    company: Digimood (Marseille)
+    position: CTO
+    duties: >-
+      En tant que directeur du pôle R&D, mon objectif premier était de développer une suite d'outils internes
+      afin de soutenir nos consultants dans leurs missions SEO et SEA.
+      La récupération des données publicitaire et des volumes de mots-clés, le suivis des tendances et
+      des budgets ainsi que la surveillance des liens d'affiliation étaient ce que nous avons accomplis
+      en l'espace de quelques années avec mon équipe.
+    skills: python, django, celery, rabbitmq, redis, mongodb, postgres, react, next.js, docker
+
   - date: Avril 2019
     contract: CDI 3+ ans
     company: WAG Travel (Marseille)
