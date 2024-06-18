@@ -1,0 +1,145 @@
+title: Software Engineer
+objectives: >-
+  Software engineer with 15+ years experience in many domains covering web development,
+  software development and sciences. I’m confident that my proven
+  skills and expertise will be a valuable asset for any organization and
+  am ready to accept any challenging job matching my profile.
+profile:
+  status: single, 2 kiddos.
+  languages:
+    - English.
+    - French.
+  interests: Music, Development, Video games, TV Shows, Mangas, Gym.
+
+education:
+  - Bachelor Degree in Computer Science, University of Sciences, Marseille, completed in 2011.
+  - Higher National Certificate in Programming, High School of Marseille, 2010.
+  - High School Certificate, High School of Agen, 2008.
+
+certifications:
+  - 'The Complete Digital Marketing Course - 12 Courses in 1, Udemy, 2024.'
+  - 'Team management course, A+C | agir plus concrètement, 2024.'
+  - 'Server Side Rendering with React and Redux, Udemy, 2022.'
+  - 'Kubernetes Mastery: Hands-On Lessons From A Docker Captain, Udemy, 2021.'
+  - 'MongoDB : Leading NoSQL Database from scratch, Udemy, 2020.'
+  - AWS Certified Solutions Architect - Associate 2018, Udemy, 2018.
+  - 'Artificial Intelligence A-Z : Learn how to build an AI, Udemy, 2017.'
+  - Arduino, Fun MOOC, 2016.
+  - Web semantic and Web data, Fun MOOC, 2016.
+  - Docker, Treeptik, 2015.
+
+skills:
+  - category: Python
+    skills:
+      - PIP, Virtualenv, Conda
+      - Django, Rest framework, Graphene
+      - Celery, threads, coroutines
+      - Tensorflow, Pandas, pyTorch
+      - unittest, pytest, coverage
+
+  - category: Web
+    skills:
+      - PHP 7+ (OOP, Symfony)
+      - Javascript & React
+      - Bootstrap, TailwindCSS
+      - Jekyll, Joomla, Wordpress
+      - Shopify, PrestaShop (+modules)
+
+  - category: Mobile / Node
+    skills:
+      - Kotlin / Java & React Native / Typescript, Next.js
+      - Yarn, Gulp, NPM
+      - Socket.io, Mongoose, Express, Firebase
+      - Jest, Karma
+
+  - category: Databases & Brokers
+    skills:
+      - MySQL, MariaDB, PostgreSQL
+      - MongoDB, DynamoDB
+      - ZeroMQ, ActiveMQ, RabbitMQ, SQS
+      - Redis, Memcached, ElastiCache
+      - Firebase Firestore & Realtime
+
+  - category: Devops
+    skills:
+      - Kubernetes, Docker, Rancher
+      - AWS, Digital Ocean
+      - Github / Actions, Gitlab, Jenkins, TravisCI
+      - Windows, Mac & Linux ♥️
+
+  - category: Methodologies
+    skills:
+      - Merise/2, UML
+      - Agile, SCRUM
+      - Design Pattern
+      - Test-Driven & Domain-Driven Development
+
+experiences:
+  - date: Apr 2022
+    contract: 2+ years
+    company: Digimood (Marseille)
+    position: CTO
+    duties: >-
+      As head of research and development department, my main goal
+      was to build a internal software suite SEO and SEA centric helping our experts to perform.
+      Fetching ads campaigns and keywords metrics, monitoring trends and budgets and watching
+      netlinking availability were what we achieved with my team in these years.
+    skills: python, django, celery, rabbitmq, redis, mongodb, postgres, react, next.js, docker
+
+  - date: Apr 2019
+    contract: 3+ years
+    company: WAG Travel (Marseille)
+    position: CTO
+    duties: >-
+      I did too many things! From accounting to web development,
+      I spent my days to create a solution to analyze visitors
+      behaviors from websites based on their activities without
+      any personal data following GDPR regulations. A great challenge! <br/>
+      My first aim was to develop a tracker as light and powerful as
+      possible to ease its implementation. It has to be customizable to catch events on demand. My second goal was to create a dashboard to deliver our analysis
+      and let our customers personalize their trackers.
+      Finally, every project has to be in real time.
+    skills: python, django, celery, rabbitmq, redis, mongodb, postgres, react, graphql, kubernetes, rancher, docker
+
+  - date: Apr 2018
+    contract: 1 year
+    company: Kalyzée (Marseille)
+    position: Software architect
+    duties: >-
+      I mainly developed a website to manage boxes on remote.
+      Thank to Django, my goal was to let make possible
+      maintenance on devices all around the world
+      without any manual connections by technicians.
+      Some of features were : Upgrading, rebooting,
+      recording, streaming and managing storage.
+    skills: java, maven, php, javascript, android, python, html/css, django, docker, ovh
+
+  - date: Jun 2016
+    contract: 2+ years
+    company: Pepperstone (Melbourne, Australia)
+    position: Software architect
+    duties: >-
+      My job was to maintain different applications related on Finance.
+      One of my task was to develop and maintain programs detecting
+      Money Laundry behaviors based on clients activities. Another
+      one was a new public website in collaboration with the
+      marketing team and the last one was to develop from
+      scratch an accounting software reconciling automatically
+      transactions between our payment providers and tradings servers.
+    skills: php, symfony, javascript, html/css, elasticsearch, ansible, docker, mysql, aws, digital ocean
+
+  - date: Feb 2014
+    contract: 2+ years
+    company: CNRS (National laboratory of astrophysics)
+    position: Software architect
+    duties: >-
+      I learnt Python/Django, Java, IDL and improved my communication.
+      Knowing scientists needs and collaborating with international
+      laboratories were my basic day. The two main parts of my job
+      were to maintain an astronomic software helping scientists to
+      determine the best parameters to watch a star on telescope
+      (Brightness, location, etc.) and the second one was to
+      develop from scratch, a website helping astronomers to
+      know if one star belongs to a given groups of star
+      based on the paralax effect.
+    skills: java, maven, php, javascript, python, html/css, django, docker, zMq, postgres, angularjs
