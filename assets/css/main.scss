@@ -13,7 +13,7 @@ $akg-bg-repeat: "/assets/images/bg-repeat.png";
 }
 
 html {
-  @apply bg-akgWhite text-akgBlack text-base font-open-sans leading-8;
+  @apply bg-akgWhite text-akgBlack screen:text-base font-open-sans leading-8 print:text-sm;
 }
 
 .banner, footer {
@@ -34,15 +34,15 @@ html {
 }
 
 h1, h2 {
-  @apply text-4xl;
+  @apply screen:text-4xl print:text-base;
 }
 
 h3 {
-  @apply text-3xl;
+  @apply screen:text-3xl print:text-xl;
 }
 
 h4 {
-  @apply text-2xl;
+  @apply screen:text-2xl print:text-base;
 }
 
 a {

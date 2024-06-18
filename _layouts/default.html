@@ -37,13 +37,15 @@
     </head>
     <body>
         {% if site.env == 'dev' %}
-        <div class="fixed text-center w-full z-50">
+        <div class="fixed text-center w-full z-50 grid grid-cols-2 gap-6">
             <div class="sm:hidden bg-gray-300">XS</div>
             <div class="hidden sm:block md:hidden bg-yellow-300">SM</div>
             <div class="hidden md:block lg:hidden bg-yellow-600">MD</div>
             <div class="hidden lg:block xl:hidden bg-red-600 text-white">LG</div>
             <div class="hidden xl:block 2xl:hidden bg-red-900 text-white">XL</div>
             <div class="hidden 2xl:block bg-purple-800 text-white">2XL</div>
+            <div class="hidden print:block bg-red-600">Print</div>
+            <div class="hidden screen:block bg-green-600">Screen</div>
         </div>
         {% endif %}
         {{ content }}

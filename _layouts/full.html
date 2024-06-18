@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="menu fixed w-full h-16 border-b shadow-sm z-40 bg-akgWhite">
+<div class="hidden screen:block menu fixed w-full h-16 border-b shadow-sm z-40 bg-akgWhite">
     <div class="container mx-auto flex justify-between place-content-center p-3">
         <div class="w-16">
             <a href="{{ site.baseurl }}/">
@@ -17,7 +17,7 @@ layout: default
     </div>
 </div>
 {% include anchor/anchor.html anchorId='top' %}
-<div class="banner text-center lg:p-40 lg:pt-52 p-8 pt-24">
+<div class="hidden screen:block banner text-center lg:p-40 lg:pt-52 p-8 pt-24">
     <div class="uppercase text-akgWhite font-bold">
         <h1 class="text-2xl sm:text-4xl opacity-80">
             {%- if page.text-rotator -%}
@@ -33,7 +33,7 @@ layout: default
         {{content}}
     </div>
 </div>
-<div class="socials bg-white flex text-xl sm:text-3xl md:text-4xl xl:text-5xl text-akgBlue justify-center py-10 lg:py-20">
+<div class="hidden screen:flex socials bg-white text-xl sm:text-3xl md:text-4xl xl:text-5xl text-akgBlue justify-center py-10 lg:py-20">
     <div class="font-jenna-sue text-center text-akgBlack transform -rotate-6">
         <div>Stay tuned !</div>
     </div>
@@ -44,7 +44,7 @@ layout: default
         </a>
     {% endfor %}
 </div>
-<footer>
+<footer class="hidden screen:block">
     <div class="container mx-auto p-3 text-center">
         {% capture img %}
             <img class="w-24 m-4 inline-block opacity-50" src="/assets/images/akg2.svg" />
@@ -52,7 +52,7 @@ layout: default
         {% include anchor/goto.html anchorId='top' content=img %}
     </div>
 </footer>
-<div class="bg-akgBlack text-gray-500 p-2 text-center">
+<div class="hidden screen:block bg-akgBlack text-gray-500 p-2 text-center">
         Made with <i class="fa fa-heart text-red-600"></i>
         with <a href="https://jekyllrb.com" target="_blank">Jekyll</a>
         | Source code available on <a href="{{site.project_url}}">Github</a>

@@ -13,16 +13,16 @@ permalink: /
 ---
 
 {% assign cv = site.data.cv['fr'] %}
-<div class="flex flex-row justify-end">
+<div class="hidden screen:flex flex-row justify-end">
     <img class="w-10" src="/assets/images/flag_fr.png" />
     <a href="/en/cv">
         <img class="opacity-50 w-10 hover:opacity-100" src="/assets/images/flag_en.png" />
     </a>
 </div>
 
-<div class="lg:grid grid-cols-2 text-justify">
+<div class="print:grid lg:grid grid-cols-2 screen:text-justify">
     <div class="flex flex-row items-start">
-        <img class="w-36 mr-4" src="/assets/images/photo_143.jpg"/>
+        <img class="screen:w-36 print:w-20 mr-4" src="/assets/images/photo_143.jpg"/>
         <div>
             <h3>Anthony K GROSS</h3>
             <h4>{{ cv.title }}</h4>
@@ -30,8 +30,8 @@ permalink: /
         </div>
     </div>
     <div>
-        <h3 class="mt-8 lg:mt-0">Contact</h3>
-        <ul>
+        <h3 class="mt-8 print:mt-0 lg:mt-0">Contact</h3>
+        <ul class="print:text-sm">
             <li>
                 <i class="fa fa-twitter px-3 text-1xl"></i>
                 <a href="{{ site.socials['twitter'].url }}">{{ site.socials['twitter'].url }}</a>
@@ -48,7 +48,7 @@ permalink: /
     </div>
 </div>
 
-<div>
+<div class="text-justify">
     <h3 class="mt-8">Objectif de carrière</h3>
     <p>{{ cv.objectives }}</p>
 </div>
@@ -74,7 +74,7 @@ permalink: /
 
 <div class="text-justify">
     <h3 class="mt-8">Connaissances informatiques</h3>
-    <div class="lg:grid grid-cols-2 xl:grid-cols-3 gap-3">
+    <div class="print:grid lg:grid grid-cols-2 xl:grid-cols-3 gap-3">
         {% for s in cv.skills %}
             <div>
                 <h4 class="mt-4">{{ s.category }}</h4>
@@ -108,7 +108,7 @@ permalink: /
 </div>
 
 <div class="text-justify">
-    <div class="lg:grid grid-cols-2 gap-3">
+    <div class="print:grid lg:grid grid-cols-2 gap-3">
         <div>
             <h3 class="mt-4">Langues vivantes</h3>
             {% for language in cv.profile.languages %}
