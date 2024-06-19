@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+        <title>Record, convert and stream audio and video with FFmpeg - Anthony K GROSS</title>
+
+        <link rel="stylesheet" href='//fonts.googleapis.com/css?family=Open+Sans%3A400%2C600%2C700%7CDomine%3A400%7C&#038;ver=4.5.0' type='text/css' media='all' />
+        <link rel="stylesheet" href="/assets/dist/libs.css">
+        <link rel="stylesheet" href="/assets/css/main.css">
+
+        <meta name="google-site-verification" content="kXqRha3lLeyeykj_Ghf3RgzHypUNl2aAAfEJ49iSONE" />
+        
+        <meta property="og:locale" content="en-US"/>
+        <meta property="og:title" content="Record, convert and stream audio and video with FFmpeg"/>
+        <meta property="og:description" content="A quick guide to convert, record and stream media files with FFmpeg."/>
+        <meta property="og:url" content="https://anthonykgross.fr/posts/memento-ffmpeg"/>
+        <meta property="og:site_name" content="Anthony K GROSS"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="https://anthonykgross.fr/assets/images/posts/memento-ffmpeg/thumbnail.png">
+        <meta property="fb:app_id" content="1488082224825425"/>
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@AnthonyKGROSS">
+        <meta name="twitter:creator" content="@AnthonyKGROSS">
+        <meta name="twitter:title" content="Record, convert and stream audio and video with FFmpeg">
+        <meta name="twitter:description" content="A quick guide to convert, record and stream media files with FFmpeg.">
+        <meta name="twitter:image" content="https://anthonykgross.fr/assets/images/posts/memento-ffmpeg/thumbnail.png">
+
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="/assets/favicon.ico">
+        <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+        <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+    </head>
+    <body>
+        
+        <div class="hidden screen:block menu fixed w-full h-16 border-b shadow-sm z-40 bg-akgWhite">
+    <div class="container mx-auto flex justify-between place-content-center p-3">
+        <div class="w-16">
+            <a href="/">
+                <img src="/assets/images/akg.svg" title="AKG - Anthony K GROSS" alt="AKG - Anthony K GROSS" />
+            </a>
+        </div>
+        <div class="ml-8 text-xl flex items-center content-center text-akgBlack">
+            
+                <a class="mx-6 font-semibold last:mr-0 hover:text-akgBlue" href="/">CV</a>
+            
+                <a class="mx-6 font-semibold last:mr-0 hover:text-akgBlue" href="/posts">Blog</a>
+            
+                <a class="mx-6 font-semibold last:mr-0 hover:text-akgBlue" href="/portfolio">Portfolio</a>
+            
+        </div>
+    </div>
+</div>
+<div id="top"></div>
+<div class="hidden screen:block banner text-center lg:p-40 lg:pt-52 p-8 pt-24">
+    <div class="uppercase text-akgWhite font-bold">
+        <h1 class="text-2xl sm:text-4xl opacity-80">Memento FFmpeg</h1>
+    </div>
+</div>
+<div class="content">
+    <div class="container mx-auto p-6 min-h-screen">
+        <div class="border-l-4 border-akgBlue pl-6 my-6">
+    <h2 class="mb-3
+        
+    " id="record-convert-and-stream-audio-and-video-with-ffmpeg">Record, convert and stream audio and video with FFmpeg</h2>
+    <div class="text-lg text-akgBlack text-justify">I'm getting old and I need to write everything. Welcome to my memento for FFmpeg ! <br/> Converting video formats to another one, generating thumbnails, merging sounds; everything is there !</div>
+</div>
+
+
+<div class="post overflow-auto">
+    <p>
+    FFmpeg is a free and open-source software project consisting of a suite of libraries and programs for handling video, audio, and other multimedia files and streams.
+    It can be downloaded <a href="https://ffmpeg.org/download.html" target="_blank">here</a>. Please refer to the <a href="https://ffmpeg.org/documentation.html" target="_blank">official documentation</a> if you need any help to install FFmpeg.
+</p>
+
+<h3 class="mt-8">Get file Information from a media file</h3>
+<pre class=" language-bash"><code>
+    ffprobe video.avi
+</code></pre>
+
+<h3 class="mt-8">Get file Information to JSON file</h3>
+<pre class=" language-bash"><code>
+    ffprobe -v quiet -print_format json -show_format -show_streams output.mp4 > output.json
+</code></pre>
+
+<h3 class="mt-8">Convert a video to X images</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.mpg image-%d.jpg
+</code></pre>
+
+<h3 class="mt-8">Extract a sound from a video and convert it as MP3</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.avi -vn -ar 44100 -ac 2 -ab 192 -f mp3 output.mp3
+</code></pre>
+
+<h3 class="mt-8">Convert AVI to MPEG</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.avi output.mpg
+</code></pre>
+
+<h3 class="mt-8">Convert AVI to animated GIF</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.avi output.gif
+</code></pre>
+
+<h3 class="mt-8">Convert AVI to FLV</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.avi -ab 56 -ar 44100 -b 200 -r 15 -s 320x240 -f flv output.flv
+</code></pre>
+
+<h3 class="mt-8">Extract 23 seconds of audio from the 8th second</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i audio.mp3 -ss 08 -t 23 output.mp3
+</code></pre>
+
+<h3>Remove the 2nd audio track</h3>
+<pre class=" language-bash"><code>
+    ffmpeg -i video.avi -i -map 0:0 -map 0:1 -map 0:3 -codec copy output.avi
+</code></pre>
+
+<h3 class="mt-8">Replace an audio track</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.avi -i audio.mp3 -codec copy output.avi
+</code></pre>
+
+<h3 class="mt-8">Add an audio track</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.avi -i audio.mp3 -map 0 -map 1 -codec copy output.avi
+</code></pre>
+
+<h3 class="mt-8">Add multiple audio tracks</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.avi -i track1.mp3 -i track2.mp3 -i track3.mp3 -map 0 -map 1 -map 2 -map 3 -codec copy output.avi
+</code></pre>
+
+<h3 class="mt-8">Specify the language of the 3rd audio track as German</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.mov -metadata:s:a:2 language=ger -map 0 -codec copy output.mov
+</code></pre>
+
+<h3 class="mt-8">Add an audio track between the 1st and te 2nd</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.avi -i audio.mp3 -map 0:1 -map 1 -map 0:2 -codec copy output.avi
+</code></pre>
+
+<h3 class="mt-8">Convert a multitrack video to MPEG</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.avi -map 0 output.mpeg
+</code></pre>
+
+<h3 class="mt-8">Convert a multitrack video and keep the 1st and the 3rd audio tracks</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.avi -map 0:0 -map 0:2 output.mpeg
+</code></pre>
+
+<h3 class="mt-8">Merge a subtitle ASS file to a video</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.mp4 -vf ass=subtitles.ass output.mp4
+</code></pre>
+
+<h3 class="mt-8">Append an audio track to another one</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i "concat:son1.mp3|son2.mp3" output.mp3
+</code></pre>
+
+<h3 class="mt-8">Extract thumbnails every 5 minutes (300 seconds)</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.mp4 -vf fps=fps=1/300 %d.png
+</code></pre>
+
+<h3 class="mt-8">Multiply by 2 audio track and the video duration</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.mp4 -filter:a 'atempo=0.5' -filter:v 'setpts=2.0*PTS' output.mp4
+</code></pre>
+
+<h3 class="mt-8">Overlay an audio track to another one</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i track1.mp3 -i track2.mp3 -filter_complex "amerge,pan=stereo:c0&lt;c0+c2:c1&lt;c1+c3" -c:a libmp3lame -q:a 4 output.mp3
+</code></pre>
+
+<h3 class="mt-8">Lower the audio volume to 10%</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i track1.mp3 -af "volume=0.1" output.mp3
+</code></pre>
+
+<h3 class="mt-8">Convert a video to M3U8</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.mp4 -map 0 -bsf h264_mp4toannexb -c copy -f segment -segment_list output.m3u8 output-%03d.ts
+</code></pre>
+
+</div>
+
+<div class="flex justify-between border-t border-b border-akgFontGrey my-6 py-3">
+    <div>
+        <a class="pr-2 no-underline" href="https://www.facebook.com/sharer/sharer.php?u=https://anthonykgross.fr/posts/memento-ffmpeg" target="_blank">
+            <i class="fa fa-facebook-square text-social-facebook"></i>
+        </a>
+        <a class="pr-2 no-underline" href="https://twitter.com/share?text=Record, convert and stream audio and video with FFmpeg&url=https://anthonykgross.fr/posts/memento-ffmpeg" target="_blank">
+            <i class="fa fa-twitter-square text-social-twitter"></i>
+        </a>
+    </div>
+    <div>
+        <i class="fa fa-calendar pr-2"></i>
+        2012-11-03
+    </div>
+</div>
+
+<div class="author my-6">
+    <div class="flex text-justify">
+        <div class="w-1/3 md:w-auto flex-none relative mr-6">
+            <a class="thumb" href="/">
+                <img class="w-full" src="/assets/images/photo.jpg" alt="Anthony K GROSS" />
+            </a>
+        </div>
+        <div>
+            <h4>
+                <a class="text-akgBlack-dark no-underline" href="/">About me</a>
+            </h4>
+            Software engineer with 15+ years experience in many domains covering web development,
+            software development and sciences. I would like to increase my skills in devopsing.
+            My current stack is Python / Django, MongoDb, RabbitMq / Redis.
+        </div>
+    </div>
+</div>
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://anthonykgross.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<nosc
+    </div>
+</div>
+<div class="hidden screen:flex socials bg-white text-xl sm:text-3xl md:text-4xl xl:text-5xl text-akgBlue justify-center py-10 lg:py-20">
+    <div class="font-jenna-sue text-center text-akgBlack transform -rotate-6">
+        <div>Stay tuned !</div>
+    </div>
+    
+        
+        <a class="mx-4 lg:mx-14 mt-1 hover:text-akgBlue-dark" href="https://twitter.com/anthonykgross" target="_blank">
+            <i class="fa fa-twitter"></i>
+        </a>
+    
+        
+        <a class="mx-4 lg:mx-14 mt-1 hover:text-akgBlue-dark" href="https://www.youtube.com/channel/UC7hF0LUlIoShX2QZejF7z7g" target="_blank">
+            <i class="fa fa-youtube-play"></i>
+        </a>
+    
+        
+        <a class="mx-4 lg:mx-14 mt-1 hover:text-akgBlue-dark" href="https://www.linkedin.com/in/anthonykgross/" target="_blank">
+            <i class="fa fa-linkedin"></i>
+        </a>
+    
+        
+        <a class="mx-4 lg:mx-14 mt-1 hover:text-akgBlue-dark" href="https://github.com/anthonykgross" target="_blank">
+            <i class="fa fa-github"></i>
+        </a>
+    
+        
+        <a class="mx-4 lg:mx-14 mt-1 hover:text-akgBlue-dark" href="https://hub.docker.com/u/anthonykgross/" target="_blank">
+            <i class="fa fa-cubes"></i>
+        </a>
+    
+        
+        <a class="mx-4 lg:mx-14 mt-1 hover:text-akgBlue-dark" href="/feed.xml" target="_blank">
+            <i class="fa fa-rss"></i>
+        </a>
+    
+</div>
+<footer class="hidden screen:block">
+    <div class="container mx-auto p-3 text-center">
+        
+        <a class="active-anchor" href="#top">
+    
+            <img class="w-24 m-4 inline-block opacity-50" src="/assets/images/akg2.svg" />
+        
+</a>
+    </div>
+</footer>
+<div class="hidden screen:block bg-akgBlack text-gray-500 p-2 text-center">
+        Made with <i class="fa fa-heart text-red-600"></i>
+        with <a href="https://jekyllrb.com" target="_blank">Jekyll</a>
+        | Source code available on <a href="https://github.com/anthonykgross/anthonykgross.github.io">Github</a>
+</div>
+
+        <script src="/assets/dist/libs.js"></script>
+        <script src="/assets/js/app.js"></script>
+        <script id="dsq-count-scr" src="//anthonykgross.disqus.com/count.js" async></script>
+    </body>
+</html>

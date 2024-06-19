@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+        <title>Convert jQuery to Javascript - Anthony K GROSS</title>
+
+        <link rel="stylesheet" href='//fonts.googleapis.com/css?family=Open+Sans%3A400%2C600%2C700%7CDomine%3A400%7C&#038;ver=4.5.0' type='text/css' media='all' />
+        <link rel="stylesheet" href="/assets/dist/libs.css">
+        <link rel="stylesheet" href="/assets/css/main.css">
+
+        <meta name="google-site-verification" content="kXqRha3lLeyeykj_Ghf3RgzHypUNl2aAAfEJ49iSONE" />
+        
+        <meta property="og:locale" content="en-US"/>
+        <meta property="og:title" content="Convert jQuery to Javascript"/>
+        <meta property="og:description" content="A quick cheat sheet to convert jQuery code to vanilla Javascript."/>
+        <meta property="og:url" content="https://anthonykgross.fr/posts/jquery-to-javascript"/>
+        <meta property="og:site_name" content="Anthony K GROSS"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="https://anthonykgross.fr/assets/images/posts/jquery-to-javascript/thumbnail.png">
+        <meta property="fb:app_id" content="1488082224825425"/>
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@AnthonyKGROSS">
+        <meta name="twitter:creator" content="@AnthonyKGROSS">
+        <meta name="twitter:title" content="Convert jQuery to Javascript">
+        <meta name="twitter:description" content="A quick cheat sheet to convert jQuery code to vanilla Javascript.">
+        <meta name="twitter:image" content="https://anthonykgross.fr/assets/images/posts/jquery-to-javascript/thumbnail.png">
+
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="/assets/favicon.ico">
+        <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+        <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+    </head>
+    <body>
+        
+        <div class="hidden screen:block menu fixed w-full h-16 border-b shadow-sm z-40 bg-akgWhite">
+    <div class="container mx-auto flex justify-between place-content-center p-3">
+        <div class="w-16">
+            <a href="/">
+                <img src="/assets/images/akg.svg" title="AKG - Anthony K GROSS" alt="AKG - Anthony K GROSS" />
+            </a>
+        </div>
+        <div class="ml-8 text-xl flex items-center content-center text-akgBlack">
+            
+                <a class="mx-6 font-semibold last:mr-0 hover:text-akgBlue" href="/">CV</a>
+            
+                <a class="mx-6 font-semibold last:mr-0 hover:text-akgBlue" href="/posts">Blog</a>
+            
+                <a class="mx-6 font-semibold last:mr-0 hover:text-akgBlue" href="/portfolio">Portfolio</a>
+            
+        </div>
+    </div>
+</div>
+<div id="top"></div>
+<div class="hidden screen:block banner text-center lg:p-40 lg:pt-52 p-8 pt-24">
+    <div class="uppercase text-akgWhite font-bold">
+        <h1 class="text-2xl sm:text-4xl opacity-80">Convert jQuery to Javascript</h1>
+    </div>
+</div>
+<div class="content">
+    <div class="container mx-auto p-6 min-h-screen">
+        <div class="border-l-4 border-akgBlue pl-6 my-6">
+    <h2 class="mb-3
+        
+    " id="convert-jquery-to-javascript">Convert jQuery to Javascript</h2>
+    <div class="text-lg text-akgBlack text-justify">I would like to avoid using jQuery everywhere for any reasons. This is my essential cheat sheet to convert jQuery to Javascript.</div>
+</div>
+
+
+<div class="post overflow-auto">
+    <p>
+    <a href="https://jquery.com/" target="_blank">jQuery</a> is a fast, small, and feature-rich Open Source JavaScript
+    library to simplify HTML DOM tree traversal and manipulation,
+    CSS animation, and Ajax.
+</p>
+
+<h3 class="mt-8">Tree Traversal</h3>
+<h4 class="mt-4">
+    Select Elements
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class a');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelectorAll('.my-class a');
+    </code></pre>
+</div>
+
+
+<h4 class="mt-4">
+    Select first element
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class a').first();
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class a');
+    </code></pre>
+</div>
+
+
+<h4 class="mt-4">
+    Find child elements
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class a').find('div');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+let nodes = document.querySelectorAll('.my-class a');
+for (let i = 0; i < nodes.length; i++) {
+    if (nodes[i].querySelector('div')) {
+      // nodes[i].querySelector('div').innerHTML = 'Found !'
+   }
+}
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Select parent
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class a').parent();
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class a').parentNode;
+    </code></pre>
+</div>
+
+<h3 class="mt-8">Class Attribute</h3>
+<h4 class="mt-4">
+    Add class
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').addClass('new-class');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').classList.add('new-class');
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Remove class
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').removeClass('new-class');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').classList.remove('new-class');
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Toggle class
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').toggleClass('new-class');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').classList.toggle('new-class');
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Has class
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').hasClass('new-class');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').classList.contains('new-class');
+    </code></pre>
+</div>
+
+<h3 class="mt-8">General Attributes</h3>
+<h4 class="mt-4">
+    Get Attribute
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').attr('href');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').getAttribute('href');
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Set Attribute
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').attr('href', 'index.html');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').getAttribute('href', 'index.html');
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Remove Attribute
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').removeAttr('href');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').removeAttribute('href');
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Get HTML content
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').html();
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').innerHTML;
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Set HTML content
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').html('my html content');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').innerHTML = 'my html content';
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Get CSS style
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').css('property-name');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').style.{propertyName};
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Set CSS style
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').css('property-name', 'value');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').style.{propertyName} = value;
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Get height
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').height();
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').offsetHeight;
+// or
+document.querySelector('.my-class').clientHeight;
+    </code></pre>
+</div>
+
+<h3 class="mt-8"> DOM Insertion</h3>
+<h4 class="mt-4">
+    Append a new child
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+let child = $('&lt;div /&gt;');
+$('.my-class').append(child);
+    </code></pre>
+    <pre class=" language-javascript"><code>
+let child = document.createElement("div");
+document.querySelector('.my-class').appendChild(child);
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Prepend a new child
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+let child = $('&lt;div /&gt;');
+$('.my-class').prepend(child);
+    </code></pre>
+    <pre class=" language-javascript"><code>
+let child = document.createElement("div");
+let node = document.querySelector('.my-class');
+node.insertBefore(child, node.firstChild);
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Remove children
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').empty();
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').replaceChildren();
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Insert after an element
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+let child = $('&lt;div /&gt;');
+$('.my-class').after(child);
+    </code></pre>
+    <pre class=" language-javascript"><code>
+let child = document.createElement("div");
+let node = document.querySelector('.my-class');
+node.parentNode.insertBefore(child, node.nextSibling);
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Insert before an element
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+let child = $('&lt;div /&gt;');
+$('.my-class').after(child);
+    </code></pre>
+    <pre class=" language-javascript"><code>
+let child = document.createElement("div");
+let node = document.querySelector('.my-class');
+node.parentNode.insertBefore(child, node);
+    </code></pre>
+</div>
+
+<h3 class="mt-8">Event Handler Attachment</h3>
+<h4 class="mt-4">
+    Add Event Listener
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').on('click', function () {
+    ...
+});
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelectorAll('.my-class').forEach(function(item) {
+  item.addEventListener('click', event => {
+    ...
+  })
+})
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Remove Event Listener
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').off('click');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').removeEventListener('click');
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    DOM Is Ready
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$(function() {
+    // event handler
+});
+    </code></pre>
+    <pre class=" language-javascript"><code>
+if (document.readyState === 'complete' || (document.readyState !== 'loading')) {
+    ...
+} else {
+    document.addEventListener('DOMContentLoaded', function() {
+        ...
+    });
+}
+    </code></pre>
+</div>
+</div>
+
+<div class="flex justify-between border-t border-b border-akgFontGrey my-6 py-3">
+    <div>
+        <a class="pr-2 no-underline" href="https://www.facebook.com/sharer/sharer.php?u=https://anthonykgross.fr/posts/jquery-to-javascript" target="_blank">
+            <i class="fa fa-facebook-square text-social-facebook"></i>
+        </a>
+        <a class="pr-2 no-underline" href="https://twitter.com/share?text=Convert jQuery to Javascript&url=https://anthonykgross.fr/posts/jquery-to-javascript" target="_blank">
+            <i class="fa fa-twitter-square text-social-twitter"></i>
+        </a>
+    </div>
+    <div>
+        <i class="fa fa-calendar pr-2"></i>
+        2022-02-17
+    </div>
+</div>
+
+<div class="author my-6">
+    <div class="flex text-justify">
+        <div class="w-1/3 md:w-auto flex-none relative mr-6">
+            <a class="thumb" href="/">
+                <img class="w-full" src="/assets/images/photo.jpg" alt="Anthony K GROSS" />
+            </a>
+        </div>
+        <div>
+            <h4>
+                <a class="text-akgBlack-dark no-underline" href="/">About me</a>
+            </h4>
+            Software engineer with 15+ years experience in many domains covering web development,
+            software development and sciences. I would like to increase my skills in devopsing.
+            My current stack is Python / Django, MongoDb, RabbitMq / Redis.
+        </div>
+    </div>
+</div>
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://anthonykgross.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<nosc
+    </div>
+</div>
+<div class="hidden screen:flex socials bg-white text-xl sm:text-3xl md:text-4xl xl:text-5xl text-akgBlue justify-center py-10 lg:py-20">
+    <div class="font-jenna-sue text-center text-akgBlack transform -rotate-6">
+        <div>Stay tuned !</div>
+    </div>
+    
+        
+        <a class="mx-4 lg:mx-14 mt-1 hover:text-akgBlue-dark" href="https://twitter.com/anthonykgross" target="_blank">
+            <i class="fa fa-twitter"></i>
+        </a>
+    
+        
+        <a class="mx-4 lg:mx-14 mt-1 hover:text-akgBlue-dark" href="https://www.youtube.com/channel/UC7hF0LUlIoShX2QZejF7z7g" target="_blank">
+            <i class="fa fa-youtube-play"></i>
+        </a>
+    
+        
+        <a class="mx-4 lg:mx-14 mt-1 hover:text-akgBlue-dark" href="https://www.linkedin.com/in/anthonykgross/" target="_blank">
+            <i class="fa fa-linkedin"></i>
+        </a>
+    
+        
+        <a class="mx-4 lg:mx-14 mt-1 hover:text-akgBlue-dark" href="https://github.com/anthonykgross" target="_blank">
+            <i class="fa fa-github"></i>
+        </a>
+    
+        
+        <a class="mx-4 lg:mx-14 mt-1 hover:text-akgBlue-dark" href="https://hub.docker.com/u/anthonykgross/" target="_blank">
+            <i class="fa fa-cubes"></i>
+        </a>
+    
+        
+        <a class="mx-4 lg:mx-14 mt-1 hover:text-akgBlue-dark" href="/feed.xml" target="_blank">
+            <i class="fa fa-rss"></i>
+        </a>
+    
+</div>
+<footer class="hidden screen:block">
+    <div class="container mx-auto p-3 text-center">
+        
+        <a class="active-anchor" href="#top">
+    
+            <img class="w-24 m-4 inline-block opacity-50" src="/assets/images/akg2.svg" />
+        
+</a>
+    </div>
+</footer>
+<div class="hidden screen:block bg-akgBlack text-gray-500 p-2 text-center">
+        Made with <i class="fa fa-heart text-red-600"></i>
+        with <a href="https://jekyllrb.com" target="_blank">Jekyll</a>
+        | Source code available on <a href="https://github.com/anthonykgross/anthonykgross.github.io">Github</a>
+</div>
+
+        <script src="/assets/dist/libs.js"></script>
+        <script src="/assets/js/app.js"></script>
+        <script id="dsq-count-scr" src="//anthonykgross.disqus.com/count.js" async></script>
+    </body>
+</html>

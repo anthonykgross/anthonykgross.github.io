@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://anthonykgross.fr/feed.xml" rel="self" type="application/atom+xml" /><link href="https://anthonykgross.fr/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2024-06-18T23:30:41-05:00</updated><id>https://anthonykgross.fr/feed.xml</id><title type="html">Anthony K GROSS</title><entry><title type="html">Convert jQuery to Javascript</title><link href="https://anthonykgross.fr/posts/jquery-to-javascript" rel="alternate" type="text/html" title="Convert jQuery to Javascript" /><published>2022-02-17T00:00:00-06:00</published><updated>2022-02-17T00:00:00-06:00</updated><id>https://anthonykgross.fr/posts/jquery-to-javascript</id><content type="html" xml:base="https://anthonykgross.fr/posts/jquery-to-javascript"><![CDATA[<p>
+    <a href="https://jquery.com/" target="_blank">jQuery</a> is a fast, small, and feature-rich Open Source JavaScript
+    library to simplify HTML DOM tree traversal and manipulation,
+    CSS animation, and Ajax.
+</p>
+
+<h3 class="mt-8">Tree Traversal</h3>
+<h4 class="mt-4">
+    Select Elements
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class a');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelectorAll('.my-class a');
+    </code></pre>
+</div>
+
+
+<h4 class="mt-4">
+    Select first element
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class a').first();
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class a');
+    </code></pre>
+</div>
+
+
+<h4 class="mt-4">
+    Find child elements
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class a').find('div');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+let nodes = document.querySelectorAll('.my-class a');
+for (let i = 0; i < nodes.length; i++) {
+    if (nodes[i].querySelector('div')) {
+      // nodes[i].querySelector('div').innerHTML = 'Found !'
+   }
+}
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Select parent
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class a').parent();
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class a').parentNode;
+    </code></pre>
+</div>
+
+<h3 class="mt-8">Class Attribute</h3>
+<h4 class="mt-4">
+    Add class
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').addClass('new-class');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').classList.add('new-class');
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Remove class
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').removeClass('new-class');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').classList.remove('new-class');
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Toggle class
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').toggleClass('new-class');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').classList.toggle('new-class');
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Has class
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').hasClass('new-class');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').classList.contains('new-class');
+    </code></pre>
+</div>
+
+<h3 class="mt-8">General Attributes</h3>
+<h4 class="mt-4">
+    Get Attribute
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').attr('href');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').getAttribute('href');
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Set Attribute
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').attr('href', 'index.html');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').getAttribute('href', 'index.html');
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Remove Attribute
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').removeAttr('href');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').removeAttribute('href');
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Get HTML content
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').html();
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').innerHTML;
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Set HTML content
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').html('my html content');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').innerHTML = 'my html content';
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Get CSS style
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').css('property-name');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').style.{propertyName};
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Set CSS style
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').css('property-name', 'value');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').style.{propertyName} = value;
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Get height
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').height();
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').offsetHeight;
+// or
+document.querySelector('.my-class').clientHeight;
+    </code></pre>
+</div>
+
+<h3 class="mt-8"> DOM Insertion</h3>
+<h4 class="mt-4">
+    Append a new child
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+let child = $('&lt;div /&gt;');
+$('.my-class').append(child);
+    </code></pre>
+    <pre class=" language-javascript"><code>
+let child = document.createElement("div");
+document.querySelector('.my-class').appendChild(child);
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Prepend a new child
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+let child = $('&lt;div /&gt;');
+$('.my-class').prepend(child);
+    </code></pre>
+    <pre class=" language-javascript"><code>
+let child = document.createElement("div");
+let node = document.querySelector('.my-class');
+node.insertBefore(child, node.firstChild);
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Remove children
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').empty();
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').replaceChildren();
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Insert after an element
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+let child = $('&lt;div /&gt;');
+$('.my-class').after(child);
+    </code></pre>
+    <pre class=" language-javascript"><code>
+let child = document.createElement("div");
+let node = document.querySelector('.my-class');
+node.parentNode.insertBefore(child, node.nextSibling);
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Insert before an element
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+let child = $('&lt;div /&gt;');
+$('.my-class').after(child);
+    </code></pre>
+    <pre class=" language-javascript"><code>
+let child = document.createElement("div");
+let node = document.querySelector('.my-class');
+node.parentNode.insertBefore(child, node);
+    </code></pre>
+</div>
+
+<h3 class="mt-8">Event Handler Attachment</h3>
+<h4 class="mt-4">
+    Add Event Listener
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').on('click', function () {
+    ...
+});
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelectorAll('.my-class').forEach(function(item) {
+  item.addEventListener('click', event => {
+    ...
+  })
+})
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    Remove Event Listener
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$('.my-class').off('click');
+    </code></pre>
+    <pre class=" language-javascript"><code>
+document.querySelector('.my-class').removeEventListener('click');
+    </code></pre>
+</div>
+
+<h4 class="mt-4">
+    DOM Is Ready
+</h4>
+<div class="lg:grid grid-cols-2 gap-3">
+    <pre class=" language-javascript"><code>
+$(function() {
+    // event handler
+});
+    </code></pre>
+    <pre class=" language-javascript"><code>
+if (document.readyState === 'complete' || (document.readyState !== 'loading')) {
+    ...
+} else {
+    document.addEventListener('DOMContentLoaded', function() {
+        ...
+    });
+}
+    </code></pre>
+</div>]]></content><author><name></name></author><summary type="html"><![CDATA[A quick cheat sheet to convert jQuery code to vanilla Javascript.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://anthonykgross.fr/assets/images/posts/jquery-to-javascript/thumbnail.png" /><media:content medium="image" url="https://anthonykgross.fr/assets/images/posts/jquery-to-javascript/thumbnail.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Record, convert and stream audio and video with FFmpeg</title><link href="https://anthonykgross.fr/posts/memento-ffmpeg" rel="alternate" type="text/html" title="Record, convert and stream audio and video with FFmpeg" /><published>2012-11-03T00:00:00-05:00</published><updated>2012-11-03T00:00:00-05:00</updated><id>https://anthonykgross.fr/posts/memento-ffmpeg</id><content type="html" xml:base="https://anthonykgross.fr/posts/memento-ffmpeg"><![CDATA[<p>
+    FFmpeg is a free and open-source software project consisting of a suite of libraries and programs for handling video, audio, and other multimedia files and streams.
+    It can be downloaded <a href="https://ffmpeg.org/download.html" target="_blank">here</a>. Please refer to the <a href="https://ffmpeg.org/documentation.html" target="_blank">official documentation</a> if you need any help to install FFmpeg.
+</p>
+
+<h3 class="mt-8">Get file Information from a media file</h3>
+<pre class=" language-bash"><code>
+    ffprobe video.avi
+</code></pre>
+
+<h3 class="mt-8">Get file Information to JSON file</h3>
+<pre class=" language-bash"><code>
+    ffprobe -v quiet -print_format json -show_format -show_streams output.mp4 > output.json
+</code></pre>
+
+<h3 class="mt-8">Convert a video to X images</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.mpg image-%d.jpg
+</code></pre>
+
+<h3 class="mt-8">Extract a sound from a video and convert it as MP3</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.avi -vn -ar 44100 -ac 2 -ab 192 -f mp3 output.mp3
+</code></pre>
+
+<h3 class="mt-8">Convert AVI to MPEG</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.avi output.mpg
+</code></pre>
+
+<h3 class="mt-8">Convert AVI to animated GIF</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.avi output.gif
+</code></pre>
+
+<h3 class="mt-8">Convert AVI to FLV</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.avi -ab 56 -ar 44100 -b 200 -r 15 -s 320x240 -f flv output.flv
+</code></pre>
+
+<h3 class="mt-8">Extract 23 seconds of audio from the 8th second</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i audio.mp3 -ss 08 -t 23 output.mp3
+</code></pre>
+
+<h3>Remove the 2nd audio track</h3>
+<pre class=" language-bash"><code>
+    ffmpeg -i video.avi -i -map 0:0 -map 0:1 -map 0:3 -codec copy output.avi
+</code></pre>
+
+<h3 class="mt-8">Replace an audio track</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.avi -i audio.mp3 -codec copy output.avi
+</code></pre>
+
+<h3 class="mt-8">Add an audio track</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.avi -i audio.mp3 -map 0 -map 1 -codec copy output.avi
+</code></pre>
+
+<h3 class="mt-8">Add multiple audio tracks</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.avi -i track1.mp3 -i track2.mp3 -i track3.mp3 -map 0 -map 1 -map 2 -map 3 -codec copy output.avi
+</code></pre>
+
+<h3 class="mt-8">Specify the language of the 3rd audio track as German</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.mov -metadata:s:a:2 language=ger -map 0 -codec copy output.mov
+</code></pre>
+
+<h3 class="mt-8">Add an audio track between the 1st and te 2nd</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.avi -i audio.mp3 -map 0:1 -map 1 -map 0:2 -codec copy output.avi
+</code></pre>
+
+<h3 class="mt-8">Convert a multitrack video to MPEG</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.avi -map 0 output.mpeg
+</code></pre>
+
+<h3 class="mt-8">Convert a multitrack video and keep the 1st and the 3rd audio tracks</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.avi -map 0:0 -map 0:2 output.mpeg
+</code></pre>
+
+<h3 class="mt-8">Merge a subtitle ASS file to a video</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.mp4 -vf ass=subtitles.ass output.mp4
+</code></pre>
+
+<h3 class="mt-8">Append an audio track to another one</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i "concat:son1.mp3|son2.mp3" output.mp3
+</code></pre>
+
+<h3 class="mt-8">Extract thumbnails every 5 minutes (300 seconds)</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.mp4 -vf fps=fps=1/300 %d.png
+</code></pre>
+
+<h3 class="mt-8">Multiply by 2 audio track and the video duration</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.mp4 -filter:a 'atempo=0.5' -filter:v 'setpts=2.0*PTS' output.mp4
+</code></pre>
+
+<h3 class="mt-8">Overlay an audio track to another one</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i track1.mp3 -i track2.mp3 -filter_complex "amerge,pan=stereo:c0&lt;c0+c2:c1&lt;c1+c3" -c:a libmp3lame -q:a 4 output.mp3
+</code></pre>
+
+<h3 class="mt-8">Lower the audio volume to 10%</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i track1.mp3 -af "volume=0.1" output.mp3
+</code></pre>
+
+<h3 class="mt-8">Convert a video to M3U8</h3>
+<pre class="language-bash"><code>
+    ffmpeg -i video.mp4 -map 0 -bsf h264_mp4toannexb -c copy -f segment -segment_list output.m3u8 output-%03d.ts
+</code></pre>]]></content><author><name></name></author><summary type="html"><![CDATA[A quick guide to convert, record and stream media files with FFmpeg.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://anthonykgross.fr/assets/images/posts/memento-ffmpeg/thumbnail.png" /><media:content medium="image" url="https://anthonykgross.fr/assets/images/posts/memento-ffmpeg/thumbnail.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
