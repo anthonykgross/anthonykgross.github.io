@@ -1,8 +1,8 @@
 - name: CV
   template: cv.html
 
-- name: Blog
-  template: blog.html
+#- name: Blog
+#  template: blog.html
 
 - name: Portfolio
   template: portfolio.html

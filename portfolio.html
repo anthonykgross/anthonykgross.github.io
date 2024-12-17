@@ -15,6 +15,11 @@ permalink: /portfolio
     intro=page.intro
 %}
 
+{% include github_profile.html %}
+<div class="mt-6">
+    {% include github_repositories.html %}
+</div>
+
 <div class="mt-12">
     {% assign projects = site.data.portfolio %}
     {% for project in projects %}

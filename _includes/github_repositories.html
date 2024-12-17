@@ -1,0 +1,81 @@
+<script>
+    (() => {
+        fetch('https://api.github.com/users/anthonykgross/repos?per_page=1000&sort=full_name&direction=asc', {
+            headers: {
+                'Authorization': `Bearer {{site.github_token}}`,
+            }
+        })
+            .then(res => res.json())
+            .then(res => {
+                res.forEach(repo => {
+                    let template = document.getElementById('repo-template').cloneNode(true);
+                    template.classList.remove('hidden');
+                    template.querySelector('.repo-name').href = repo.html_url;
+                    template.querySelector('.repo-name').innerHTML = repo.name;
+                    template.querySelector('.repo-description').innerHTML = repo.description;
+                    template.querySelector('.repo-stars').innerHTML = repo.stargazers_count;
+                    template.querySelector('.repo-forks').innerHTML = repo.forks_count;
+                    template.querySelector('.repo-pushed_at').innerHTML = new Date(repo.pushed_at).toLocaleDateString();
+                    template.querySelector('.repo-language').innerHTML = repo.language;
+                    template.querySelector('.repo-homepage').href = repo.homepage;
+
+                    if (!repo.language) {
+                        template.querySelector('.repo-language').parentNode.remove()
+                    }
+                    if (!repo.homepage || repo.homepage.length === 0) {
+                        template.querySelector('.repo-homepage').parentNode.remove()
+                    }
+                    if (!repo.archived) {
+                        template.querySelector('.repo-archived').remove()
+                    }
+
+                    let topic = template.querySelector('.repo-topic-tag').cloneNode(true)
+                    topic.classList.remove('hidden');
+
+                    repo.topics.forEach(topic => {
+                        let tag = template.querySelector('.repo-topic-tag').cloneNode(true)
+                        tag.classList.remove('hidden');
+                        tag.innerHTML = `#${topic}`;
+                        template.querySelector('.repo-topic').append(tag);
+                    })
+
+                    document.getElementById('repos-grid').append(template);
+                });
+            });
+    })();
+</script>
+
+<div id="repos-grid" class="grid grid-cols-1 gap-3">
+    <div id="repo-template" class="flex flex-col justify-between p-3 hidden">
+        <div class="flex justify-between">
+            <div class="flex items-center">
+                <a href="" target="_blank" class="font-bold text-2xl repo-name"></a>
+                <div class="repo-archived ml-5 border border-blue-500 text-blue-500 bg-blue-100 rounded-full p-2 text-xs">Archived</div>
+            </div>
+            <div>
+                <i class="fa fa-clock-o mr-3"></i>
+                <span class="text-xs repo-pushed_at"></span>
+            </div>
+        </div>
+        <div class="py-1 repo-description"></div>
+        <div class="flex repo-topic">
+            <span class="repo-topic-tag text-xs mr-1 p-1 font-bold text-blue-500 hidden"></span>
+        </div>
+        <div class="flex mt-1">
+            <div class="mr-5">
+                <i class="fa fa-star"></i>
+                <span class="repo-stars"></span>
+            </div>
+            <div class="mr-5">
+                <i class="fa fa-code-fork"></i>
+                <span class="repo-forks"></span>
+            </div>
+            <div class="mr-5">
+                <span class="repo-language font-bold"></span>
+            </div>
+            <div class="mr-5">
+                <a href="" target="_blank" class="repo-homepage">Documentation</a>
+            </div>
+        </div>
+    </div>
+</div>
