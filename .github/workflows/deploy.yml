@@ -6,8 +6,14 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - uses: actions/checkout@v2
@@ -23,10 +29,11 @@ jobs:
           -v ${{ github.workspace }}:/srv/jekyll \
           jekyll/builder:latest bash -c "chmod -R 777 /srv/jekyll && jekyll build"
 
-      - name: GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v2.5.0
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          build_dir: _site/
-          fqdn: anthonykgross.fr
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          path: ./_site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
