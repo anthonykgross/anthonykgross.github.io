@@ -1,5 +1,5 @@
-- name: CV
-  template: cv.html
+#- name: CV
+#  template: cv.html
 #
 #- name: Blog
 #  template: blog.html
