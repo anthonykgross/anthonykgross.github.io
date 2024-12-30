@@ -47,18 +47,18 @@
 
 <div id="repos-grid" class="grid grid-cols-1 gap-3">
     <div id="repo-template" class="flex flex-col justify-between p-3 hidden">
-        <div class="flex justify-between">
+        <div class="lg:flex justify-between">
             <div class="flex items-center">
                 <a href="" target="_blank" class="font-bold text-2xl repo-name"></a>
                 <div class="repo-archived ml-5 border border-blue-500 text-blue-500 bg-blue-100 rounded-full p-2 text-xs">Archived</div>
             </div>
             <div>
-                <i class="fa fa-clock-o mr-3"></i>
+                <i class="fa fa-clock-o mr-1 lg:mr-3"></i>
                 <span class="text-xs repo-pushed_at"></span>
             </div>
         </div>
         <div class="py-1 repo-description"></div>
-        <div class="flex repo-topic">
+        <div class="flex flex-wrap repo-topic">
             <span class="repo-topic-tag text-xs mr-1 p-1 font-bold text-blue-500 hidden"></span>
         </div>
         <div class="flex mt-1">
