@@ -21,7 +21,7 @@ build:
 
 start:          ## Run development Jekyll server
 start:
-	docker run --rm --volume="$(PWD):/srv/jekyll" --publish 81:4000 -it $(JEKYLL_IMAGE) jekyll serve
+	docker run --rm --volume="$(PWD):/srv/jekyll" --publish 80:4000 -it $(JEKYLL_IMAGE) jekyll serve
 
 debug:          ## Debug Jekyll server
 debug:
