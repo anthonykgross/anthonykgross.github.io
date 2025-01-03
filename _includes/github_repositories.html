@@ -7,39 +7,59 @@
         })
             .then(res => res.json())
             .then(res => {
-                res.forEach(repo => {
-                    let template = document.getElementById('repo-template').cloneNode(true);
-                    template.classList.remove('hidden');
-                    template.querySelector('.repo-name').href = repo.html_url;
-                    template.querySelector('.repo-name').innerHTML = repo.name;
-                    template.querySelector('.repo-description').innerHTML = repo.description;
-                    template.querySelector('.repo-stars').innerHTML = repo.stargazers_count;
-                    template.querySelector('.repo-forks').innerHTML = repo.forks_count;
-                    template.querySelector('.repo-pushed_at').innerHTML = new Date(repo.pushed_at).toLocaleDateString();
-                    template.querySelector('.repo-language').innerHTML = repo.language;
-                    template.querySelector('.repo-homepage').href = repo.homepage;
-
-                    if (!repo.language) {
-                        template.querySelector('.repo-language').parentNode.remove()
-                    }
-                    if (!repo.homepage || repo.homepage.length === 0) {
-                        template.querySelector('.repo-homepage').parentNode.remove()
-                    }
-                    if (!repo.archived) {
-                        template.querySelector('.repo-archived').remove()
-                    }
-
-                    let topic = template.querySelector('.repo-topic-tag').cloneNode(true)
-                    topic.classList.remove('hidden');
-
-                    repo.topics.forEach(topic => {
-                        let tag = template.querySelector('.repo-topic-tag').cloneNode(true)
-                        tag.classList.remove('hidden');
-                        tag.innerHTML = `#${topic}`;
-                        template.querySelector('.repo-topic').append(tag);
+                res
+                    .orWhere([
+                        {field: 'stargazers_count', operator: '>=', value: 1},
+                        {field: 'forks_count', operator: '>=', value: 1},
+                        {operator: 'custom', test: (item) => {
+                            if (item.homepage) {
+                                if (item.homepage.length > 0) {
+                                    return true
+                                }
+                            }
+                            return false;
+                        }},
+                    ]).sort((a, b) => {
+                        if (a.stargazers_count > b.stargazers_count) {
+                            return -1;
+                        } else if (a.stargazers_count < b.stargazers_count) {
+                            return 1;
+                        }
+                        return 0;
                     })
+                    .forEach(repo => {
+                        let template = document.getElementById('repo-template').cloneNode(true);
+                        template.classList.remove('hidden');
+                        template.querySelector('.repo-name').href = repo.html_url;
+                        template.querySelector('.repo-name').innerHTML = repo.name;
+                        template.querySelector('.repo-description').innerHTML = repo.description;
+                        template.querySelector('.repo-stars').innerHTML = repo.stargazers_count;
+                        template.querySelector('.repo-forks').innerHTML = repo.forks_count;
+                        template.querySelector('.repo-pushed_at').innerHTML = new Date(repo.pushed_at).toLocaleDateString();
+                        template.querySelector('.repo-language').innerHTML = repo.language;
+                        template.querySelector('.repo-homepage').href = repo.homepage;
 
-                    document.getElementById('repos-grid').append(template);
+                        if (!repo.language) {
+                            template.querySelector('.repo-language').parentNode.remove()
+                        }
+                        if (!repo.homepage || repo.homepage.length === 0) {
+                            template.querySelector('.repo-homepage').parentNode.remove()
+                        }
+                        if (!repo.archived) {
+                            template.querySelector('.repo-archived').remove()
+                        }
+
+                        let topic = template.querySelector('.repo-topic-tag').cloneNode(true)
+                        topic.classList.remove('hidden');
+
+                        repo.topics.forEach(topic => {
+                            let tag = template.querySelector('.repo-topic-tag').cloneNode(true)
+                            tag.classList.remove('hidden');
+                            tag.innerHTML = `#${topic}`;
+                            template.querySelector('.repo-topic').append(tag);
+                        })
+
+                        document.getElementById('repos-grid').append(template);
                 });
             });
     })();

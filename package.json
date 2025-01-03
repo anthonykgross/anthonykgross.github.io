@@ -5,6 +5,7 @@
   "repository": "git@github.com:anthonykgross/anthonykgross.github.io.git",
   "license": "MIT",
   "dependencies": {
+    "@anthonykgross/extensible-array-filter": "^1.0.3",
     "@highlightjs/cdn-assets": "^11.4.0",
     "autoprefixer": "^10.4.0",
     "clipboard": "^2.0.8",

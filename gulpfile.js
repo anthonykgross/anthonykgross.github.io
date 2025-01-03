@@ -14,6 +14,7 @@ exports.default = function() {
         './node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
         './node_modules/noty/lib/noty.min.js',
         './node_modules/urijs/src/URI.min.js',
+        './node_modules/@anthonykgross/extensible-array-filter/dist/bundle.js',
     ])
     .pipe(concat('assets/dist/libs.js'))
     .pipe(uglify())
