@@ -10,6 +10,13 @@ profile:
     - English.
     - French.
   interests: Music, Development, Video games, TV Shows, Mangas, Gym.
+  projects:
+    - name: python-workflow
+      url: https://anthonykgross.fr/python-workflow/
+    - name: extensible-array-filter
+      url: https://anthonykgross.fr/extensible-array-filter/
+    - name: docker-broadcaster
+      url: https://github.com/anthonykgross/docker-broadcaster
 
 education:
   - Bachelor Degree in Computer Science, University of Sciences, Marseille, completed in 2011.
@@ -35,28 +42,28 @@ skills:
       - Django, Rest framework, Graphene
       - Celery, threads, coroutines
       - Tensorflow, Pandas, pyTorch
-      - unittest, pytest, coverage
+      - unittest, coverage, Playwright
 
   - category: Web
     skills:
       - PHP 7+ (OOP, Symfony)
       - Javascript & React
       - Bootstrap, TailwindCSS
-      - Jekyll, Joomla, Wordpress
+      - Jekyll, Wordpress
       - Shopify, PrestaShop (+modules)
 
   - category: Mobile / Node
     skills:
-      - Kotlin / Java & React Native / Typescript, Next.js
+      - Kotlin / Java & React Native / Typescript / Expo, Next.js
       - Yarn, Gulp, NPM
       - Socket.io, Mongoose, Express, Firebase
-      - Jest, Karma
+      - Jest, Maestro, Storybook
 
   - category: Databases & Brokers
     skills:
       - MySQL, MariaDB, PostgreSQL
       - MongoDB, DynamoDB
-      - ZeroMQ, ActiveMQ, RabbitMQ, SQS
+      - ZeroMQ, ActiveMQ, RabbitMQ, SQS, Pub/Sub
       - Redis, Memcached, ElastiCache
       - Firebase Firestore & Realtime
 
@@ -73,6 +80,12 @@ skills:
       - Agile, SCRUM
       - Design Pattern
       - Test-Driven & Domain-Driven Development
+
+  - category: IA
+    skills:
+      - Development of assistants and agents
+      - Function calling
+      - Librechat Plugins
 
 experiences:
   - date: Apr 2022

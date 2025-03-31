@@ -66,7 +66,7 @@ permalink: /
         <h3 class="mt-8">Certifications</h3>
         <ul class="list-disc ml-6">
             {% for certification in cv.certifications %}
-            <li>{{ certification }}</li>
+                <li>{{ certification }}</li>
             {% endfor %}
         </ul>
     </div>
@@ -119,6 +119,7 @@ permalink: /
             <h3 class="mt-4">Informations personnelles</h3>
             <div>{{ "now" | date: "%Y" | minus: 1988 }} ans, {{ cv.profile.status }}</div>
             <div>Loisirs : {{ cv.profile.interests }}</div>
+            <div>Projets : {% for project in cv.profile.projects %}<a href="{{project.url}}" target="_blank">{{project.name}}</a> {% endfor %}</div>
         </div>
     </div>
 </div>

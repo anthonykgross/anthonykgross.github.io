@@ -11,6 +11,13 @@ profile:
     - Anglais courant (lu – parlé – écrit).
     - Allemand courant (lu – parlé – écrit).
   interests: Informatique, mangas, guitare, lecture, activités physiques.
+  projects:
+    - name: python-workflow
+      url: https://anthonykgross.fr/python-workflow/
+    - name: extensible-array-filter
+      url: https://anthonykgross.fr/extensible-array-filter/
+    - name: docker-broadcaster
+      url: https://github.com/anthonykgross/docker-broadcaster
 
 education:
   - 2011 – Licence Informatique SIL-NTI (Nouvelles Technologies)
@@ -36,35 +43,35 @@ skills:
       - Django, Rest framework, Graphene
       - Celery, threads, coroutines
       - Tensorflow, Pandas, pyTorch
-      - unittest, pytest, coverage
+      - unittest, coverage, Playwright
 
   - category: Web
     skills:
       - PHP 7+ (POO, Symfony)
       - Javascript & React
       - Bootstrap, TailwindCSS
-      - Jekyll, Joomla, Wordpress
+      - Jekyll, Wordpress
       - Shopify, PrestaShop (+modules)
 
   - category: Mobile / Node
     skills:
-      - Kotlin / Java & React Native / Typescript
+      - Kotlin / Java & React Native / Typescript / Expo, Next.js
       - Yarn, Gulp, NPM
       - Socket.io, Mongoose, Express, Firebase
-      - Jest, Karma
+      - Jest, Maestro, Storybook
 
   - category: Bases de données & Brokers
     skills:
       - MySQL, MariaDB, PostgreSQL
       - MongoDB, DynamoDB
-      - ZeroMQ, ActiveMQ, RabbitMQ, SQS
+      - ZeroMQ, ActiveMQ, RabbitMQ, SQS, Pub/Sub
       - Redis, Memcached, ElastiCache
       - Firebase Firestore & Realtime
 
   - category: Devops
     skills:
       - Kubernetes, Docker, Rancher
-      - AWS, Digital Ocean
+      - AWS, Digital Ocean, GCP
       - Github / Actions, Gitlab, Jenkins, TravisCI
       - Windows, Mac & Linux ♥️
 
@@ -74,6 +81,12 @@ skills:
       - Agile, SCRUM
       - Design Pattern
       - Test-Driven & Domain-Driven Development
+
+  - category: IA
+    skills:
+      - Développement d'assistants et d'agents
+      - Function calling
+      - Plugins Librechat
 
 experiences:
   - date: Avril 2022
