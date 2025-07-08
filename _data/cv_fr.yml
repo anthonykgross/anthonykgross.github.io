@@ -25,6 +25,7 @@ education:
   - 2008 – BAC STG (télécommunication-gestion) avec mention AB
 
 certifications:
+  - 'En cours – Agile Scrum : Certifiez-vous Scrum Product Owner PSPO® ! – Udemy.'
   - '2024 – The Complete Digital Marketing Course - 12 Courses in 1 – Udemy.'
   - '2024 – Formation management – A+C | agir plus concrètement.'
   - '2022 – Server Side Rendering with React and Redux – Udemy.'
@@ -93,73 +94,61 @@ experiences:
     contract: CDI 2+ ans
     company: Digimood (Marseille)
     position: CTO
-    duties: >-
-      En tant que directeur du pôle R&D, mon objectif premier était de développer une suite d'outils internes
-      afin de soutenir nos consultants dans leurs missions SEO et SEA.
-      La récupération des données publicitaire et des volumes de mots-clés, le suivis des tendances et
-      des budgets ainsi que la surveillance des liens d'affiliation étaient ce que nous avons accomplis
-      en l'espace de quelques années avec mon équipe.
+    duties:
+      - "En tant que directeur du pôle R&D, j'ai piloté une transformation stratégique de nos outils internes, avec une vision claire : donner à nos consultants les moyens technologiques de se surpasser dans leurs missions SEO et SEA."
+      - La conception de notre suite d'outils était animée par une compréhension profonde des besoins opérationnels de nos équipes. Nous avons développé des solutions sur mesure pour répondre aux défis complexes du marketing digital. La récupération et l'analyse des données publicitaires sont rapidement devenues notre signature technologique.
+      - Notre premier axe de développement a concerné l'agrégation et le traitement des volumes de mots-clés. Nous avons créé des algorithmes sophistiqués capables de collecter, normaliser et contextualiser des milliers de données en temps réel, offrant à nos consultants une visibilité instantanée sur les tendances du marché.
+      - Le suivi des budgets publicitaires et la surveillance des liens d'affiliation ont été nos principaux chantiers. Nous avons développé des outils de tracking financier et de monitoring permettant une traçabilité complète et des alertes personnalisées.
+      - L'équipe que j'ai constituée, composée de développeurs, data analysts et experts marketing, a transformé des besoins opérationnels en solutions technologiques innovantes. En quelques années, nous sommes passés d'outils disparates à une suite technologique intégrée et puissante.
+      - Cette expérience m'a confirmé que la R&D n'est pas qu'une question de technologie, mais avant tout une démarche d'écoute, de compréhension et d'innovation au service des métiers.
     skills: python, django, celery, rabbitmq, redis, mongodb, postgres, react, next.js, docker
 
   - date: Avril 2019
     contract: CDI 3+ ans
     company: WAG Travel (Marseille)
-    position: Directeur technique
-    duties: >-
-      Mes associés et moi-même avions pour objectif d’analyser le
-      comportement des visiteurs d'un site internet pour pouvoir faire
-      des recommandations pertinentes. L'originalité de notre solution était
-      qu’elle n’utilisait aucune donnée personnelle et qu'elle était whitelisté
-      par la CNIL; donc exemptée de consentement. <br/>
-      Durant cette aventure riche d'expérience, mon rôle
-      premier était de construire un trackeur suffisamment
-      discret et léger pour être facilement implémenter chez
-      nos clients et personnalisable pour analyser finement
-      l’audience et les pages produits. Dans un second temps,
-      l’exploitation et la restitution de notre analyse dans un
-      dashboard. Pour finir, le tout est temps réel pour une
-      actionnabilité immédiate.
+    position: CTO
+    duties:
+      - En tant que CTO, j'ai orchestré la transformation de notre startup dans le domaine de l'analytics web, en développant une solution technologique innovante et éthique.
+      - La stratégie technologique était au cœur de notre différenciation. J'ai défini l'architecture technique et la vision produit, en choisissant des technologies permettant de créer un trackeur web unique. Notre objectif principal était de développer une solution GDPR-compliant, qui respecte intrinsèquement la vie privée des utilisateurs.
+      - Le leadership de l'équipe technique a été un enjeu crucial. J'ai construit et animé une petite équipe de 3 personnes, en recrutant des talents stratégiques comme des développeurs et data scientists. Ma priorité était de créer une culture d'innovation où l'apprentissage continu et la montée en compétences sont encouragés.
+      - Sur le plan business, j'ai veillé à un alignement constant entre notre stratégie technologique et les objectifs de l'entreprise. Ma participation active aux décisions stratégiques m'a permis de gérer efficacement le budget R&D et d'optimiser nos ressources techniques.
+      - "Le résultat : un trackeur web léger, personnalisable et respectueux de la vie privée, offrant des insights temps réel qui ont séduit nos premiers clients."
     skills: python, django, celery, rabbitmq, redis, mongodb, postgres, react, graphql, kubernetes, rancher
 
   - date: Avril 2018
     contract: CDI 1 an
     company: Kalyzée (Marseille)
     position: Architecte logiciel
-    duties: >-
-      J'ai principalement mis en place une plateforme permettant à nos équipes de gérer les boîtiers
-      streaming à distance. Grâce à Django, mon objectif était de rendre possible la maintenance de
-      tout le parc depuis n'importe ou sans intervention technique manuelle. Les principales
-      fonctionnalités étaient la mise à jour et l'accès aux logs ainsi que le contrôle de la
-      caméra et du stockage.
+    duties:
+      - En tant que développeur, j'ai conçu et implémenté une plateforme innovante de gestion à distance des boîtiers streaming, répondant à un besoin crucial de notre infrastructure technique.
+      - "La solution développée sous Django avait un objectif ambitieux : permettre une maintenance complète et centralisée de notre parc de boîtiers, sans intervention technique manuelle sur site. Cette approche représentait une transformation significative de notre stratégie de support informatique."
+      - Les fonctionnalités clés de la plateforme couvraient plusieurs dimensions essentielles. La mise à jour automatisée des boîtiers garantissait leur performance et leur sécurité. L'accès centralisé aux logs offrait une traçabilité complète et facilitait le diagnostic des éventuels problèmes techniques.
+      - Le contrôle à distance de la caméra et de l'espace de stockage apportait une flexibilité opérationnelle inédite. Les équipes pouvaient désormais intervenir instantanément, sans déplacement physique, réduisant significativement les coûts et les délais de maintenance.
+      - Cette solution technique a non seulement optimisé notre gestion du parc de boîtiers, mais a aussi démontré la capacité de nos équipes à développer des outils internes innovants et hautement performants.
     skills: java, maven, php, javascript, android, python, html/css, django, docker, ovh
 
   - date: Juin 2016
     contract: CDI 2+ ans
     company: Pepperstone (Melbourne, Australie)
     position: Architecte logiciel
-    duties: >-
-      Mon rôle était de maintenir différentes applications dans le domaine de la finance.
-      Une de mes tâches était de développer et maintenir un programme permettant de détecter
-      le blanchiment d'argent via le comportement des clients. J'ai aussi conçu en
-      collaboration avec l'équipe marketing un site web sur l'actualité Forex
-      doté des dernières technos web marketing du moment et l'activation de
-      campagnes d'ads. Pour finir, mon fil rouge était la mise en place d'un
-      logiciel de réconciliation des transactions financières depuis tous les
-      moyens de paiements utilisés, les banques et les achats/ventes des clients.
+    duties:
+      - En tant que développeur dans le secteur financier, j'ai géré un portefeuille de projets stratégiques visant à optimiser nos processus internes et nos outils de détection des risques.
+      - Le développement d'un programme de détection du blanchiment d'argent a représenté un défi technique majeur. En analysant finement le comportement des clients, j'ai mis au point des algorithmes capables d'identifier des schémas financiers suspects, renforçant significativement notre dispositif de conformité réglementaire.
+      - En collaboration étroite avec l'équipe marketing, j'ai également conçu un site web Forex innovant. L'objectif était de créer une plateforme dynamique, intégrant les dernières technologies de web marketing et permettant le déploiement de campagnes publicitaires ciblées et performantes.
+      - "Mon projet fil rouge fut la conception d'un logiciel complexe de réconciliation financière. Cet outil permettait de centraliser et de rapprocher les transactions issues de multiples sources : différents moyens de paiement, transactions bancaires, achats et ventes des clients."
+      - Ces projets ont démontré ma capacité à développer des solutions techniques sophistiquées, répondant à des enjeux métiers critiques dans le domaine financier.
     skills: php, symfony, javascript, html/css, elasticsearch, ansible, docker, mysql, aws, digital ocean
 
   - date: Février 2014
     contract: CDD 2+ ans
     company: CNRS (Laboratoire d’Astrophysique de Marseille)
     position: Ingénieur d'étude
-    duties: >-
-      Après avoir passé quelques temps sur le débogage d'une application en java,
-      j'ai développé un site web en python(django) permettant de savoir si deux
-      étoiles appartiennent au même système, en collaboration avec différents
-      laboratoires. J'ai aussi participé à l'établissement de petits outils
-      facilitant la maintenance de plus gros. J'ai énormément voyagé afin de
-      promouvoir les travaux de notre service au travers de conférences
-      internationales et de formations.
+    duties:
+      - Mon parcours dans le domaine de la recherche astronomique a été marqué par une diversité de projets techniques et scientifiques, combinant développement logiciel et collaboration internationale.
+      - Initialement affecté au débogage d'une application Java complexe, j'ai ensuite développé un site web innovant sous Django, en collaboration étroite avec plusieurs laboratoires de recherche. L'objectif de ce projet était de permettre l'identification et l'analyse des systèmes stellaires, offrant un nouvel outil aux chercheurs du domaine.
+      - En parallèle, j'ai contribué à la création de plusieurs outils internes visant à optimiser la maintenance de nos systèmes informatiques. Ces développements, bien que plus modestes, ont significativement amélioré notre efficacité opérationnelle.
+      - Ma participation active au rayonnement scientifique s'est traduite par de nombreux déplacements internationaux. J'ai présenté nos travaux lors de conférences prestigieuses et dispensé des formations, contribuant ainsi à la visibilité et au partage des connaissances de notre service.
+      - Ces expériences ont illustré ma capacité à combiner expertise technique, collaboration scientifique et communication internationale.
     skills: java, maven, php, javascript, python, html/css, django, docker, zMq, postgres, angularjs
 #
 #  - date: Avril 2012

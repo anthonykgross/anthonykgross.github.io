@@ -96,10 +96,12 @@ permalink: /
             <div class="text-right lg:text-left">{{ experience.contract }}</div>
             <div>{{ experience.company }}</div>
             <div class="text-right">{{ experience.position }}</div>
-            <div class="col-span-2 lg:col-span-4">
-                {{ experience.duties }}
+            <div class="col-span-2 lg:col-span-4 px-2">
+                {% for duty in experience.duties %}
+                    <p class="mt-2">{{ duty }}</p>
+                {% endfor %}
             </div>
-            <div class="col-span-2 lg:col-span-4 italic">
+            <div class="col-span-2 lg:col-span-4 italic mt-2">
                 <span class="font-bold">Technologies</span> :
                 {{ experience.skills }}
             </div>

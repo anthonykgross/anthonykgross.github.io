@@ -24,6 +24,7 @@ education:
   - High School Certificate, High School of Agen, 2008.
 
 certifications:
+  - 'Agile Scrum: Become a Certified Scrum Product Owner PSPO®!, Udemy, In progress.'
   - 'The Complete Digital Marketing Course - 12 Courses in 1, Udemy, 2024.'
   - 'Team management course, A+C | agir plus concrètement, 2024.'
   - 'Server Side Rendering with React and Redux, Udemy, 2022.'
@@ -92,67 +93,59 @@ experiences:
     contract: 2+ years
     company: Digimood (Marseille)
     position: CTO
-    duties: >-
-      As head of research and development department, my main goal
-      was to build a internal software suite SEO and SEA centric helping our experts to perform.
-      Fetching ads campaigns and keywords metrics, monitoring trends and budgets and watching
-      netlinking availability were what we achieved with my team in these years.
+    duties:
+      - "As R&D Director, I led a strategic transformation of our internal tools, with a clear vision: to provide our consultants with the technological means to excel in their SEO and SEA missions."
+      - The design of our tool suite was driven by a deep understanding of our teams' operational needs. We developed custom solutions to address the complex challenges of digital marketing. The retrieval and analysis of advertising data quickly became our technological signature.
+      - Our first development axis focused on the aggregation and processing of keyword volumes. We created sophisticated algorithms capable of collecting, normalizing, and contextualizing thousands of data points in real-time, offering our consultants instant visibility into market trends.
+      - Tracking advertising budgets and monitoring affiliate links were our main projects. We developed financial tracking and monitoring tools that enabled complete traceability and personalized alerts.
+      - The team I assembled, composed of developers, data analysts, and marketing experts, transformed operational needs into innovative technological solutions. In just a few years, we moved from disparate tools to an integrated and powerful technological suite.
+      - This experience confirmed to me that R&D is not just about technology, but fundamentally about listening, understanding, and innovating in service of business needs.
     skills: python, django, celery, rabbitmq, redis, mongodb, postgres, react, next.js, docker
 
   - date: Apr 2019
     contract: 3+ years
     company: WAG Travel (Marseille)
     position: CTO
-    duties: >-
-      I did too many things! From accounting to web development,
-      I spent my days to create a solution to analyze visitors
-      behaviors from websites based on their activities without
-      any personal data following GDPR regulations. A great challenge! <br/>
-      My first aim was to develop a tracker as light and powerful as
-      possible to ease its implementation. It has to be customizable to catch events on demand. My second goal was to create a dashboard to deliver our analysis
-      and let our customers personalize their trackers.
-      Finally, every project has to be in real time.
+    duties:
+      - As CTO, I orchestrated the transformation of our startup in the web analytics domain by developing an innovative and ethical technological solution.
+      - Technological strategy was at the core of our differentiation. I defined the technical architecture and product vision, selecting technologies that would enable the creation of a unique web tracker. Our primary objective was to develop a GDPR-compliant solution that intrinsically respects user privacy.
+      - Technical team leadership was a crucial challenge. I built and led a small team of 3 people, recruiting strategic talents like developers and data scientists. My priority was to create an innovation culture where continuous learning and skill development are encouraged.
+      - On the business front, I ensured constant alignment between our technological strategy and the company's objectives. My active participation in strategic decisions allowed me to effectively manage the R&D budget and optimize our technical resources.
+      - "The result: a lightweight, customizable, and privacy-respecting web tracker offering real-time insights that attracted our first clients."
     skills: python, django, celery, rabbitmq, redis, mongodb, postgres, react, graphql, kubernetes, rancher, docker
 
   - date: Apr 2018
     contract: 1 year
     company: Kalyzée (Marseille)
     position: Software architect
-    duties: >-
-      I mainly developed a website to manage boxes on remote.
-      Thank to Django, my goal was to let make possible
-      maintenance on devices all around the world
-      without any manual connections by technicians.
-      Some of features were : Upgrading, rebooting,
-      recording, streaming and managing storage.
+    duties:
+      - As a developer, I designed and implemented an innovative remote management platform for streaming boxes, addressing a crucial need in our technical infrastructure.
+      - "The solution developed under Django had an ambitious objective: to enable comprehensive and centralized maintenance of our box fleet, without manual on-site technical intervention. This approach represented a significant transformation of our IT support strategy."
+      - The platform's key functionalities covered several essential dimensions. The automated update of boxes ensured their performance and security. Centralized log access offered complete traceability and facilitated the diagnosis of potential technical issues.
+      - Remote control of the camera and storage space brought unprecedented operational flexibility. Teams could now intervene instantly, without physical travel, significantly reducing maintenance costs and delays.
+      - This technical solution not only optimized our box fleet management but also demonstrated our team's ability to develop innovative and highly performant internal tools.
     skills: java, maven, php, javascript, android, python, html/css, django, docker, ovh
 
   - date: Jun 2016
     contract: 2+ years
     company: Pepperstone (Melbourne, Australia)
     position: Software architect
-    duties: >-
-      My job was to maintain different applications related on Finance.
-      One of my task was to develop and maintain programs detecting
-      Money Laundry behaviors based on clients activities. Another
-      one was a new public website in collaboration with the
-      marketing team and the last one was to develop from
-      scratch an accounting software reconciling automatically
-      transactions between our payment providers and tradings servers.
+    duties:
+      - As a developer in the financial sector, I managed a portfolio of strategic projects aimed at optimizing our internal processes and risk detection tools.
+      - The development of a money laundering detection program represented a major technical challenge. By finely analyzing customer behavior, I developed algorithms capable of identifying suspicious financial patterns, significantly strengthening our regulatory compliance mechanism.
+      - In close collaboration with the marketing team, I also designed an innovative Forex website. The objective was to create a dynamic platform, integrating the latest web marketing technologies and enabling the deployment of targeted and high-performance advertising campaigns.
+      - "My flagship project was the design of a complex financial reconciliation software. This tool allowed the centralization and reconciliation of transactions from multiple sources: different payment methods, banking transactions, customer purchases and sales."
+      - These projects demonstrated my ability to develop sophisticated technical solutions, addressing critical business issues in the financial domain.
     skills: php, symfony, javascript, html/css, elasticsearch, ansible, docker, mysql, aws, digital ocean
 
   - date: Feb 2014
     contract: 2+ years
     company: CNRS (National laboratory of astrophysics)
     position: Software architect
-    duties: >-
-      I learnt Python/Django, Java, IDL and improved my communication.
-      Knowing scientists needs and collaborating with international
-      laboratories were my basic day. The two main parts of my job
-      were to maintain an astronomic software helping scientists to
-      determine the best parameters to watch a star on telescope
-      (Brightness, location, etc.) and the second one was to
-      develop from scratch, a website helping astronomers to
-      know if one star belongs to a given groups of star
-      based on the paralax effect.
+    duties:
+      - My journey in the field of astronomical research was marked by a diversity of technical and scientific projects, combining software development and international collaboration.
+      - Initially assigned to debugging a complex Java application, I subsequently developed an innovative website using Django, in close collaboration with several research laboratories. The objective of this project was to enable the identification and analysis of stellar systems, offering researchers a new tool in the domain.
+      - In parallel, I contributed to the creation of several internal tools aimed at optimizing the maintenance of our computer systems. These developments, although more modest, significantly improved our operational efficiency.
+      - My active participation in scientific outreach translated into numerous international travels. I presented our work at prestigious conferences and delivered training sessions, thus contributing to the visibility and knowledge sharing of our service.
+      - These experiences illustrated my ability to combine technical expertise, scientific collaboration, and international communication.
     skills: java, maven, php, javascript, python, html/css, django, docker, zMq, postgres, angularjs
