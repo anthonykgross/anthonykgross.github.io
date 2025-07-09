@@ -2,7 +2,9 @@
 layout: full
 title: Professional experiences
 description: >-
-
+    Resume of a passionate developer with 15+ years of experience in software development, specialized in AI, technical
+    leadership, and innovation. Expert in digital transformation, creating innovative solutions,
+    and technical team management.
 image: /assets/images/fb/cv_en.png
 text-rotator: Professional experiences
 
@@ -17,8 +19,8 @@ permalink: /en/cv
     <img class="w-10" src="/assets/images/flag_en.png" />
 </div>
 
-<div class="print:grid lg:grid grid-cols-2 screen:text-justify">
-    <div class="flex flex-row items-start">
+<div class="print:grid lg:grid grid-cols-3 screen:text-justify">
+    <div class="flex flex-row items-start lg:col-span-2 print:col-span-2">
         <img class="screen:w-36 print:w-20 mr-4" src="/assets/images/photo_143.jpg"/>
         <div>
             <h3>Anthony K GROSS</h3>
@@ -30,15 +32,15 @@ permalink: /en/cv
         <h3 class="mt-8 print:mt-0 lg:mt-0">Contact</h3>
         <ul class="print:text-sm">
             <li>
-                <i class="fa fa-twitter px-3 text-1xl"></i>
+                <i class="fa fa-twitter px-3 text-1xl print:hidden"></i>
                 <a href="{{ site.socials['twitter'].url }}">{{ site.socials['twitter'].url }}</a>
             </li>
             <li>
-                <i class="fa fa-linkedin px-3 text-1xl"></i>
+                <i class="fa fa-linkedin px-3 text-1xl print:hidden"></i>
                 <a href="{{ site.socials['linkedin'].url }}">{{ site.socials['linkedin'].url }}</a>
             </li>
             <li>
-                <i class="fa fa-github px-3 text-1xl"></i>
+                <i class="fa fa-github px-3 text-1xl print:hidden"></i>
                 <a href="{{ site.socials['github'].url }}">{{ site.socials['github'].url }}</a>
             </li>
         </ul>
@@ -46,24 +48,22 @@ permalink: /en/cv
 </div>
 
 <div class="text-justify">
-    <h3 class="mt-8">Career Objectives</h3>
+    <h3 class="mt-8 mb-3">Career Objectives</h3>
     <p>{{ cv.objectives }}</p>
 </div>
 
-<div class="lg:grid grid-cols-2 gap-3 text-justify">
-    <div>
-        <h3 class="mt-8">Education</h3>
+<div>
+    <h3 class="mt-8">Education & Certifications</h3>
+    <div class="lg:grid grid-cols-2 gap-3 text-justify">
+        {% assign halfsize = cv.certifications.size | divided_by: 2 | ceil %}
         <ul class="list-disc ml-6">
-            {% for education in cv.education %}
-                <li>{{ education }}</li>
+            {% for certification in cv.certifications limit:halfsize %}
+                <li class="mt-1">{{ certification }}</li>
             {% endfor %}
         </ul>
-    </div>
-    <div>
-        <h3 class="mt-8">Certifications</h3>
         <ul class="list-disc ml-6">
-            {% for certification in cv.certifications %}
-                <li>{{ certification }}</li>
+            {% for certification in cv.certifications offset:halfsize %}
+                <li class="mt-1">{{ certification }}</li>
             {% endfor %}
         </ul>
     </div>
@@ -77,7 +77,7 @@ permalink: /en/cv
                 <h4 class="mt-4">{{ s.category }}</h4>
                 <ul class="ml-6">
                     {% for skill in s.skills %}
-                        <li>{{ skill }}</li>
+                        <li class="mt-1">{{ skill }}</li>
                     {% endfor %}
                 </ul>
             </div>
@@ -95,7 +95,7 @@ permalink: /en/cv
             <div class="text-right">{{ experience.position }}</div>
             <div class="col-span-2 lg:col-span-4 px-2">
                 {% for duty in experience.duties %}
-                <p class="mt-2">{{ duty }}</p>
+                    <p class="mt-2">{{ duty }}</p>
                 {% endfor %}
             </div>
             <div class="col-span-2 lg:col-span-4 italic mt-2">
@@ -109,16 +109,16 @@ permalink: /en/cv
 <div class="text-justify">
     <div class="print:grid lg:grid grid-cols-2 gap-3">
         <div>
-            <h3 class="mt-4">Languages known</h3>
+            <h3 class="mt-4 mb-3">Languages known</h3>
             {% for language in cv.profile.languages %}
-                <div>{{ language }}</div>
+                <div class="mt-1">{{ language }}</div>
             {% endfor %}
         </div>
         <div>
             <h3 class="mt-4">Profile</h3>
-            <div>{{ "now" | date: "%Y" | minus: 1988 }} y.o, {{ cv.profile.status }}</div>
-            <div>Interests : {{ cv.profile.interests }}</div>
-            <div>Projects : {% for project in cv.profile.projects %}<a href="{{project.url}}" target="_blank">{{project.name}}</a> {% endfor %}</div>
+            <div class="mt-1">{{ "now" | date: "%Y" | minus: 1988 }} y.o, {{ cv.profile.status }}</div>
+            <div class="mt-1">Interests : {{ cv.profile.interests }}</div>
+            <div class="mt-1">Projects : {% for project in cv.profile.projects %}<a href="{{project.url}}" target="_blank">{{project.name}}</a> {% endfor %}</div>
         </div>
     </div>
 </div>

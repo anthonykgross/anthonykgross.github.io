@@ -1,9 +1,10 @@
-title: Software Engineer
+title: Engineering Manager
 objectives: >-
-  Software engineer with 15+ years experience in many domains covering web development,
-  software development and sciences. I’m confident that my proven
-  skills and expertise will be a valuable asset for any organization and
-  am ready to accept any challenging job matching my profile.
+  Software architect with 15+ years of experience, I combine in-depth technical expertise 
+  and strong managerial skills. Passionate about technical leadership, I am able to unite teams, 
+  optimize processes, and drive innovative projects. My goal: to bring strategic value through 
+  a technical and human vision.
+
 profile:
   status: single, 2 kiddos.
   languages:
@@ -18,11 +19,6 @@ profile:
     - name: docker-broadcaster
       url: https://github.com/anthonykgross/docker-broadcaster
 
-education:
-  - Bachelor Degree in Computer Science, University of Sciences, Marseille, completed in 2011.
-  - Higher National Certificate in Programming, High School of Marseille, 2010.
-  - High School Certificate, High School of Agen, 2008.
-
 certifications:
   - 'Agile Scrum: Become a Certified Scrum Product Owner PSPO®!, Udemy, In progress.'
   - 'The Complete Digital Marketing Course - 12 Courses in 1, Udemy, 2024.'
@@ -35,6 +31,9 @@ certifications:
   - Arduino, Fun MOOC, 2016.
   - Web semantic and Web data, Fun MOOC, 2016.
   - Docker, Treeptik, 2015.
+  - Bachelor Degree in Computer Science, University of Sciences, Marseille, completed in 2011.
+  - Higher National Certificate in Programming, High School of Marseille, 2010.
+  - High School Certificate, High School of Agen, 2008.
 
 skills:
   - category: Python
@@ -88,7 +87,31 @@ skills:
       - Function calling
       - Librechat Plugins
 
+  - category: Project Management
+    skills:
+      - Agile & SCRUM methodologies
+      - Product & Sprint Planning
+      - Cross-functional team coordination
+      - Stakeholder communication
+
+  - category: Team Leadership
+    skills:
+      - Technical team management
+      - Performance coaching
+      - Skill development & mentoring
+      - Talent acquisition & onboarding
+      - Conflict resolution
+
 experiences:
+  - date: Oct 2024
+    contract: Currently
+    company: Biggie Group (Marseille)
+    position: Senior Software Engineer
+    duties:
+      - As a Senior Fullstack Developer, I am driving the digital transformation of our information system through the development of innovative AI assistants and agents. My strategic mission is to democratize access to our internal data, enabling our web marketing consultants to effectively leverage it through Large Language Models (LLM) technologies.
+      - I design and implement solutions that significantly improve team productivity and analytical capabilities, transforming raw data into operational insights. My goal is to create intelligent and intuitive tools that facilitate the understanding and exploitation of our complex data, bridging the gap between technical and marketing teams.
+    skills: node, php, bigquery, datadog, mysql, react, next.js, n8n, llm, librechat, docker, project management
+
   - date: Apr 2022
     contract: 2+ years
     company: Digimood (Marseille)
@@ -100,7 +123,7 @@ experiences:
       - Tracking advertising budgets and monitoring affiliate links were our main projects. We developed financial tracking and monitoring tools that enabled complete traceability and personalized alerts.
       - The team I assembled, composed of developers, data analysts, and marketing experts, transformed operational needs into innovative technological solutions. In just a few years, we moved from disparate tools to an integrated and powerful technological suite.
       - This experience confirmed to me that R&D is not just about technology, but fundamentally about listening, understanding, and innovating in service of business needs.
-    skills: python, django, celery, rabbitmq, redis, mongodb, postgres, react, next.js, docker
+    skills: python, django, celery, rabbitmq, redis, mongodb, postgres, react, next.js, docker, project management, team leadership
 
   - date: Apr 2019
     contract: 3+ years
@@ -112,7 +135,7 @@ experiences:
       - Technical team leadership was a crucial challenge. I built and led a small team of 3 people, recruiting strategic talents like developers and data scientists. My priority was to create an innovation culture where continuous learning and skill development are encouraged.
       - On the business front, I ensured constant alignment between our technological strategy and the company's objectives. My active participation in strategic decisions allowed me to effectively manage the R&D budget and optimize our technical resources.
       - "The result: a lightweight, customizable, and privacy-respecting web tracker offering real-time insights that attracted our first clients."
-    skills: python, django, celery, rabbitmq, redis, mongodb, postgres, react, graphql, kubernetes, rancher, docker
+    skills: python, django, celery, rabbitmq, redis, mongodb, postgres, react, graphql, kubernetes, rancher, docker, project management, team leadership
 
   - date: Apr 2018
     contract: 1 year
