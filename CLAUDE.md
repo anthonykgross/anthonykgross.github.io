@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Personal site for **Anthony K GROSS** — published at https://anthonykgross.fr via GitHub Pages. Scope is the CV only; the blog was removed, and the Portfolio menu entry now links straight to the GitHub repos list.
+Personal site for **Anthony K GROSS** — published at https://anthonykgross.fr via GitHub Pages. Scope is the CV only; the blog was removed, and the Portfolio menu entry now links straight to the GitHub repos list. Two CV variants are served per language: **Hands-off** (managerial/CTO) and **Hands-on** (technical/architect), switchable via tabs at the top of each page.
 
 ## Stack
 
@@ -31,10 +31,17 @@ The `env` variable toggles dev-only UI (e.g. the responsive-breakpoint indicator
 
 ## Structure
 
-- `_data/` — site data (`cv_fr.yml`, `cv_en.yml`, `menu.yml`). Drafts: `draft_*.txt`.
+- `_data/` — site data:
+  - `cv_hands_off_{fr,en}.yml` — managerial/CTO variant (has `management_skills:` block)
+  - `cv_hands_on_{fr,en}.yml` — technical/architect variant
+  - `menu.yml` — nav entries
 - `_layouts/` — `default.html` (head + scripts) and `full.html` (banner + nav + footer)
 - `_includes/` — partials: `anchor/{anchor,goto}.html` (top-of-page anchor + back-to-top link)
-- Pages: `cv.html` (site root, `permalink: /`) and `cv-en.html`
+- Pages (4 CV variants):
+  - `cv-hands-off-fr.html` → `/` (site root, redirects `/cv`, `/fr/cv`, `/cv/hands-off`)
+  - `cv-hands-on-fr.html` → `/cv/hands-on`
+  - `cv-hands-off-en.html` → `/en/cv` (redirects `/en/cv/hands-off`)
+  - `cv-hands-on-en.html` → `/en/cv/hands-on`
 
 ## Notes
 

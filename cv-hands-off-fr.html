@@ -1,0 +1,146 @@
+---
+layout: full
+title: Expériences professionnelles
+description: >-
+    CV d'un manager technique avec 15+ ans d'expérience, spécialisé en leadership d'équipes, transformation digitale et
+    pilotage de la stratégie technologique. Expert en management, définition de roadmap produit et alignement
+    technique/business.
+image: /assets/images/fb/cv.png
+text-rotator: Expériences professionnelles
+
+redirect_from:
+    - /fr/cv
+    - /cv
+    - /cv/hands-off
+permalink: /
+---
+
+{% assign cv = site.data.cv_hands_off_fr %}
+<div class="hidden screen:flex flex-row justify-between items-end border-b border-akgFontGrey mb-4">
+    <div class="flex flex-row">
+        <a href="/" class="px-4 py-2 border-b-2 border-akgRed -mb-px font-bold text-akgRed">Hands-off</a>
+        <a href="/cv/hands-on" class="px-4 py-2 border-b-2 border-transparent hover:text-akgRed">Hands-on</a>
+    </div>
+    <a href="/en/cv">
+        <img class="w-10 mb-1 opacity-50 hover:opacity-100" src="/assets/images/flag_en.png" />
+    </a>
+</div>
+
+<div class="print:grid lg:grid grid-cols-3 screen:text-justify">
+    <div class="flex flex-row items-start lg:col-span-2 print:col-span-2">
+        <img class="screen:w-36 print:w-20 mr-4" src="/assets/images/photo_143.jpg"/>
+        <div>
+            <h3>Anthony K GROSS</h3>
+            <h4>{{ cv.title }}</h4>
+            <div>Marseille, France</div>
+        </div>
+    </div>
+    <div>
+        <h3 class="mt-8 print:mt-0 lg:mt-0">Contact</h3>
+        <ul class="print:text-sm">
+            <li>
+                <i class="fa fa-twitter px-3 text-1xl print:hidden"></i>
+                <a href="{{ site.socials['twitter'].url }}">{{ site.socials['twitter'].url }}</a>
+            </li>
+            <li>
+                <i class="fa fa-linkedin px-3 text-1xl print:hidden"></i>
+                <a href="{{ site.socials['linkedin'].url }}">{{ site.socials['linkedin'].url }}</a>
+            </li>
+            <li>
+                <i class="fa fa-github px-3 text-1xl print:hidden"></i>
+                <a href="{{ site.socials['github'].url }}">{{ site.socials['github'].url }}</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="text-justify">
+    <h3 class="mt-8 mb-3">Objectif de carrière</h3>
+    <p>{{ cv.objectives }}</p>
+</div>
+
+<div class="text-justify">
+    <div class="print:grid lg:grid grid-cols-2 gap-3">
+        {% for s in cv.management_skills %}
+            <div>
+                <h3 class="mt-8 mb-3">{{ s.category }}</h3>
+                <ul class="ml-6 list-disc">
+                    {% for skill in s.skills %}
+                        <li class="mt-1">{{ skill }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="text-justify">
+    <h3 class="mt-8">Expériences professionnelles</h3>
+    {% for experience in cv.experiences %}
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-1 py-6 border-akgFontGrey border-b border-dashed">
+            <div>{{ experience.date }}</div>
+            <div class="text-right lg:text-left">{{ experience.contract }}</div>
+            <div>{{ experience.company }}</div>
+            <div class="text-right">{{ experience.position }}</div>
+            <div class="col-span-2 lg:col-span-4 px-2">
+                {% for duty in experience.duties %}
+                    <p class="mt-2">{{ duty }}</p>
+                {% endfor %}
+            </div>
+            <div class="col-span-2 lg:col-span-4 italic mt-2">
+                <span class="font-bold">Technologies</span> :
+                {{ experience.skills }}
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+<div>
+    <h3 class="mt-8 mb-3">Études & Certifications</h3>
+    <div class="lg:grid grid-cols-2 gap-3 text-justify">
+        {% assign halfsize = cv.certifications.size | divided_by: 2 | ceil %}
+        <ul class="list-disc ml-6">
+            {% for certification in cv.certifications limit:halfsize %}
+                <li class="mt-1">{{ certification }}</li>
+            {% endfor %}
+        </ul>
+        <ul class="list-disc ml-6">
+            {% for certification in cv.certifications offset:halfsize %}
+            <li class="mt-1">{{ certification }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<div class="text-justify">
+    <h3 class="mt-8">Connaissances informatiques</h3>
+    <div class="print:grid lg:grid grid-cols-2 xl:grid-cols-3 gap-3">
+        {% for s in cv.skills %}
+            <div>
+                <h4 class="mt-4">{{ s.category }}</h4>
+                <ul class="ml-6">
+                    {% for skill in s.skills %}
+                        <li class="mt-1">{{ skill }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="text-justify">
+    <div class="print:grid lg:grid grid-cols-2 gap-3">
+        <div>
+            <h3 class="mt-4 mb-3">Langues vivantes</h3>
+            {% for language in cv.profile.languages %}
+                <div class="mt-1">{{ language }}</div>
+            {% endfor %}
+        </div>
+        <div>
+            <h3 class="mt-4 mb-3">Informations personnelles</h3>
+            <div class="mt-1">{{ "now" | date: "%Y" | minus: 1988 }} ans, {{ cv.profile.status }}</div>
+            <div class="mt-1">Loisirs : {{ cv.profile.interests }}</div>
+            <div class="mt-1">Projets : {% for project in cv.profile.projects %}<a href="{{project.url}}" target="_blank">{{project.name}}</a> {% endfor %}</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,153 @@
+title: Tech Lead / Software Architect
+objectives: >-
+  Senior engineer with 15+ years of experience, I combine in-depth technical
+  expertise in software architecture, fullstack development, and DevOps.
+  Passionate about complex technical challenges, I am able to design robust
+  and scalable architectures, support teams in best practices, and lead
+  innovative projects end-to-end. My goal: to deliver strong technical
+  value through a clear and pragmatic architectural vision.
+
+profile:
+  status: single, 2 kiddos.
+  languages:
+    - English.
+    - French.
+  interests: Music, Development, Video games, TV Shows, Mangas, Gym.
+  projects:
+    - name: python-workflow
+      url: https://anthonykgross.fr/python-workflow/
+    - name: extensible-array-filter
+      url: https://anthonykgross.fr/extensible-array-filter/
+    - name: docker-broadcaster
+      url: https://github.com/anthonykgross/docker-broadcaster
+
+certifications:
+  - 'Management Skills - Team Leadership Skills Masterclass, Udemy, In progress.'
+  - 'Agile Scrum: Become a Certified Scrum Product Owner PSPO®!, Udemy, 2026.'
+  - 'The Complete Digital Marketing Course - 12 Courses in 1, Udemy, 2024.'
+  - 'Team management course, A+C | agir plus concrètement, 2024.'
+  - 'Server Side Rendering with React and Redux, Udemy, 2022.'
+  - 'Kubernetes Mastery: Hands-On Lessons From A Docker Captain, Udemy, 2021.'
+  - 'MongoDB : Leading NoSQL Database from scratch, Udemy, 2020.'
+  - AWS Certified Solutions Architect - Associate 2018, Udemy, 2018.
+  - 'Artificial Intelligence A-Z : Learn how to build an AI, Udemy, 2017.'
+  - Arduino, Fun MOOC, 2016.
+  - Web semantic and Web data, Fun MOOC, 2016.
+  - Docker, Treeptik, 2015.
+  - Bachelor Degree in Computer Science, University of Sciences, Marseille, completed in 2011.
+  - Higher National Certificate in Programming, High School of Marseille, 2010.
+  - High School Certificate, High School of Agen, 2008.
+
+skills:
+  - category: Python
+    skills:
+      - PIP, Virtualenv, Conda
+      - Django, Rest framework, Graphene
+      - Celery, threads, coroutines
+      - Tensorflow, Pandas, pyTorch
+      - unittest, coverage, Playwright
+
+  - category: Web
+    skills:
+      - PHP 7+ (OOP, Symfony)
+      - Javascript & React
+      - Bootstrap, TailwindCSS
+      - Jekyll, Wordpress
+      - Shopify, PrestaShop (+modules)
+
+  - category: Mobile / Node
+    skills:
+      - Kotlin / Java & React Native / Typescript / Expo, Next.js
+      - Yarn, Gulp, NPM
+      - Socket.io, Mongoose, Express, Firebase
+      - Jest, Maestro, Storybook
+
+  - category: Databases & Brokers
+    skills:
+      - MySQL, MariaDB, PostgreSQL
+      - MongoDB, DynamoDB
+      - ZeroMQ, ActiveMQ, RabbitMQ, SQS, Pub/Sub
+      - Redis, Memcached, ElastiCache
+      - Firebase Firestore & Realtime
+
+  - category: DevOps
+    skills:
+      - Kubernetes, Docker, Rancher
+      - AWS, Digital Ocean, GCP
+      - Github / Actions, Gitlab, Jenkins, TravisCI
+      - Windows, Mac & Linux ♥️
+
+  - category: AI
+    skills:
+      - Development of assistants and agents
+      - Function calling
+      - Librechat Plugins
+
+  - category: Methodologies
+    skills:
+      - Merise/2, UML
+      - Agile, SCRUM
+      - Design Pattern
+      - Test-Driven & Domain-Driven Development
+
+experiences:
+  - date: Oct 2024
+    contract: Currently
+    company: Biggie Group (Marseille)
+    position: Senior Software Engineer
+    duties:
+      - Driving the digital transformation of the information system through the development of AI assistants and agents.
+      - Designing and implementing LLM solutions enabling web marketing consultants to effectively leverage internal data.
+      - Significant improvement in team productivity and analytical capabilities.
+    skills: node, php, bigquery, datadog, mysql, react, next.js, n8n, llm, librechat, docker
+
+  - date: Apr 2022
+    contract: 2+ years
+    company: Digimood (Marseille)
+    position: CTO / R&D Tech Lead
+    duties:
+      - Design and development of a suite of internal tools dedicated to SEO/SEA consultants.
+      - Implementation of sophisticated algorithms for the aggregation and processing of massive keyword volumes.
+      - Development of financial tracking tools and affiliate link monitoring.
+      - Definition of technical standards and development best practices.
+    skills: python, django, celery, rabbitmq, redis, mongodb, postgresql, react, next.js, docker
+
+  - date: Apr 2019
+    contract: 3+ years
+    company: WAG Travel (Marseille)
+    position: CTO / Architect
+    duties:
+      - Defining the technical architecture of a GDPR-compliant web tracker.
+      - Designing a lightweight, customizable, and privacy-respecting solution providing real-time insights.
+      - Technology choices and implementation of architectural patterns ensuring scalability and performance.
+    skills: python, django, celery, rabbitmq, redis, mongodb, postgresql, react, graphql, kubernetes, rancher
+
+  - date: Apr 2018
+    contract: 1 year
+    company: Kalyzée (Marseille)
+    position: Software Architect
+    duties:
+      - Design and implementation of a Django-based remote management platform for streaming boxes.
+      - Setting up automated updates, centralized log access, and remote equipment control.
+      - Significant reduction of maintenance costs and delays.
+    skills: java, maven, php, javascript, android, python, django, docker, ovh
+
+  - date: Jun 2016
+    contract: 2+ years
+    company: Pepperstone (Melbourne, Australia)
+    position: Software Architect
+    duties:
+      - Development of a money laundering detection program via customer behavioral analysis.
+      - Designing complex financial reconciliation software centralizing multi-source transactions.
+      - Development of a Forex website integrating advanced web marketing technologies.
+    skills: php, symfony, javascript, elasticsearch, ansible, docker, mysql, aws, digital ocean
+
+  - date: Feb 2014
+    contract: 2+ years
+    company: CNRS (National laboratory of astrophysics)
+    position: Study Engineer
+    duties:
+      - Development of a Django website for the identification and analysis of stellar systems in collaboration with several international laboratories.
+      - Creation of internal tools to optimize the maintenance of computer systems.
+      - Presenting work at international scientific conferences.
+    skills: java, maven, php, javascript, python, django, docker, zeromq, postgresql, angularjs

@@ -1,0 +1,140 @@
+title: CTO / Engineering Manager
+objectives: >-
+  Manager technique avec 15+ ans d'expérience, je combine une vision
+  stratégique forte et une expertise technique solide. Passionné par le
+  leadership et la transformation digitale, j'ai prouvé ma capacité à
+  construire et fédérer des équipes performantes, définir des roadmaps
+  produit ambitieuses et aligner la stratégie technique sur les objectifs
+  business. Mon objectif : piloter la croissance technologique d'une
+  organisation en plaçant l'humain et l'innovation au cœur de la stratégie.
+
+profile:
+  status: célibataire, 2 crapules.
+  languages:
+    - Anglais courant (lu – parlé – écrit).
+    - Allemand courant (lu – parlé – écrit).
+  interests: Informatique, mangas, guitare, lecture, activités physiques.
+  projects:
+    - name: python-workflow
+      url: https://anthonykgross.fr/python-workflow/
+    - name: extensible-array-filter
+      url: https://anthonykgross.fr/extensible-array-filter/
+    - name: docker-broadcaster
+      url: https://github.com/anthonykgross/docker-broadcaster
+
+certifications:
+  - 'En cours – Management Skills - Team Leadership Skills Masterclass – Udemy.'
+  - '2026 – Agile Scrum : Certifiez-vous Scrum Product Owner PSPO® ! – Udemy.'
+  - '2024 – Formation management – A+C | agir plus concrètement.'
+  - '2024 – The Complete Digital Marketing Course - 12 Courses in 1 – Udemy.'
+  - '2022 – Server Side Rendering with React and Redux – Udemy.'
+  - '2021 – Kubernetes Mastery: Hands-On Lessons From A Docker Captain – Udemy.'
+  - '2020 – MongoDB : Leading NoSQL Database from scratch – Udemy.'
+  - 2018 – AWS Certified Solutions Architect - Associate 2018 – Udemy.
+  - '2017 – Artificial Intelligence A-Z : Learn how to build an AI – Udemy.'
+  - 2011 – Licence Informatique SIL-NTI (Nouvelles Technologies).
+  - 2010 – BTS Informatique de gestion option développeur d'applications.
+  - 2008 – BAC STG (télécommunication-gestion) avec mention AB.
+
+management_skills:
+  - category: Gestion de Projet
+    skills:
+      - Méthodologies Agile & SCRUM
+      - Planification de produit et de sprints
+      - Coordination d'équipes pluridisciplinaires
+      - Communication avec les parties prenantes
+      - Définition et suivi de roadmap technique
+
+  - category: Leadership d'Équipe
+    skills:
+      - Management d'équipes techniques
+      - Coaching et performance individuelle
+      - Développement des compétences
+      - Intégration et recrutement de talents
+      - Résolution de conflits
+      - Création d'une culture d'innovation
+
+skills:
+  - category: Languages & Frameworks
+    skills:
+      - Python, PHP, Javascript
+      - React, Next.js, Node.js
+
+  - category: DevOps & Cloud
+    skills:
+      - Kubernetes, Docker
+      - AWS, GCP, Digital Ocean
+
+  - category: Bases de données
+    skills:
+      - PostgreSQL, MongoDB
+      - MySQL, Redis
+
+  - category: IA & Data
+    skills:
+      - LLM, Agents IA
+      - BigQuery, Tensorflow
+
+  - category: Méthodologies
+    skills:
+      - Agile, SCRUM
+      - TDD, DDD
+      - Design Pattern
+
+experiences:
+  - date: Oct 2024
+    contract: Actuellement
+    company: Biggie Group (Marseille)
+    position: Senior Software Engineer
+    duties:
+      - Pilotage de la transformation digitale du système d'information via l'intégration de solutions IA innovantes. Définition de la stratégie d'adoption des LLM au sein des équipes métier.
+      - Rapprochement des équipes techniques et marketing autour d'outils intelligents facilitant l'exploitation des données internes et améliorant significativement la productivité des consultants.
+    skills: node, php, bigquery, react, next.js, llm, librechat, docker
+
+  - date: Avril 2022
+    contract: CDI 2+ ans
+    company: Digimood (Marseille)
+    position: CTO
+    duties:
+      - Direction du pôle R&D et pilotage de la transformation technologique de l'entreprise. Constitution et animation d'une équipe pluridisciplinaire de développeurs, data analysts et experts marketing.
+      - Définition de la roadmap technique et priorisation des projets en fonction des besoins métier. Développement d'une suite d'outils internes ayant transformé la productivité des consultants SEO/SEA.
+      - Alignement constant entre stratégie technologique et objectifs business.
+    skills: python, django, celery, rabbitmq, redis, mongodb, postgresql, react, next.js, docker
+
+  - date: Avril 2019
+    contract: CDI 3+ ans
+    company: WAG Travel (Marseille)
+    position: CTO
+    duties:
+      - Direction technique et stratégique d'une startup dans le domaine de l'analytics web. Construction et animation d'une équipe de 3 personnes incluant développeurs et data scientists.
+      - Définition de la vision produit et de l'architecture technique d'un trackeur web GDPR-compliant. Gestion du budget R&D et optimisation des ressources techniques.
+      - Participation active aux décisions stratégiques de l'entreprise et relation avec les investisseurs.
+    skills: python, django, celery, rabbitmq, redis, mongodb, postgresql, react, graphql, kubernetes
+
+  - date: Avril 2018
+    contract: CDI 1 an
+    company: Kalyzée (Marseille)
+    position: Architecte Logiciel
+    duties:
+      - Conception et déploiement d'une solution de gestion à distance du parc de boîtiers streaming.
+      - Réduction significative des coûts et délais de maintenance grâce à l'automatisation des processus de mise à jour et de monitoring.
+    skills: java, php, python, django, docker
+
+  - date: Juin 2016
+    contract: CDI 2+ ans
+    company: Pepperstone (Melbourne, Australie)
+    position: Architecte Logiciel
+    duties:
+      - "Développement de solutions stratégiques dans le secteur financier : programme de détection du blanchiment d'argent, logiciel de réconciliation financière multi-sources et plateforme web Forex."
+      - Collaboration étroite avec les équipes métier et marketing pour aligner les solutions techniques sur les enjeux business.
+    skills: php, symfony, elasticsearch, docker, mysql, aws
+
+  - date: Février 2014
+    contract: CDD 2+ ans
+    company: CNRS (Laboratoire d'Astrophysique de Marseille)
+    position: Ingénieur d'étude
+    duties:
+      - Développement de solutions logicielles en collaboration avec plusieurs laboratoires internationaux.
+      - Représentation du service lors de conférences scientifiques internationales et formation des équipes.
+      - Contribution à la visibilité et au rayonnement scientifique du laboratoire.
+    skills: java, python, django, docker, postgresql, angularjs

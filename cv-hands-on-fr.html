@@ -2,23 +2,23 @@
 layout: full
 title: Expériences professionnelles
 description: >-
-    CV d'un développeur passionné avec 15+ ans d'expérience en développement logiciel, spécialisé dans l'IA, le
-    leadership technique et l'innovation. Expert en transformation digitale, création de solutions innovantes et
-    management d'équipes techniques.
+    CV d'un ingénieur senior avec 15+ ans d'expérience, spécialisé en architecture logicielle, développement fullstack
+    et DevOps. Expert en conception d'architectures robustes et scalables, accompagnement des équipes sur les bonnes
+    pratiques et projets innovants de bout en bout.
 image: /assets/images/fb/cv.png
 text-rotator: Expériences professionnelles
 
-redirect_from:
-    - /fr/cv
-    - /cv
-permalink: /
+permalink: /cv/hands-on
 ---
 
-{% assign cv = site.data.cv_fr %}
-<div class="hidden screen:flex flex-row justify-end">
-    <img class="w-10" src="/assets/images/flag_fr.png" />
-    <a href="/en/cv">
-        <img class="opacity-50 w-10 hover:opacity-100" src="/assets/images/flag_en.png" />
+{% assign cv = site.data.cv_hands_on_fr %}
+<div class="hidden screen:flex flex-row justify-between items-end border-b border-akgFontGrey mb-4">
+    <div class="flex flex-row">
+        <a href="/" class="px-4 py-2 border-b-2 border-transparent hover:text-akgRed">Hands-off</a>
+        <a href="/cv/hands-on" class="px-4 py-2 border-b-2 border-akgRed -mb-px font-bold text-akgRed">Hands-on</a>
+    </div>
+    <a href="/en/cv/hands-on">
+        <img class="w-10 mb-1 opacity-50 hover:opacity-100" src="/assets/images/flag_en.png" />
     </a>
 </div>
 
@@ -53,23 +53,6 @@ permalink: /
 <div class="text-justify">
     <h3 class="mt-8 mb-3">Objectif de carrière</h3>
     <p>{{ cv.objectives }}</p>
-</div>
-
-<div>
-    <h3 class="mt-8 mb-3">Études & Certifications</h3>
-    <div class="lg:grid grid-cols-2 gap-3 text-justify">
-        {% assign halfsize = cv.certifications.size | divided_by: 2 | ceil %}
-        <ul class="list-disc ml-6">
-            {% for certification in cv.certifications limit:halfsize %}
-                <li class="mt-1">{{ certification }}</li>
-            {% endfor %}
-        </ul>
-        <ul class="list-disc ml-6">
-            {% for certification in cv.certifications offset:halfsize %}
-            <li class="mt-1">{{ certification }}</li>
-            {% endfor %}
-        </ul>
-    </div>
 </div>
 
 <div class="text-justify">
@@ -107,6 +90,23 @@ permalink: /
             </div>
         </div>
     {% endfor %}
+</div>
+
+<div>
+    <h3 class="mt-8 mb-3">Études & Certifications</h3>
+    <div class="lg:grid grid-cols-2 gap-3 text-justify">
+        {% assign halfsize = cv.certifications.size | divided_by: 2 | ceil %}
+        <ul class="list-disc ml-6">
+            {% for certification in cv.certifications limit:halfsize %}
+                <li class="mt-1">{{ certification }}</li>
+            {% endfor %}
+        </ul>
+        <ul class="list-disc ml-6">
+            {% for certification in cv.certifications offset:halfsize %}
+            <li class="mt-1">{{ certification }}</li>
+            {% endfor %}
+        </ul>
+    </div>
 </div>
 
 <div class="text-justify">

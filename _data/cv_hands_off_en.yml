@@ -1,0 +1,140 @@
+title: CTO / Engineering Manager
+objectives: >-
+  Technical leader with 15+ years of experience, I combine strong strategic
+  vision and solid technical expertise. Passionate about leadership and
+  digital transformation, I have proven my ability to build and unite
+  high-performing teams, define ambitious product roadmaps, and align
+  technical strategy with business objectives. My goal: to drive the
+  technological growth of an organization by placing people and innovation
+  at the heart of the strategy.
+
+profile:
+  status: single, 2 kiddos.
+  languages:
+    - English.
+    - French.
+  interests: Music, Development, Video games, TV Shows, Mangas, Gym.
+  projects:
+    - name: python-workflow
+      url: https://anthonykgross.fr/python-workflow/
+    - name: extensible-array-filter
+      url: https://anthonykgross.fr/extensible-array-filter/
+    - name: docker-broadcaster
+      url: https://github.com/anthonykgross/docker-broadcaster
+
+certifications:
+  - 'Management Skills - Team Leadership Skills Masterclass, Udemy, In progress.'
+  - 'Agile Scrum: Become a Certified Scrum Product Owner PSPO®!, Udemy, 2026.'
+  - 'Team management course, A+C | agir plus concrètement, 2024.'
+  - 'The Complete Digital Marketing Course - 12 Courses in 1, Udemy, 2024.'
+  - 'Server Side Rendering with React and Redux, Udemy, 2022.'
+  - 'Kubernetes Mastery: Hands-On Lessons From A Docker Captain, Udemy, 2021.'
+  - 'MongoDB : Leading NoSQL Database from scratch, Udemy, 2020.'
+  - AWS Certified Solutions Architect - Associate 2018, Udemy, 2018.
+  - 'Artificial Intelligence A-Z : Learn how to build an AI, Udemy, 2017.'
+  - Bachelor Degree in Computer Science, University of Sciences, Marseille, completed in 2011.
+  - Higher National Certificate in Programming, High School of Marseille, 2010.
+  - High School Certificate, High School of Agen, 2008.
+
+management_skills:
+  - category: Project Management
+    skills:
+      - Agile & SCRUM methodologies
+      - Product & Sprint Planning
+      - Cross-functional team coordination
+      - Stakeholder communication
+      - Technical roadmap definition & tracking
+
+  - category: Team Leadership
+    skills:
+      - Technical team management
+      - Performance coaching
+      - Skill development & mentoring
+      - Talent acquisition & onboarding
+      - Conflict resolution
+      - Building an innovation culture
+
+skills:
+  - category: Languages & Frameworks
+    skills:
+      - Python, PHP, Javascript
+      - React, Next.js, Node.js
+
+  - category: DevOps & Cloud
+    skills:
+      - Kubernetes, Docker
+      - AWS, GCP, Digital Ocean
+
+  - category: Databases
+    skills:
+      - PostgreSQL, MongoDB
+      - MySQL, Redis
+
+  - category: AI & Data
+    skills:
+      - LLM, AI Agents
+      - BigQuery, Tensorflow
+
+  - category: Methodologies
+    skills:
+      - Agile, SCRUM
+      - TDD, DDD
+      - Design Pattern
+
+experiences:
+  - date: Oct 2024
+    contract: Currently
+    company: Biggie Group (Marseille)
+    position: Senior Software Engineer
+    duties:
+      - Driving the digital transformation of the information system through the integration of innovative AI solutions. Defining the LLM adoption strategy across business teams.
+      - Bridging technical and marketing teams around intelligent tools that facilitate the use of internal data and significantly improve consultant productivity.
+    skills: node, php, bigquery, react, next.js, llm, librechat, docker
+
+  - date: Apr 2022
+    contract: 2+ years
+    company: Digimood (Marseille)
+    position: CTO
+    duties:
+      - Leading the R&D department and driving the company's technological transformation. Building and managing a cross-functional team of developers, data analysts, and marketing experts.
+      - Defining the technical roadmap and prioritizing projects based on business needs. Building a suite of internal tools that transformed SEO/SEA consultants' productivity.
+      - Maintaining constant alignment between technology strategy and business objectives.
+    skills: python, django, celery, rabbitmq, redis, mongodb, postgresql, react, next.js, docker
+
+  - date: Apr 2019
+    contract: 3+ years
+    company: WAG Travel (Marseille)
+    position: CTO
+    duties:
+      - Technical and strategic leadership of a startup in the web analytics domain. Building and leading a 3-person team including developers and data scientists.
+      - Defining the product vision and technical architecture of a GDPR-compliant web tracker. Managing the R&D budget and optimizing technical resources.
+      - Active participation in strategic company decisions and investor relations.
+    skills: python, django, celery, rabbitmq, redis, mongodb, postgresql, react, graphql, kubernetes
+
+  - date: Apr 2018
+    contract: 1 year
+    company: Kalyzée (Marseille)
+    position: Software Architect
+    duties:
+      - Design and deployment of a remote management solution for the streaming box fleet.
+      - Significant reduction of maintenance costs and delays thanks to the automation of update and monitoring processes.
+    skills: java, php, python, django, docker
+
+  - date: Jun 2016
+    contract: 2+ years
+    company: Pepperstone (Melbourne, Australia)
+    position: Software Architect
+    duties:
+      - "Development of strategic solutions in the financial sector: an anti-money laundering detection program, a multi-source financial reconciliation software, and a Forex web platform."
+      - Close collaboration with business and marketing teams to align technical solutions with business challenges.
+    skills: php, symfony, elasticsearch, docker, mysql, aws
+
+  - date: Feb 2014
+    contract: 2+ years
+    company: CNRS (National laboratory of astrophysics)
+    position: Study Engineer
+    duties:
+      - Development of software solutions in collaboration with several international laboratories.
+      - Representing the service at international scientific conferences and training teams.
+      - Contributing to the visibility and scientific outreach of the laboratory.
+    skills: java, python, django, docker, postgresql, angularjs
