@@ -58,7 +58,7 @@ skills:
 
   - category: Mobile / Node
     skills:
-      - Kotlin / Java & React Native / Typescript / Expo, Next.js
+      - React Native / Typescript / Expo, Next.js
       - Yarn, Gulp, NPM
       - Socket.io, Mongoose, Express, Firebase
       - Jest, Maestro, Storybook
