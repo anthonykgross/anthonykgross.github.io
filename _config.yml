@@ -25,7 +25,7 @@ lang: en-US
 env: dev
 
 project_url: https://github.com/anthonykgross/anthonykgross.github.io
-github_token: 
+github_token:
 
 socials:
   twitter:
@@ -48,14 +48,9 @@ socials:
     username: AnthonyKGROSS
     url: https://hub.docker.com/u/anthonykgross/
     fontawesome: fa fa-cubes
-  rss:
-    username: AnthonyKGROSS
-    url: /feed.xml
-    fontawesome: fa fa-rss
 
 # Build settings
 plugins:
-  - jekyll-feed
   - jekyll-seo-tag
   - jekyll-postcss
   - jekyll-redirect-from
@@ -64,10 +59,10 @@ plugins:
 exclude:
   - CNAME
   - README.md
+  - CLAUDE.md
   - package.json
   - postcss.config.js
   - tailwind.config.js
   - Makefile
   - yarn.lock
-  - gulpfile.js
   - .idea

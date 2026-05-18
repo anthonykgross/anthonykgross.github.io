@@ -21,18 +21,6 @@ html {
   background-repeat: repeat;
 }
 
-.cliper {
-  @apply cursor-pointer;
-
-  &:hover {
-    @apply text-akgBlue;
-  }
-}
-
-.noty_theme__light.noty_type__success {
-  @apply bg-akgBlue text-akgWhite border-akgBlue-dark;
-}
-
 h1, h2 {
   @apply screen:text-4xl print:text-base;
 }
@@ -48,26 +36,17 @@ h4 {
 a {
   @apply underline;
 
-  .menu &, &.cliper {
+  .menu & {
     @apply no-underline;
   }
 }
 
-.content a, .post a {
+.content a {
   @apply text-akgBlue underline hover:text-akgBlue-dark;
 }
 
 .card a, .author a {
   @apply text-akgBlack no-underline hover:text-akgBlue;
-}
-
-.post p {
-  text-indent: 2rem;
-  @apply text-justify;
-}
-
-pre code {
-  @apply my-2;
 }
 
 .card .thumb::before,

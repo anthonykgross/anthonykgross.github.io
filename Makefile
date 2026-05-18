@@ -12,7 +12,7 @@ help:
 ##---------------------------------------------------------------------------
 install:        ## Install dependencies
 install:
-	docker run --rm --volume="$(PWD):/src" -it $(NODE_IMAGE) bash -c "cd /src && npm install -g gulp && yarn && gulp"
+	docker run --rm --volume="$(PWD):/src" -it $(NODE_IMAGE) bash -c "cd /src && yarn"
 	docker run --rm --volume="$(PWD):/srv/jekyll" -it $(JEKYLL_IMAGE) bundle install
 
 build:          ## Build application
@@ -26,8 +26,3 @@ start:
 debug:          ## Debug Jekyll server
 debug:
 	docker run --rm --volume="$(PWD):/srv/jekyll" -it $(JEKYLL_IMAGE) bash
-
-
-node:           ## Node commands
-node:
-	docker run --rm --volume="$(PWD):/src" -it $(NODE_IMAGE) bash -c "cd /src && bash"
