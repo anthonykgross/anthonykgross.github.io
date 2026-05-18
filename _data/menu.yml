@@ -1,5 +1,2 @@
-- name: CV
-  template: cv-hands-off-fr.html
-
 - name: Portfolio
   url: https://github.com/anthonykgross?tab=repositories&q=&type=public&language=&sort=stargazers

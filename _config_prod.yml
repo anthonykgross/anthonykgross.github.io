@@ -50,7 +50,6 @@ socials:
 
 # Build settings
 plugins:
-  - jekyll-seo-tag
   - jekyll-postcss
   - jekyll-redirect-from
 

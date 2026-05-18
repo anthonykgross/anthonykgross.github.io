@@ -16,7 +16,6 @@ module.exports = {
         },
         akgBlack: {
           DEFAULT: '#212529',
-          dark: '#060607',
         },
         akgFontGrey: {
           DEFAULT: '#A9B7C6'
@@ -25,13 +24,6 @@ module.exports = {
           DEFAULT: '#3A9ADB',
           dark: '#355771'
         },
-        akgRed: {
-          DEFAULT: '#FE6061'
-        },
-        social: {
-          twitter: '#00aced',
-          facebook: '#4267B2',
-        }
       },
       fontFamily: {
         'open-sans': ['Open Sans'],
