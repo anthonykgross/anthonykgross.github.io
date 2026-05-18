@@ -59,7 +59,7 @@ skills:
     skills:
       - React Native / Typescript / Expo, Next.js
       - Yarn, Gulp, NPM
-      - Socket.io, Mongoose, Express, Firebase
+      - Socket.io, Mongoose, Express, Firebase, Supabase
       - Jest, Maestro, Storybook
 
   - category: Databases & Brokers
@@ -68,7 +68,7 @@ skills:
       - MongoDB, DynamoDB
       - ZeroMQ, ActiveMQ, RabbitMQ, SQS, Pub/Sub
       - Redis, Memcached, ElastiCache
-      - Firebase Firestore & Realtime
+      - Firebase Firestore & Realtime, Supabase
 
   - category: DevOps
     skills:

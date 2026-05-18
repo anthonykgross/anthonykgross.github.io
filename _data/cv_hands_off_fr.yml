@@ -62,17 +62,20 @@ skills:
 
   - category: DevOps & Cloud
     skills:
-      - Kubernetes, Docker
+      - Kubernetes, Docker, Rancher
       - AWS, GCP, Digital Ocean
+      - Github Actions, Gitlab CI
 
   - category: Bases de données
     skills:
       - PostgreSQL, MongoDB
       - MySQL, Redis
+      - Supabase
 
   - category: IA & Data
     skills:
       - LLM, Agents IA
+      - Function calling, Librechat
       - BigQuery, Tensorflow
 
   - category: Méthodologies
