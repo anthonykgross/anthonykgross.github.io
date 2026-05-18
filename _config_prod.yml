@@ -25,7 +25,6 @@ lang: en-US
 env: prod
 
 project_url: https://github.com/anthonykgross/anthonykgross.github.io
-github_token: __GH_TOKEN__
 
 socials:
   twitter:

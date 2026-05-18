@@ -11,7 +11,11 @@ layout: default
         </div>
         <div class="ml-8 text-xl flex items-center content-center text-akgBlack">
             {% for m in site.data.menu %}
-                <a class="mx-6 font-semibold last:mr-0 hover:text-akgBlue" href="{% link {{ m.template }} %}">{{m.name}}</a>
+                {% if m.url %}
+                    <a class="mx-6 font-semibold last:mr-0 hover:text-akgBlue" href="{{ m.url }}" target="_blank" rel="noopener">{{ m.name }}</a>
+                {% else %}
+                    <a class="mx-6 font-semibold last:mr-0 hover:text-akgBlue" href="{% link {{ m.template }} %}">{{ m.name }}</a>
+                {% endif %}
             {% endfor %}
         </div>
     </div>

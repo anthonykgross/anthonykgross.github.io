@@ -2,4 +2,4 @@
   template: cv.html
 
 - name: Portfolio
-  template: portfolio.html
+  url: https://github.com/anthonykgross?tab=repositories&q=&type=public&language=&sort=stargazers
