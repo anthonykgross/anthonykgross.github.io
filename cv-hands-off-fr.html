@@ -54,7 +54,7 @@ permalink: /
     <p class="text-justify">{{ cv.objectives }}</p>
 </section>
 
-<section class="mt-8 print:mt-3">
+<section class="mt-8 print:mt-12">
     <h3 class="border-l-4 border-akgBlue pl-3 font-bold uppercase tracking-wider screen:text-2xl print:text-base mb-3 print:mb-2 break-after-avoid">Compétences managériales</h3>
     <div class="print:grid lg:grid grid-cols-2 gap-x-6 gap-y-2">
         {% for s in cv.management_skills %}
@@ -70,7 +70,7 @@ permalink: /
     </div>
 </section>
 
-<section class="mt-8 print:mt-3">
+<section class="mt-8 print:mt-12">
     <h3 class="border-l-4 border-akgBlue pl-3 font-bold uppercase tracking-wider screen:text-2xl print:text-base mb-3 print:mb-2 break-after-avoid">Expériences professionnelles</h3>
     {% for experience in cv.experiences %}
         <article class="break-inside-avoid py-4 print:py-3 border-b border-dashed border-akgFontGrey">
@@ -97,7 +97,7 @@ permalink: /
     {% endfor %}
 </section>
 
-<section class="mt-8 print:mt-3 break-inside-avoid">
+<section class="mt-8 print:mt-12 break-inside-avoid">
     <h3 class="border-l-4 border-akgBlue pl-3 font-bold uppercase tracking-wider screen:text-2xl print:text-base mb-3 print:mb-2 break-after-avoid">Études & Certifications</h3>
     {% assign halfsize = cv.certifications.size | divided_by: 2 | ceil %}
     <div class="print:grid lg:grid grid-cols-2 gap-x-6">
@@ -114,7 +114,7 @@ permalink: /
     </div>
 </section>
 
-<section class="mt-8 print:mt-3">
+<section class="mt-8 print:mt-12">
     <h3 class="border-l-4 border-akgBlue pl-3 font-bold uppercase tracking-wider screen:text-2xl print:text-base mb-3 print:mb-2 break-after-avoid">Connaissances informatiques</h3>
     <div class="print:grid lg:grid grid-cols-2 xl:grid-cols-3 print:grid-cols-3 gap-x-6 gap-y-2">
         {% for s in cv.skills %}
@@ -130,7 +130,7 @@ permalink: /
     </div>
 </section>
 
-<section class="mt-8 print:mt-3 print:grid lg:grid grid-cols-2 gap-x-6">
+<section class="mt-8 print:mt-12 print:grid lg:grid grid-cols-2 gap-x-6">
     <div>
         <h3 class="border-l-4 border-akgBlue pl-3 font-bold uppercase tracking-wider screen:text-2xl print:text-base mb-3 print:mb-2 break-after-avoid">Langues vivantes</h3>
         {% for language in cv.profile.languages %}
