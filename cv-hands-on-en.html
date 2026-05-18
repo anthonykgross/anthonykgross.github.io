@@ -50,9 +50,9 @@ permalink: /en/cv/hands-on
     <p class="text-justify">{{ cv.objectives }}</p>
 </section>
 
-<section class="mt-8 print:mt-3">
+<section class="mt-8 print:mt-12">
     <h3 class="border-l-4 border-akgBlue pl-3 font-bold uppercase tracking-wider screen:text-2xl print:text-base mb-3 print:mb-2 break-after-avoid">IT Technical Skills</h3>
-    <div class="print:grid lg:grid grid-cols-2 xl:grid-cols-3 print:grid-cols-3 gap-x-6 gap-y-2">
+    <div class="print:grid lg:grid grid-cols-2 xl:grid-cols-3 print:grid-cols-2 gap-x-6 gap-y-2">
         {% for s in cv.skills %}
             <div class="break-inside-avoid">
                 <h4 class="font-semibold text-akgBlue screen:text-lg print:text-sm mt-3 print:mt-2">{{ s.category }}</h4>
@@ -66,7 +66,7 @@ permalink: /en/cv/hands-on
     </div>
 </section>
 
-<section class="mt-8 print:mt-3">
+<section class="mt-8 print:mt-12">
     <h3 class="border-l-4 border-akgBlue pl-3 font-bold uppercase tracking-wider screen:text-2xl print:text-base mb-3 print:mb-2 break-after-avoid">Professional experiences</h3>
     {% for experience in cv.experiences %}
         <article class="break-inside-avoid py-4 print:py-3 border-b border-dashed border-akgFontGrey">
@@ -93,7 +93,7 @@ permalink: /en/cv/hands-on
     {% endfor %}
 </section>
 
-<section class="mt-8 print:mt-3 break-inside-avoid">
+<section class="mt-8 print:mt-12 break-inside-avoid">
     <h3 class="border-l-4 border-akgBlue pl-3 font-bold uppercase tracking-wider screen:text-2xl print:text-base mb-3 print:mb-2 break-after-avoid">Education & Certifications</h3>
     {% assign halfsize = cv.certifications.size | divided_by: 2 | ceil %}
     <div class="print:grid lg:grid grid-cols-2 gap-x-6">
@@ -110,7 +110,7 @@ permalink: /en/cv/hands-on
     </div>
 </section>
 
-<section class="mt-8 print:mt-3 print:grid lg:grid grid-cols-2 gap-x-6">
+<section class="mt-8 print:mt-12 print:grid lg:grid grid-cols-2 gap-x-6">
     <div>
         <h3 class="border-l-4 border-akgBlue pl-3 font-bold uppercase tracking-wider screen:text-2xl print:text-base mb-3 print:mb-2 break-after-avoid">Languages known</h3>
         {% for language in cv.profile.languages %}
