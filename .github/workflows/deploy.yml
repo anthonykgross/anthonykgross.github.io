@@ -23,7 +23,7 @@ jobs:
           sed -i -e "s,__GH_TOKEN__,${{ secrets.GH_TOKEN }},g" _config.yml
 
       - name: Install Dependencies
-        run: npm install -g gulp && yarn && gulp
+        run: yarn
 
       - name: Build the site in the jekyll/builder container
         run: |
