@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Personal site for **Anthony K GROSS** — published at https://anthonykgross.fr via GitHub Pages. Scope is the CV only; the blog was removed, and the Portfolio menu entry now links straight to the GitHub repos list. Two CV variants are served per language: **Hands-off** (managerial/CTO) and **Hands-on** (technical/architect), switchable via tabs at the top of each page.
+Personal site for **Anthony K GROSS** — published at https://anthonykgross.fr via GitHub Pages. Scope is the CV only; the blog and portfolio were removed. Two CV variants are served per language: **Hands-off** (managerial/CTO) and **Hands-on** (technical/architect), switchable via tabs at the top of each page.
 
 ## Stack
 
@@ -34,8 +34,7 @@ The `env` variable toggles dev-only UI (e.g. the responsive-breakpoint indicator
 - `_data/` — site data:
   - `cv_hands_off_{fr,en}.yml` — managerial/CTO variant (has `management_skills:` block)
   - `cv_hands_on_{fr,en}.yml` — technical/architect variant
-  - `menu.yml` — nav entries
-- `_layouts/` — `default.html` (head + scripts) and `full.html` (banner + nav + footer)
+- `_layouts/` — `default.html` (head + scripts) and `full.html` (banner + header + footer)
 - `_includes/` — partials: `anchor/{anchor,goto}.html` (top-of-page anchor + back-to-top link)
 - Pages (4 CV variants):
   - `cv-hands-off-fr.html` → `/` (site root, redirects `/cv`, `/fr/cv`, `/cv/hands-off`)
@@ -47,4 +46,3 @@ The `env` variable toggles dev-only UI (e.g. the responsive-breakpoint indicator
 
 - Pages use raw HTML (Liquid), not Markdown.
 - Tailwind theme colors are prefixed `akg*` (`akgBlack`, `akgBlue`, `akgRed`, …) — see `tailwind.config.js`.
-- `_data/menu.yml` entries support either `template:` (internal Jekyll page, rendered with `{% link %}`) or `url:` (external link, opens in a new tab) — see the loop in `_layouts/full.html`.

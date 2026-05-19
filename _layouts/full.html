@@ -3,20 +3,11 @@ layout: default
 ---
 
 <div class="hidden screen:block menu fixed w-full h-16 border-b shadow-sm z-40 bg-akgWhite">
-    <div class="container mx-auto flex justify-between place-content-center p-3">
+    <div class="container mx-auto flex place-content-center p-3">
         <div class="w-16">
             <a href="{{ site.baseurl }}/">
                 <img src="/assets/images/akg.svg" title="AKG - Anthony K GROSS" alt="AKG - Anthony K GROSS" />
             </a>
-        </div>
-        <div class="ml-8 text-xl flex items-center content-center text-akgBlack">
-            {% for m in site.data.menu %}
-                {% if m.url %}
-                    <a class="mx-6 font-semibold last:mr-0 hover:text-akgBlue" href="{{ m.url }}" target="_blank" rel="noopener">{{ m.name }}</a>
-                {% else %}
-                    <a class="mx-6 font-semibold last:mr-0 hover:text-akgBlue" href="{% link {{ m.template }} %}">{{ m.name }}</a>
-                {% endif %}
-            {% endfor %}
         </div>
     </div>
 </div>
