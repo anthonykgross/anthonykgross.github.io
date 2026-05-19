@@ -26,14 +26,14 @@ permalink: /
     </a>
 </div>
 
-<header class="flex items-center gap-5 pb-4 mb-6 border-b-2 border-akgBlue print:gap-4 print:pb-3 print:mb-5">
+<header class="flex flex-wrap sm:flex-nowrap items-center gap-5 pb-4 mb-6 border-b-2 border-akgBlue print:gap-4 print:pb-3 print:mb-5 print:flex-nowrap">
     <img class="rounded-full object-cover screen:w-32 screen:h-32 print:w-24 print:h-24" src="/assets/images/photo_143.jpg" alt="Anthony K GROSS"/>
     <div class="flex-1">
         <h2 class="font-bold leading-tight screen:text-3xl print:text-2xl">Anthony K GROSS</h2>
         <div class="text-akgBlue font-semibold uppercase tracking-widest screen:text-base print:text-xs mt-1">{{ cv.title }}</div>
         <div class="text-gray-600 screen:text-base print:text-xs mt-0.5">Marseille, France</div>
     </div>
-    <ul class="text-right screen:text-sm print:text-xs leading-snug space-y-1">
+    <ul class="w-full sm:w-auto text-right screen:text-sm print:text-xs leading-snug space-y-1 print:w-auto">
         <li>
             <i class="fa fa-twitter text-akgBlue mr-1 print:hidden"></i>
             <a href="{{ site.socials['twitter'].url }}">{{ site.socials['twitter'].url | remove: 'https://' }}</a>
