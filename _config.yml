@@ -24,8 +24,6 @@ url: "http://localhost"
 lang: en-US
 env: dev
 
-project_url: https://github.com/anthonykgross/anthonykgross.github.io
-
 socials:
   twitter:
     username: AnthonyKGROSS
@@ -43,10 +41,6 @@ socials:
     username: AnthonyKGROSS
     url: https://github.com/anthonykgross
     fontawesome: fa fa-github
-  docker_hub:
-    username: AnthonyKGROSS
-    url: https://hub.docker.com/u/anthonykgross/
-    fontawesome: fa fa-cubes
 
 # Build settings
 plugins:

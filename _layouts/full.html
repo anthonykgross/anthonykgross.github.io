@@ -28,16 +28,18 @@ layout: default
         {{content}}
     </div>
 </div>
-<div class="hidden screen:flex socials bg-white text-xl sm:text-3xl md:text-4xl xl:text-5xl text-akgBlue justify-center py-10 lg:py-20">
+<div class="hidden screen:flex socials bg-white text-4xl sm:text-3xl md:text-4xl xl:text-5xl text-akgBlue flex-col sm:flex-row items-center justify-center py-10 lg:py-20">
     <div class="font-jenna-sue text-center text-akgBlack transform -rotate-6">
         <div>Stay tuned !</div>
     </div>
-    {% for s in site.socials %}
-        {% assign social = s[1] %}
-        <a class="mx-4 lg:mx-14 mt-1 hover:text-akgBlue-dark" href="{{social.url}}" target="_blank">
-            <i class="{{social.fontawesome}}"></i>
-        </a>
-    {% endfor %}
+    <div class="flex justify-center mt-4 sm:mt-0">
+        {% for s in site.socials %}
+            {% assign social = s[1] %}
+            <a class="mx-4 lg:mx-14 mt-1 hover:text-akgBlue-dark" href="{{social.url}}" target="_blank">
+                <i class="{{social.fontawesome}}"></i>
+            </a>
+        {% endfor %}
+    </div>
 </div>
 <footer class="hidden screen:block">
     <div class="container mx-auto p-3 text-center">
@@ -50,5 +52,4 @@ layout: default
 <div class="hidden screen:block bg-akgBlack text-gray-500 p-2 text-center">
         Made with <i class="fa fa-heart text-red-600"></i>
         with <a href="https://jekyllrb.com" target="_blank">Jekyll</a>
-        | Source code available on <a href="{{site.project_url}}">Github</a>
 </div>
