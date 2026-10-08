@@ -30,7 +30,7 @@
 
 ### Durcir la CI de déploiement
 
-**What:** Dans `.github/workflows/deploy.yml` : ajouter un groupe `concurrency` Pages, passer à `actions/checkout@v4` avec `persist-credentials: false`, épingler les actions et l'image `jekyll/builder` par SHA, utiliser `yarn install --frozen-lockfile`. Aligner `make check` (image, `JEKYLL_ENV`) sur la CI, faire tourner le contrôle de parité des configs avant le `mv` en CI, et échapper `og:description` / `twitter:description`.
+**What:** Dans `.github/workflows/deploy.yml` : ajouter un groupe `concurrency` Pages, passer à `actions/checkout@v4` avec `persist-credentials: false`, épingler les actions par SHA (l'image `jekyll/builder` est déjà épinglée sur le tag `4.2.2`, à passer en digest), utiliser `yarn install --frozen-lockfile`. Aligner `make check` (image, `JEKYLL_ENV`) sur la CI, faire tourner le contrôle de parité des configs avant le `mv` en CI, et échapper `og:description` / `twitter:description`.
 
 **Why:** Deux push rapprochés peuvent se déployer dans le désordre (absence de `concurrency`). L'image `:latest` non maintenue et les tags mobiles rendent le build non reproductible. Un `make check` vert en local ne garantit donc pas une CI verte.
 

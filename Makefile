@@ -1,4 +1,4 @@
-JEKYLL_IMAGE=jekyll/jekyll
+JEKYLL_IMAGE=jekyll/jekyll:4.2.2
 NODE_IMAGE=node:lts
 
 .DEFAULT_GOAL := help

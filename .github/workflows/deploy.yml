@@ -24,13 +24,13 @@ jobs:
         run: |
           docker run \
           -v ${{ github.workspace }}:/srv/jekyll \
-          jekyll/builder:latest bash -c "chmod -R 777 /srv/jekyll && jekyll build"
+          jekyll/builder:4.2.2 bash -c "chmod -R 777 /srv/jekyll && jekyll build"
 
       - name: Check machine-readable views
         run: |
           docker run \
           -v ${{ github.workspace }}:/srv/jekyll \
-          jekyll/builder:latest ruby /srv/jekyll/bin/check-machine-views.rb
+          jekyll/builder:4.2.2 ruby /srv/jekyll/bin/check-machine-views.rb
 
       - name: Upload Pages artifact
         if: github.event_name == 'push'
