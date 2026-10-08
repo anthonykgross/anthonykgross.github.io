@@ -1,0 +1,25 @@
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
+{%- assign person = site.data.person -%}
+{%- assign cv_pages = site.pages | where: "layout", "full" | sort: "url" -%}
+# {{ person.name }}
+
+> {{ person.name }}, {{ person.location.city }} ({{ person.location.country.en }}). Two facets of the same profile: {{ site.data.cv_hands_off_en.title }} (hands-off, management) and {{ site.data.cv_hands_on_en.title }} (hands-on, architecture). Each CV exists in French and English, as HTML and as plain Markdown.
+
+## CV (Markdown)
+{% for p in cv_pages %}
+- [{{ p.title }} ({{ p.cv_lang }})]({{ site.url }}{{ p.md_url }}): {{ p.variant }} CV in {{ p.cv_lang }}
+{%- endfor %}
+
+## CV (HTML)
+{% for p in cv_pages %}
+- [{{ p.title }} ({{ p.cv_lang }})]({{ site.url }}{{ p.url }})
+{%- endfor %}
+
+## Profiles
+{% for s in site.socials %}
+- [{{ s[0] | capitalize }}]({{ s[1].url }})
+{%- endfor %}

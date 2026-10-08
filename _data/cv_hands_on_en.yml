@@ -10,8 +10,9 @@ objectives: >-
 profile:
   status: single, 2 kiddos.
   languages:
-    - English.
-    - French.
+    - French (native).
+    - English (fluent: reading, speaking, writing).
+    - German (fluent: reading, speaking, writing).
   interests: Music, Development, Video games, TV Shows, Mangas, Gym.
   projects:
     - name: python-workflow

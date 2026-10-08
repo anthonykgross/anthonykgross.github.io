@@ -1,0 +1,16 @@
+# Facts about the person shared by every page and every machine-readable view
+# (JSON-LD, Markdown views, llms.txt). Kept in _data/ rather than in _config.yml
+# because CI replaces _config.yml with _config_prod.yml.
+name: Anthony K GROSS
+image: /assets/images/photo_143.jpg
+location:
+  city: Marseille
+  country_code: FR
+  country:
+    fr: France
+    en: France
+# ISO 639-1 codes, used for JSON-LD knowsLanguage.
+languages:
+  - fr
+  - en
+  - de

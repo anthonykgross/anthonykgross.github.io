@@ -1,4 +1,4 @@
-JEKYLL_IMAGE=jekyll/jekyll
+JEKYLL_IMAGE=jekyll/jekyll:4.2.2
 NODE_IMAGE=node:lts
 
 .DEFAULT_GOAL := help
@@ -18,6 +18,14 @@ install:
 build:          ## Build application
 build:
 	docker run --rm --volume="$(PWD):/srv/jekyll" -it $(JEKYLL_IMAGE) jekyll build
+
+build-prod:     ## Build with the production config only, exactly like CI
+build-prod:
+	docker run --rm --volume="$(PWD):/srv/jekyll" --env JEKYLL_ENV=production $(JEKYLL_IMAGE) jekyll build --config _config_prod.yml
+
+check:          ## Build like CI, then check JSON-LD, robots, sitemap and Markdown views
+check: build-prod
+	docker run --rm --volume="$(PWD):/srv/jekyll" $(JEKYLL_IMAGE) ruby /srv/jekyll/bin/check-machine-views.rb
 
 start:          ## Run development Jekyll server
 start:

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
-        <title>{{ page.title }} - Anthony K GROSS</title>
+        <title>{{ page.title }} - {{ site.data.person.name }}</title>
+        <meta name="description" content="{{ page.description | default: site.description | strip_newlines | strip | escape }}">
 
         <link rel="stylesheet" href='//fonts.googleapis.com/css?family=Open+Sans%3A400%2C600%2C700%7CDomine%3A400%7C&#038;ver=4.5.0' type='text/css' media='all' />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -12,8 +13,8 @@
 
         <meta name="google-site-verification" content="kXqRha3lLeyeykj_Ghf3RgzHypUNl2aAAfEJ49iSONE" />
         
-        <meta property="og:locale" content="{{ site.lang | default: "en-US" }}"/>
-        <meta property="og:title" content="{{ page.title | default: site.title }}"/>
+        <meta property="og:locale" content="{{ page.lang | default: site.lang | default: "en-US" | replace: '-', '_' }}"/>
+        <meta property="og:title" content="{{ page.title | default: site.title }} - {{ site.data.person.name }}"/>
         <meta property="og:description" content="{{ page.description | default: site.description }}"/>
         <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
         <meta property="og:site_name" content="{{ site.title }}"/>
@@ -25,13 +26,30 @@
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@{{ site.socials['twitter'].username }}">
         <meta name="twitter:creator" content="@{{ site.socials['twitter'].username }}">
-        <meta name="twitter:title" content="{{ page.title | default: site.title }}">
+        <meta name="twitter:title" content="{{ page.title | default: site.title }} - {{ site.data.person.name }}">
         <meta name="twitter:description" content="{{ page.description | default: site.description }}">
         <meta name="twitter:image" content="{{ site.url }}{{ page.image | default: '/assets/images/fb/cv.png' }}">
 
         <!-- Favicons -->
         <link rel="shortcut icon" href="{{ site.baseurl }}/assets/favicon.ico">
         <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/apple-touch-icon.png">
+
+        {%- if page.variant %}
+        <!-- Machine-readable views: one entity, two facets (hands-off / hands-on), FR + EN -->
+        <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+        {%- assign facet_pages = site.pages | where: "variant", page.variant | where: "layout", "full" | sort: "cv_lang" %}
+        {%- for alt in facet_pages %}
+        <link rel="alternate" hreflang="{{ alt.cv_lang }}" href="{{ site.url }}{{ alt.url }}">
+        {%- if alt.cv_lang == "fr" %}
+        <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ alt.url }}">
+        {%- endif %}
+        {%- if alt.cv_lang != page.cv_lang %}
+        <meta property="og:locale:alternate" content="{{ alt.lang | replace: '-', '_' }}"/>
+        {%- endif %}
+        {%- endfor %}
+        <link rel="alternate" type="text/markdown" href="{{ site.url }}{{ page.md_url }}">
+        {% include jsonld.html %}
+        {%- endif %}
     </head>
     <body class="relative">
         {% if site.env == 'dev' %}

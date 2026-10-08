@@ -9,3 +9,7 @@ node_modules
 assets/dist
 !assets/dist/.gitkeep
 .gstack/
+
+# Private files that must never be published with the site
+assets/images/*.pdf
+assets/images/*.csv

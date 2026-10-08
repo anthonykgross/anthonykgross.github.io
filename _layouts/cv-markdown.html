@@ -1,0 +1,82 @@
+{%- comment -%}
+  Plain Markdown view of one CV variant, for LLMs and AI assistants.
+  The source page has a .md permalink, so Jekyll writes this output as-is.
+  Whitelist only: profile.status and profile.interests are never exposed here.
+{%- endcomment -%}
+{%- assign cv = site.data[page.cv_data] -%}
+{%- assign person = site.data.person -%}
+{%- assign html_page = site.pages | where: "variant", page.variant | where: "cv_lang", page.cv_lang | where: "layout", "full" | first -%}
+{%- assign other_pages = site.pages | where: "cv_lang", page.cv_lang | where: "layout", "full" -%}
+{%- if page.cv_lang == "fr" -%}
+  {%- assign l_location = "Localisation" -%}{%- assign l_html = "Version HTML" -%}{%- assign l_other = "Autre facette" -%}
+  {%- assign l_objectives = "Objectifs" -%}{%- assign l_mgmt = "Compétences managériales" -%}{%- assign l_skills = "Compétences techniques" -%}
+  {%- assign l_experiences = "Expériences professionnelles" -%}{%- assign l_tech = "Technologies" -%}
+  {%- assign l_certifications = "Formations & certifications" -%}{%- assign l_languages = "Langues" -%}{%- assign l_projects = "Projets" -%}
+{%- else -%}
+  {%- assign l_location = "Location" -%}{%- assign l_html = "HTML version" -%}{%- assign l_other = "Other facet" -%}
+  {%- assign l_objectives = "Career objectives" -%}{%- assign l_mgmt = "Management skills" -%}{%- assign l_skills = "Technical skills" -%}
+  {%- assign l_experiences = "Professional experiences" -%}{%- assign l_tech = "Technologies" -%}
+  {%- assign l_certifications = "Education & certifications" -%}{%- assign l_languages = "Languages" -%}{%- assign l_projects = "Projects" -%}
+{%- endif -%}
+# {{ person.name }} — {{ cv.title }}
+
+- {{ l_location }}: {{ person.location.city }}, {{ person.location.country[page.cv_lang] }}
+- {{ l_html }}: {{ site.url }}{{ html_page.url }}
+{%- for p in other_pages %}{% if p.variant != page.variant %}
+- {{ l_other }}: {{ p.title }} — {{ site.url }}{{ p.md_url }}
+{%- endif %}{% endfor %}
+{%- for s in site.socials %}
+- {{ s[0] | capitalize }}: {{ s[1].url }}
+{%- endfor %}
+
+## {{ l_objectives }}
+
+{{ cv.objectives | strip }}
+{%- if cv.management_skills %}
+
+## {{ l_mgmt }}
+{%- for c in cv.management_skills %}
+
+### {{ c.category }}
+{%- for skill in c.skills %}
+- {{ skill }}
+{%- endfor %}
+{%- endfor %}
+{%- endif %}
+
+## {{ l_skills }}
+{%- for c in cv.skills %}
+
+### {{ c.category }}
+{%- for skill in c.skills %}
+- {{ skill }}
+{%- endfor %}
+{%- endfor %}
+
+## {{ l_experiences }}
+{%- for e in cv.experiences %}
+
+### {{ e.position }} — {{ e.company }}
+
+{{ e.date }} ({{ e.contract }})
+{% for duty in e.duties %}
+- {{ duty }}
+{%- endfor %}
+
+{{ l_tech }}: {{ e.skills }}
+{%- endfor %}
+
+## {{ l_certifications }}
+{% for c in cv.certifications %}
+- {{ c }}
+{%- endfor %}
+
+## {{ l_languages }}
+{% for language in cv.profile.languages %}
+- {{ language }}
+{%- endfor %}
+
+## {{ l_projects }}
+{% for project in cv.profile.projects %}
+- [{{ project.name }}]({{ project.url }})
+{%- endfor %}
