@@ -5,22 +5,17 @@ on:
     branches: [ main ]
 
 jobs:
+  # Runs on pull requests and pushes: build with the prod config and check the
+  # machine-readable views. No deploy rights, no environment, no secrets.
   build:
     runs-on: ubuntu-latest
     permissions:
-      pages: write
-      id-token: write
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      contents: read
 
     steps:
       - uses: actions/checkout@v2
       - name: Config for Production
-        run: | 
-          mv -f _config_prod.yml _config.yml
-          sed -i -e "s,__GH_TOKEN__,${{ secrets.GH_TOKEN }},g" _config.yml
+        run: mv -f _config_prod.yml _config.yml
 
       - name: Install Dependencies
         run: yarn
@@ -31,11 +26,32 @@ jobs:
           -v ${{ github.workspace }}:/srv/jekyll \
           jekyll/builder:latest bash -c "chmod -R 777 /srv/jekyll && jekyll build"
 
+      - name: Check machine-readable views
+        run: |
+          docker run \
+          -v ${{ github.workspace }}:/srv/jekyll \
+          jekyll/builder:latest ruby /srv/jekyll/bin/check-machine-views.rb
+
       - name: Upload Pages artifact
+        if: github.event_name == 'push'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
 
+  # Pushes to main only: publish the artifact built and checked above.
+  deploy:
+    if: github.event_name == 'push'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
