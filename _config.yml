@@ -46,6 +46,7 @@ socials:
 plugins:
   - jekyll-postcss
   - jekyll-redirect-from
+  - jekyll-sitemap
 
 # other configs
 exclude:
@@ -57,4 +58,13 @@ exclude:
   - tailwind.config.js
   - Makefile
   - yarn.lock
+  - TODOS.md
+  - bin
+  - docs
   - .idea
+
+defaults:
+  - scope:
+      path: "assets"
+    values:
+      sitemap: false

@@ -6,4 +6,5 @@ gem "webrick"
 group :jekyll_plugins do
   gem "jekyll-postcss"
   gem "jekyll-redirect-from"
+  gem "jekyll-sitemap"
 end
