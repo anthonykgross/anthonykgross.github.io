@@ -1,6 +1,11 @@
 ---
 layout: full
-title: Professional experiences
+title: Principal Engineer
+lang: en-US
+cv_lang: en
+variant: hands-on
+cv_data: cv_hands_on_en
+md_url: /en/cv/hands-on.md
 description: >-
     Resume of a senior engineer with 15+ years of experience, specialized in software architecture, fullstack
     development, and DevOps. Expert in designing robust and scalable architectures, supporting teams on best practices,
@@ -23,11 +28,11 @@ permalink: /en/cv/hands-on
 </div>
 
 <header class="flex flex-wrap sm:flex-nowrap items-center gap-5 pb-4 mb-6 border-b-2 border-akgBlue print:gap-4 print:pb-3 print:mb-5 print:flex-nowrap">
-    <img class="rounded-full object-cover screen:w-32 screen:h-32 print:w-24 print:h-24" src="/assets/images/photo_143.jpg" alt="Anthony K GROSS"/>
+    <img class="rounded-full object-cover screen:w-32 screen:h-32 print:w-24 print:h-24" src="{{ site.data.person.image }}" alt="{{ site.data.person.name }}"/>
     <div class="flex-1">
-        <h2 class="font-bold leading-tight screen:text-3xl print:text-2xl">Anthony K GROSS</h2>
+        <h2 class="font-bold leading-tight screen:text-3xl print:text-2xl">{{ site.data.person.name }}</h2>
         <div class="text-akgBlue font-semibold uppercase tracking-widest screen:text-base print:text-xs mt-1">{{ cv.title }}</div>
-        <div class="text-gray-600 screen:text-base print:text-xs mt-0.5">Marseille, France</div>
+        <div class="text-gray-600 screen:text-base print:text-xs mt-0.5">{{ site.data.person.location.city }}, {{ site.data.person.location.country[page.cv_lang] }}</div>
     </div>
     <ul class="w-full sm:w-auto text-right screen:text-sm print:text-xs leading-snug space-y-1 print:w-auto">
         <li>

@@ -1,0 +1,83 @@
+{%- comment -%}
+  Schema.org JSON-LD for a CV page.
+  The Person node must be byte-identical on all 4 pages: it only reads
+  _data/person.yml, site.socials and the EN YAMLs, never the current page's YAML.
+  The facet is expressed by the ProfilePage (name, language, description, about).
+  Every value goes through jsonify; never concatenate raw strings into JSON.
+{%- endcomment -%}
+{%- assign person = site.data.person -%}
+{%- assign off = site.data.cv_hands_off_en -%}
+{%- assign on = site.data.cv_hands_on_en -%}
+{%- assign person_id = site.url | append: "/#person" -%}
+{%- assign off_id = site.url | append: "/#head-of-engineering" -%}
+{%- assign on_id = site.url | append: "/#principal-engineer" -%}
+
+{%- assign same_as = "" | split: "" -%}
+{%- for s in site.socials -%}
+  {%- assign same_as = same_as | push: s[1].url -%}
+{%- endfor -%}
+
+{%- assign off_skills = "" | split: "" -%}
+{%- for c in off.management_skills -%}{%- assign off_skills = off_skills | concat: c.skills -%}{%- endfor -%}
+{%- for c in off.skills -%}{%- assign off_skills = off_skills | concat: c.skills -%}{%- endfor -%}
+{%- assign on_skills = "" | split: "" -%}
+{%- for c in on.skills -%}{%- assign on_skills = on_skills | concat: c.skills -%}{%- endfor -%}
+
+{%- assign off_mgmt_categories = off.management_skills | map: "category" -%}
+{%- assign off_categories = off.skills | map: "category" -%}
+{%- assign on_categories = on.skills | map: "category" -%}
+{%- assign knows_about = off_mgmt_categories | concat: off_categories | concat: on_categories | uniq -%}
+{%- assign job_titles = "" | split: "" | push: off.title | push: on.title -%}
+
+{%- if page.variant == "hands-off" -%}{%- assign about_id = off_id -%}{%- else -%}{%- assign about_id = on_id -%}{%- endif -%}
+{%- assign cv = site.data[page.cv_data] -%}
+{%- assign page_url = site.url | append: page.url -%}
+{%- assign image_url = site.url | append: person.image -%}
+{%- assign site_root = site.url | append: "/" -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": {{ person_id | jsonify }},
+      "name": {{ person.name | jsonify }},
+      "url": {{ site_root | jsonify }},
+      "image": {{ image_url | jsonify }},
+      "jobTitle": {{ job_titles | jsonify }},
+      "sameAs": {{ same_as | jsonify }},
+      "knowsLanguage": {{ person.languages | jsonify }},
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": {{ person.location.city | jsonify }},
+        "addressCountry": {{ person.location.country_code | jsonify }}
+      },
+      "knowsAbout": {{ knows_about | jsonify }},
+      "hasOccupation": [
+        {
+          "@type": "Occupation",
+          "@id": {{ off_id | jsonify }},
+          "name": {{ off.title | jsonify }},
+          "skills": {{ off_skills | jsonify }}
+        },
+        {
+          "@type": "Occupation",
+          "@id": {{ on_id | jsonify }},
+          "name": {{ on.title | jsonify }},
+          "skills": {{ on_skills | jsonify }}
+        }
+      ]
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": {{ page_url | jsonify }},
+      "url": {{ page_url | jsonify }},
+      "name": {{ page.title | jsonify }},
+      "inLanguage": {{ page.lang | jsonify }},
+      "description": {{ cv.objectives | strip | jsonify }},
+      "mainEntity": { "@id": {{ person_id | jsonify }} },
+      "about": { "@id": {{ about_id | jsonify }} }
+    }
+  ]
+}
+</script>

@@ -1,0 +1,20 @@
+---
+layout: null
+permalink: /robots.txt
+sitemap: false
+---
+# AI training crawlers: blocked (the CV stays out of model training data).
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: CCBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: meta-externalagent
+Disallow: /
+
+# Everyone else, including AI search and on-demand fetchers
+# (OAI-SearchBot, ChatGPT-User, Claude-SearchBot, Claude-User, PerplexityBot, Perplexity-User).
+User-agent: *
+Allow: /
+
+Sitemap: {{ site.url }}/sitemap.xml
